@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="pierre-mauriello.be" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="pierre-mauriello.be">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/staging.pierre-mauriello.be" local="$PROJECT_DIR$" web="/staging.pierre-mauriello.be" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
