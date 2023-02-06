@@ -19,6 +19,7 @@
     .table_last_contacts{
         width: 80%;
         overflow-x: auto;
+        position: relative;
         @include desktop{
             overflow-x: visible;
         }
@@ -56,5 +57,16 @@
             }
         }
         
+    }
+    .bulb{
+        width: 12%;
+        position: absolute;
+        left: 0%;
+        top: 135%;
+        @include desktop{
+            width: 9%;
+            left: 0%;
+            top: 167%;
+        }
     }
 }
