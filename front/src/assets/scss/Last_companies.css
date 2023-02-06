@@ -1,61 +1,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
-.section_last_contacts {
+.section_last_companies {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.section_last_contacts h3 {
+.section_last_companies h3 {
   width: 80%;
   font-family: "Inter", sans-serif;
   font-size: 160%;
   text-align: left;
 }
 @media screen and (min-width: 1280px) {
-  .section_last_contacts h3 {
+  .section_last_companies h3 {
     margin-top: 5%;
     font-size: 200%;
   }
 }
-.section_last_contacts .table_last_contacts {
+.section_last_companies .table_last_companies {
   width: 80%;
   overflow-x: auto;
 }
 @media screen and (min-width: 1280px) {
-  .section_last_contacts .table_last_contacts {
+  .section_last_companies .table_last_companies {
     overflow-x: visible;
   }
 }
-.section_last_contacts .table_last_contacts table {
+.section_last_companies .table_last_companies table {
   table-layout: auto;
   width: 300%;
   border-collapse: collapse;
 }
 @media screen and (min-width: 1280px) {
-  .section_last_contacts .table_last_contacts table {
+  .section_last_companies .table_last_companies table {
     width: 100%;
   }
 }
-.section_last_contacts .table_last_contacts table thead {
+.section_last_companies .table_last_companies table thead {
   font-family: "Roboto", sans-serif;
   background-color: #F9DE4E;
 }
-.section_last_contacts .table_last_contacts table thead tr th {
+.section_last_companies .table_last_companies table thead tr th {
   padding: 1%;
   text-align: left;
   padding-left: 5%;
 }
-.section_last_contacts .table_last_contacts table tbody {
+.section_last_companies .table_last_companies table tbody {
   font-family: "Roboto", sans-serif;
 }
-.section_last_contacts .table_last_contacts table tbody tr {
+.section_last_companies .table_last_companies table tbody tr {
   background-color: #F5F5F5;
 }
-.section_last_contacts .table_last_contacts table tbody tr th {
+.section_last_companies .table_last_companies table tbody tr th {
   padding: 1%;
   text-align: left;
   padding-left: 4%;
 }
-.section_last_contacts .table_last_contacts table tbody tr:nth-child(odd) {
+.section_last_companies .table_last_companies table tbody tr:nth-child(odd) {
   background-color: #ffffff;
-}/*# sourceMappingURL=Last_contacts.css.map */
+}/*# sourceMappingURL=Last_companies.css.map */

@@ -17,34 +17,34 @@ const Last_invoices = () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <th className='invoice_number'>F20220915-001</th>
-                            <th className='dates_due'>15/09/2022</th>
-                            <th className='company'>Jouet Jean-Michel</th>
-                            <th className='created_at'>25/09/2020</th>
+                            <th>F20220915-001</th>
+                            <th>15/09/2022</th>
+                            <th>Jouet Jean-Michel</th>
+                            <th>25/09/2020</th>
                         </tr>
                         <tr>
-                            <th className='invoice_number'>F20220915-002</th>
-                            <th className='dates_due'>15/09/2022</th>
-                            <th className='company'>Dunder Mifflin</th>
-                            <th className='created_at'>25/09/2020</th>
+                            <th>F20220915-002</th>
+                            <th>15/09/2022</th>
+                            <th>Dunder Mifflin</th>
+                            <th>25/09/2020</th>
                         </tr>
                         <tr>
-                            <th className='invoice_number'>F20220915-003</th>
-                            <th className='dates_due'>15/09/2022</th>
-                            <th className='company'>Pierre Cailloux</th>
-                            <th className='created_at'>25/09/2020</th>
+                            <th>F20220915-003</th>
+                            <th>15/09/2022</th>
+                            <th>Pierre Cailloux</th>
+                            <th>25/09/2020</th>
                         </tr>
                         <tr>
-                            <th className='invoice_number'>F20220915-004</th>
-                            <th className='dates_due'>15/09/2022</th>
-                            <th className='company'>Pier Pipper</th>
-                            <th className='created_at'>25/09/2020</th>
+                            <th>F20220915-004</th>
+                            <th>15/09/2022</th>
+                            <th>Pier Pipper</th>
+                            <th>25/09/2020</th>
                         </tr>
                         <tr>
-                            <th className='invoice_number'>F20220915-005</th>
-                            <th className='dates_due'>15/09/2022</th>
-                            <th className='company'>Raviga</th>
-                            <th className='created_at'>25/09/2020</th>
+                            <th>F20220915-005</th>
+                            <th>15/09/2022</th>
+                            <th>Raviga</th>
+                            <th>25/09/2020</th>
                         </tr>
                     </tbody>
                 </table>
