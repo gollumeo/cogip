@@ -1,0 +1,110 @@
+@import "mixin";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background: #F9DE4E;
+        @include desktop{
+            padding-top: 3%;
+        }
+        h1{
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            @include desktop {
+                width: 15%;
+                display: flex;
+                justify-content: center;
+                font-size: 250%;
+            }
+        }
+        .nav_pages{
+            @include desktop{
+                width: 35%;
+            }
+            .list_pages{
+                display: none;
+                @include desktop{
+                    display: flex;
+                    list-style: none;
+                    padding: 0;
+                }
+                .page{
+                    @include desktop{
+                        padding: 4%;
+                    }
+                    a{
+                        @include desktop{
+                            text-decoration: none;
+                            color: black;
+                            font-family: 'Roboto', sans-serif;
+                            font-size: 110%;
+                        }
+                    }
+                }
+            }
+        }
+        nav{
+            @include desktop{
+                width: 30%;
+            }
+            .list_log{
+                display: none;
+                @include desktop{
+                    display: flex;
+                    list-style: none;
+                    justify-content: flex-end;
+                }
+                .sign_up{
+                    @include desktop{
+                        padding: 5%;
+                        width: 25%;
+                    }
+                    a{
+                        @include desktop{
+                            text-decoration: none;
+                            color: black;
+                            font-family: 'Roboto', sans-serif;
+                            font-size: 110%;
+                            background-color: #fff;
+                            padding: 7% 15% 7% 15%;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+                .login{
+                    @include desktop{
+                        padding: 5%;
+                    }
+                    a{
+                        @include desktop{
+                            text-decoration: none;
+                            color: black;
+                            font-family: 'Roboto', sans-serif;
+                            font-size: 110%;
+                        }
+                    }
+                }
+                
+            }
+        }
+        button{
+            border: none;
+            background-color: #F9DE4E;
+            color: none;
+            @include desktop{
+                display: none;
+            }
+            .burger_menu{
+                width: 5wv;
+                height: 3vh;
+            }
+        }
+        
+    }
+    
+}
