@@ -3,6 +3,7 @@ import Nav from './assets/component/Nav'
 import Manage from './assets/component/Manage'
 import Last_invoices from './assets/component/Last_invoices'
 import Last_contacts from './assets/component/Last_contacts'
+import Last_companies from './assets/component/Last_companies';
 
 const App = () => {
     return (
@@ -11,6 +12,7 @@ const App = () => {
             <Manage />
             <Last_invoices />
             <Last_contacts />
+            <Last_companies />
         </>
     );
 };

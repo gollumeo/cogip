@@ -8,23 +8,42 @@
 .section_last_invoices h3 {
   width: 80%;
   font-family: "Inter", sans-serif;
-  font-size: 140%;
+  font-size: 160%;
   text-align: left;
+}
+@media screen and (min-width: 1280px) {
+  .section_last_invoices h3 {
+    margin-top: 5%;
+    font-size: 200%;
+  }
 }
 .section_last_invoices .table_last_invoices {
   width: 80%;
   overflow-x: auto;
 }
+@media screen and (min-width: 1280px) {
+  .section_last_invoices .table_last_invoices {
+    overflow-x: visible;
+  }
+}
 .section_last_invoices .table_last_invoices table {
+  table-layout: auto;
   width: 200%;
   border-collapse: collapse;
+}
+@media screen and (min-width: 1280px) {
+  .section_last_invoices .table_last_invoices table {
+    width: 100%;
+  }
 }
 .section_last_invoices .table_last_invoices table thead {
   font-family: "Roboto", sans-serif;
   background-color: #F9DE4E;
 }
 .section_last_invoices .table_last_invoices table thead tr th {
-  padding: 0.5%;
+  padding: 1%;
+  text-align: left;
+  padding-left: 5%;
 }
 .section_last_invoices .table_last_invoices table tbody {
   font-family: "Roboto", sans-serif;
@@ -32,18 +51,10 @@
 .section_last_invoices .table_last_invoices table tbody tr {
   background-color: #F5F5F5;
 }
-.section_last_invoices .table_last_invoices table tbody tr .invoice_number {
-  padding: 0.5%;
-}
-.section_last_invoices .table_last_invoices table tbody tr .dates_due {
-  padding: 0.5%;
-}
-.section_last_invoices .table_last_invoices table tbody tr .company {
-  padding: 0.5%;
+.section_last_invoices .table_last_invoices table tbody tr th {
+  padding: 1%;
   text-align: left;
-}
-.section_last_invoices .table_last_invoices table tbody tr .created_at {
-  padding: 0.5%;
+  padding-left: 4%;
 }
 .section_last_invoices .table_last_invoices table tbody tr:nth-child(odd) {
   background-color: #ffffff;
