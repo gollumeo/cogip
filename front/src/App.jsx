@@ -5,6 +5,7 @@ import Last_invoices from './assets/component/Last_invoices'
 import Last_contacts from './assets/component/Last_contacts'
 import Last_companies from './assets/component/Last_companies';
 import Work from './assets/component/Work';
+import Footer from './assets/component/Footer';
 
 const App = () => {
     return (
@@ -15,6 +16,7 @@ const App = () => {
             <Last_contacts />
             <Last_companies />
             <Work />
+            <Footer />
         </>
     );
 };
