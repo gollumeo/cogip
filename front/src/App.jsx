@@ -4,6 +4,7 @@ import Manage from './assets/component/Manage'
 import Last_invoices from './assets/component/Last_invoices'
 import Last_contacts from './assets/component/Last_contacts'
 import Last_companies from './assets/component/Last_companies';
+import Work from './assets/component/Work';
 
 const App = () => {
     return (
@@ -13,6 +14,7 @@ const App = () => {
             <Last_invoices />
             <Last_contacts />
             <Last_companies />
+            <Work />
         </>
     );
 };

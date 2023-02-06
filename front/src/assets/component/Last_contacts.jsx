@@ -1,6 +1,6 @@
 import React from 'react';
 import "/src/assets/scss/Last_contacts.css";
-import bulb from "/src/assets/img/bulb.png";
+import bulb from "/public/img/bulb.png";
 
 const Last_contacts = () => {
     return (
