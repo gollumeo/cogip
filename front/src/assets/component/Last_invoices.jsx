@@ -1,5 +1,6 @@
 import React from 'react';
 import "/src/assets/scss/Last_invoices.css";
+import black_notebook_and_green_arm from "/src/assets/img/black notebook and green arm.png";
 
 const Last_invoices = () => {
     return (
@@ -49,6 +50,7 @@ const Last_invoices = () => {
                     </tbody>
                 </table>
             </section>
+            <img src={black_notebook_and_green_arm} alt="black_notebook_and_green_arm" className='green_arm'/>
         </section>
     );
 };

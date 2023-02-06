@@ -20,6 +20,7 @@
 .section_last_invoices .table_last_invoices {
   width: 80%;
   overflow-x: auto;
+  position: relative;
 }
 @media screen and (min-width: 1280px) {
   .section_last_invoices .table_last_invoices {
@@ -58,4 +59,17 @@
 }
 .section_last_invoices .table_last_invoices table tbody tr:nth-child(odd) {
   background-color: #ffffff;
+}
+.section_last_invoices .green_arm {
+  width: 15%;
+  position: absolute;
+  left: 85%;
+  top: 97%;
+}
+@media screen and (min-width: 1280px) {
+  .section_last_invoices .green_arm {
+    width: 10%;
+    left: 90%;
+    top: 125%;
+  }
 }/*# sourceMappingURL=Last_invoices.css.map */

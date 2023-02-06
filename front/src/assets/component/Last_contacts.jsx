@@ -1,5 +1,6 @@
 import React from 'react';
 import "/src/assets/scss/Last_contacts.css";
+import bulb from "/src/assets/img/bulb.png";
 
 const Last_contacts = () => {
     return (
@@ -55,6 +56,7 @@ const Last_contacts = () => {
                     </tbody>
                 </table>
             </section>
+            <img src={bulb} alt="bulb" className='bulb' />
         </section>
     );
 };

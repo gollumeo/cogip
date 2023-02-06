@@ -20,6 +20,7 @@
 .section_last_contacts .table_last_contacts {
   width: 80%;
   overflow-x: auto;
+  position: relative;
 }
 @media screen and (min-width: 1280px) {
   .section_last_contacts .table_last_contacts {
@@ -58,4 +59,17 @@
 }
 .section_last_contacts .table_last_contacts table tbody tr:nth-child(odd) {
   background-color: #ffffff;
+}
+.section_last_contacts .bulb {
+  width: 12%;
+  position: absolute;
+  left: 0%;
+  top: 135%;
+}
+@media screen and (min-width: 1280px) {
+  .section_last_contacts .bulb {
+    width: 9%;
+    left: 0%;
+    top: 167%;
+  }
 }/*# sourceMappingURL=Last_contacts.css.map */

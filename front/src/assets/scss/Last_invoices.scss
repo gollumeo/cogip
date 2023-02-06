@@ -19,6 +19,7 @@
     .table_last_invoices{
         width: 80%;
         overflow-x: auto;
+        position: relative;
         @include desktop{
             overflow-x: visible;
         }
@@ -56,6 +57,16 @@
                 }
             }
         }
-        
+    }
+    .green_arm{
+        width: 15%;
+        position: absolute;
+        left: 85%;
+        top: 97%;
+        @include desktop{
+            width: 10%;
+            left: 90%;
+            top: 125%;
+        }
     }
 }
