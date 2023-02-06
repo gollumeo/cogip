@@ -1,0 +1,58 @@
+.work_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+}
+@media screen and (min-width: 1280px) {
+  .work_section {
+    flex-direction: row;
+  }
+}
+.work_section h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 180%;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 7%;
+}
+@media screen and (min-width: 1280px) {
+  .work_section h2 {
+    width: 50%;
+    font-size: 350%;
+    text-align: left;
+    padding-left: 9%;
+    margin: 0;
+  }
+}
+.work_section .yellow_comments {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.work_section .yellow_comments .comments {
+  width: 65%;
+  position: absolute;
+  top: 201.5%;
+}
+@media screen and (min-width: 1280px) {
+  .work_section .yellow_comments .comments {
+    width: 30%;
+    left: 63%;
+    top: 225%;
+  }
+}
+.work_section .yellow_comments .yellow_rectangle {
+  width: 80%;
+  position: absolute;
+  top: 206%;
+}
+@media screen and (min-width: 1280px) {
+  .work_section .yellow_comments .yellow_rectangle {
+    width: 45%;
+    left: 55%;
+    top: 230%;
+  }
+}/*# sourceMappingURL=Work.css.map */
