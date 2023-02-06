@@ -4,45 +4,30 @@ import "/src/assets/scss/Last_contacts.css";
 const Last_contacts = () => {
     return (
         <section className='section_last_contacts'>
-            <h3>Last invoices</h3>
+            <h3>Last Contacts</h3>
             <section className='table_last_contacts'>
                 <table>
                     <thead> 
                         <tr>
-                            <th>Invoice number</th>
-                            <th>Dates due</th>
+                            <th>IName</th>
+                            <th>Phone</th>
+                            <th>Mail</th>
                             <th>Company</th>
                             <th>Created at</th>
                         </tr> 
                     </thead>
                     <tbody>
                         <tr>
-                            <th className='invoice_number'>F20220915-001</th>
-                            <th className='dates_due'>15/09/2022</th>
-                            <th className='company'>Jouet Jean-Michel</th>
+                            <th className='name'>Peter Gregory</th>
+                            <th className='phone'>1555-8765</th>
+                            <th className='mail'>peter.gregory@raviga.com</th>
+                            <th className='company'>Raviga</th>
                             <th className='created_at'>25/09/2020</th>
                         </tr>
                         <tr>
-                            <th className='invoice_number'>F20220915-002</th>
-                            <th className='dates_due'>15/09/2022</th>
-                            <th className='company'>Dunder Mifflin</th>
-                            <th className='created_at'>25/09/2020</th>
-                        </tr>
-                        <tr>
-                            <th className='invoice_number'>F20220915-003</th>
-                            <th className='dates_due'>15/09/2022</th>
-                            <th className='company'>Pierre Cailloux</th>
-                            <th className='created_at'>25/09/2020</th>
-                        </tr>
-                        <tr>
-                            <th className='invoice_number'>F20220915-004</th>
-                            <th className='dates_due'>15/09/2022</th>
-                            <th className='company'>Pier Pipper</th>
-                            <th className='created_at'>25/09/2020</th>
-                        </tr>
-                        <tr>
-                            <th className='invoice_number'>F20220915-005</th>
-                            <th className='dates_due'>15/09/2022</th>
+                            <th className='name'>Peter Gregory</th>
+                            <th className='phone'>1555-8765</th>
+                            <th className='mail'>peter.gregory@raviga.com</th>
                             <th className='company'>Raviga</th>
                             <th className='created_at'>25/09/2020</th>
                         </tr>
