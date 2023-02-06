@@ -103,7 +103,7 @@ class InvoicesRepository
         echo $json_encode;
     }
 
-    public function getInvoiceById(Invoices $invoiceData):
+    public function getInvoiceById(Invoices $invoiceData)
     {
         // Prepare the query
         $query = "SELECT * FROM invoices WHERE id = :id";
