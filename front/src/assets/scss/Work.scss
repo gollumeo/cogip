@@ -24,29 +24,7 @@
             margin: 0;
         }
     }
-    .yellow_comments{
+    .yellow_rectangle_comments{
         width: 100%;
-        display: flex;
-        justify-content: center;
-        .comments{
-            width: 65%;
-            position: absolute;
-            top: 201.5%;
-            @include desktop{
-                width: 30%;
-                left: 63%;
-                top: 225%;
-            }
-        }
-        .yellow_rectangle{
-            width: 80%;
-            position: absolute;
-            top: 206%;
-            @include desktop{
-                width: 45%;
-                left: 55%;
-                top: 230%;
-            }
-        }
     }
 }
