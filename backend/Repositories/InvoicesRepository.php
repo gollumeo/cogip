@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Repositories;
+
 use App\Core\Database;
 use App\Models\Invoices;
 use PDO;
@@ -102,7 +103,7 @@ class InvoicesRepository
         echo $json_encode;
     }
 
-    public function getInvoiceById(Invoices $invoiceData): string
+    public function getInvoiceById(Invoices $invoiceData):
     {
         // Prepare the query
         $query = "SELECT * FROM invoices WHERE id = :id";
@@ -110,8 +111,10 @@ class InvoicesRepository
         // Prepare the statement
         $stmt = $this->database->prepare($query);
 
-        // Bind the parameters
-        $stmt->bindValue(':id', $invoiceData->getId());
-        return 'This invoice has been successfully displayed!';
+        // Set the json response
+        $json_encode = json_encode($invoiceData, true);
+
+        header('Content-type: application/json');
+        echo $json_encode;
     }
 }
