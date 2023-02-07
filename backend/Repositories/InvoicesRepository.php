@@ -28,7 +28,7 @@ class InvoicesRepository
         // Bind the parameters
         $stmt->bindValue(1, $invoiceData->getCompanyId());
         $stmt->bindValue(2, $invoiceData->getCreatedAt());
-        $stmt->bindValue(3, $invoiceData->getCreatedAt());
+        $stmt->bindValue(3, $invoiceData->getUpdatedAt());
 
         // Execute the statement
         $stmt->execute();
@@ -114,6 +114,9 @@ class InvoicesRepository
 
         // Prepare the statement
         $stmt = $this->database->prepare($query);
+
+        // Execute the query
+        $stmt->execute();
 
         // Set the json response
         $json_encode = json_encode($invoiceData, true);
