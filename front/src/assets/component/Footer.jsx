@@ -41,7 +41,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className='info_rs'>
-                        <p>Social Media</p>
+                        <p className='social_media'>Social Media</p>
                         <div className='logo'>
                             <a href="#"><img src={facebook} alt="facebook"/></a>
                             <a href="#"><img src={twitter} alt="twitter"/></a>
