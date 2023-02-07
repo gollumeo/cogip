@@ -3,43 +3,37 @@
 namespace App\Routes;
 
 use Bramus\Router\Router;
-use App\Controllers\HomeController;
+use App\Controllers\InvoicesController;
 
 $router = new Router();
 
-///////////////////////////////////////////
-////////////// INVOICES /////////////
-///////////////////////////////////////////
+$invoicesController = new InvoicesController();
 
-// GET endpoint for retrieving all invoices
-$router->get('/invoices', function() {
-    // code to retrieve all invoices from the database
-    // return the invoices in JSON format
+$router->get('/invoices', function() use ($invoicesController) {
+    header('Content-Type: application/json');
+    echo $invoicesController->getAllInvoices();
 });
 
-// GET endpoint for retrieving a specific invoice
-$router->get('/invoices/{id}', function($id) {
-    // code to retrieve a specific invoice from the database using the id parameter
-    // return the invoice in JSON format
+$router->get('/invoices/{id}', function($id) use ($invoicesController) {
+    header('Content-Type: application/json');
+    echo $invoicesController->getInvoiceById($id);
 });
 
-// POST endpoint for creating a new invoice
-$router->post('/invoices', function() {
-    // code to process the incoming data and create a new invoice in the database
-    // return a success message in JSON format
+$router->post('/invoices', function() use ($invoicesController) {
+    header('Content-Type: application/json');
+    echo $invoicesController->createInvoice();
 });
 
-// PUT endpoint for updating an existing invoice
-$router->put('/invoices/{id}', function($id) {
-    // code to process the incoming data and update an existing invoice in the database using the id parameter
-    // return a success message in JSON format
+$router->put('/invoices/{id}', function($id) use ($invoicesController) {
+    header('Content-Type: application/json');
+    echo $invoicesController->updateInvoice($id);
 });
 
-// DELETE endpoint for deleting an invoice
-$router->delete('/invoices/{id}', function($id) {
-    // code to delete an existing invoice from the database using the id parameter
-    // return a success message in JSON format
+$router->delete('/invoices/{id}', function($id) use ($invoicesController) {
+    header('Content-Type: application/json');
+    echo $invoicesController->deleteInvoice($id);
 });
+
 
 ///////////////////////////////////////////
 ////////// COMPANIES ////////////

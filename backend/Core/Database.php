@@ -2,9 +2,9 @@
 
 namespace App\Core;
 
+use Dotenv;
 use PDO;
 use PDOException;
-use Dotenv;
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
@@ -42,7 +42,7 @@ class Database
         return self::$instance;
     }
 
-    public function getConnection(): PDO
+    public function getConnection()
     {
         return $this->conn;
     }
