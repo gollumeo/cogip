@@ -7,41 +7,40 @@
     flex-direction: column;
     align-items: center;
     background-color: #F9DE4E;
-    @include desktop{
-        flex-direction: row;
-    }
-    .manage{
-        font-family: 'Roboto', sans-serif;
-        font-weight: 900;
-        font-size: 180%;
-        width: 70%;
-        text-align: center;
-        margin-bottom: 0;
-        margin-top: 5%;
-        position: relative;
+    .txt_img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         @include desktop{
-            width: 50%;
-            font-size: 350%;
-            text-align: left;
-            padding-left: 9%;
-            margin: 0;
+            flex-direction: row;
         }
-    }
-    .homme_1{
-        width: 100%;
-        @include desktop{
-            width: 50%;
+        .manage{
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            font-size: 180%;
+            width: 70%;
+            text-align: center;
+            margin-bottom: 0;
+            margin-top: 5%;
+            position: relative;
+            @include desktop{
+                width: 50%;
+                font-size: 350%;
+                text-align: left;
+                padding-left: 9%;
+                margin: 0;
+            }
+        }
+        .homme_1{
+            width: 100%;
+            @include desktop{
+                width: 50%;
+            }
         }
     }
     .white_shape{
         width: 90%;
-        position: absolute;
+        position: static;
         top: 60.5%;
-        @include desktop{
-            width: 80%;
-            position: absolute;
-            left: 10%;
-            top: 71%;
-        }
     }
 }
