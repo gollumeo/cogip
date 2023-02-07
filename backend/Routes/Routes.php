@@ -3,6 +3,7 @@
 namespace App\Routes;
 
 use App\Controllers\CompaniesController;
+use App\Controllers\ContactsController;
 use App\Controllers\InvoicesController;
 use Bramus\Router\Router;
 
@@ -10,9 +11,10 @@ $router = new Router();
 
 $invoicesController = new InvoicesController();
 
-$router->get('/invoices', function () use ($invoicesController) {
-    header('Content-Type: application/json');
-    echo $invoicesController->getAllInvoices();
+$router->get('/invoices', function () {
+//    header('Content-Type: application/json');
+//    echo $invoicesController->getAllInvoices();
+    echo "coucou";
 });
 
 $router->get('/invoices/{id}', function ($id) use ($invoicesController) {
@@ -97,6 +99,5 @@ $router->delete('/contacts/{id}', function ($id) use ($contactsController) {
     header('Content-Type: application/json');
     echo $contactsController->deleteContacts($id);
 });
-
 
 $router->run();
