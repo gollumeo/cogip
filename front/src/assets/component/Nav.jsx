@@ -1,6 +1,6 @@
 import React from 'react';
 import "/src/assets/scss/Nav.css";
-import BurgerMenu from '/src/assets/img/burger_menu_icon.png';
+import BurgerMenu from '/public/img/burger_menu_icon.png';
 
 const Nav = () => {
   return (
