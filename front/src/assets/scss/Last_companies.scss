@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
-.section_last_invoices{
+.section_last_companies{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,16 +16,15 @@
             font-size: 200%;
         }
     }
-    .table_last_invoices{
+    .table_last_companies{
         width: 80%;
         overflow-x: auto;
-        position: relative;
         @include desktop{
             overflow-x: visible;
         }
         table{
             table-layout: auto;
-            width: 200%;
+            width: 300%;
             border-collapse: collapse;
             @include desktop{
                 width: 100%;
@@ -57,16 +56,6 @@
                 }
             }
         }
-    }
-    .green_arm{
-        width: 15%;
-        position: absolute;
-        left: 85%;
-        top: 97%;
-        @include desktop{
-            width: 10%;
-            left: 90%;
-            top: 125%;
-        }
+        
     }
 }
