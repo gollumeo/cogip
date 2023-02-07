@@ -139,6 +139,9 @@
     flex-direction: row;
   }
 }
+.section_footer .info_content .info_loc_rs .info_rs .social_media {
+  text-align: center;
+}
 @media screen and (min-width: 1280px) {
   .section_footer .info_content .info_loc_rs .info_rs p {
     margin-left: 2%;
