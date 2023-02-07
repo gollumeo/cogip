@@ -52,7 +52,7 @@ class InvoicesController
 
     public function getAllInvoices()
     {
-        $this->invoicesService->getAllInvoices();
+        return $this->invoicesService->getAllInvoices();
     }
 
     public function getInvoiceById()

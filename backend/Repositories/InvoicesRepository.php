@@ -88,21 +88,21 @@ class InvoicesRepository
     public function getAllInvoices()
     {
         // Prepare the query
-//        $query = "SELECT * FROM invoices";
-//
-//        // Prepare the statement
-//        $stmt = $this->database->prepare($query);
-//
-//        // Execute the query
-//        $stmt->execute();
-//
-//        $invoiceData = $stmt->fetchAll(PDO::FETCH_ASSOC);
-//
-//        // Set the json response
-//        $json_encode = json_encode($invoiceData, true);
-//
-//        header('Content-type: application/json');
-//        echo $json_encode;
+        $query = "SELECT * FROM invoices";
+
+        // Prepare the statement
+        $stmt = $this->database->prepare($query);
+
+        // Execute the query
+        $stmt->execute();
+
+        $invoiceData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        // Set the json response
+        $json_encode = json_encode($invoiceData, true);
+
+        header('Content-type: application/json');
+        return $json_encode;
 
 
     }
