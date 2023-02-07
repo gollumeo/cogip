@@ -9,9 +9,11 @@ use PDO;
 class InvoicesRepository
 {
     private $database;
+    private $hostname;
 
     public function __construct()
     {
+
         $this->database = Database::getInstance()->getConnection();
     }
 
@@ -36,6 +38,7 @@ class InvoicesRepository
 
         header('Content-type: application/json');
         return $json_encode;
+
     }
 
     public function update(Invoices $invoiceData): string
@@ -85,22 +88,23 @@ class InvoicesRepository
     public function getAllInvoices()
     {
         // Prepare the query
-        $query = "SELECT * FROM invoices";
+//        $query = "SELECT * FROM invoices";
+//
+//        // Prepare the statement
+//        $stmt = $this->database->prepare($query);
+//
+//        // Execute the query
+//        $stmt->execute();
+//
+//        $invoiceData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//
+//        // Set the json response
+//        $json_encode = json_encode($invoiceData, true);
+//
+//        header('Content-type: application/json');
+//        echo $json_encode;
 
-        // Prepare the statement
-        $stmt = $this->database->prepare($query);
 
-        // Execute the query
-        $stmt->execute();
-
-
-        $invoiceData = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        // Set the json response
-        $json_encode = json_encode($invoiceData, true);
-
-        header('Content-type: application/json');
-        echo $json_encode;
     }
 
     public function getInvoiceById(Invoices $invoiceData)
