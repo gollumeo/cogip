@@ -22,22 +22,29 @@ const Footer = () => {
                 <div className='info_loc_rs'>
                     <div className='info_loc'>
                         <div className='content_localisation'>
-                            <div className='localisation'>
-                                <img src={localisation} alt="localisation"/>
-                            </div>
-                            <p>Square des Martyrs, 6000 Charleroi</p>
+                            <a href="https://www.google.com/maps/place/Sq.+des+Martyrs,+6000+Charleroi/@50.4053612,4.4369442,17z/data=!3m1!4b1!4m5!3m4!1s0x47c226759b15803b:0xcc51f879d97b9c78!8m2!3d50.4053578!4d4.4391329">
+                                <div className='localisation'>
+                                    <img src={localisation} alt="localisation"/>
+                                </div>
+                                <p>Square des Martyrs, 6000 Charleroi</p>
+                            </a>
+                            
                         </div>
                         <div className='content_phone'>
-                            <div className='phone'>
-                                <img src={phone} alt="phone"/>
-                            </div>
-                            <p>(123) 456-7890</p>
+                            <a href="tel:123-456-7890">
+                                <div className='phone'>
+                                    <img src={phone} alt="phone"/>
+                                </div>
+                                <p>(123) 456-7890</p>
+                            </a>
                         </div>
                         <div className='content_fax'>
-                            <div className='fax'>
-                                <img src={fax} alt="fax"/>
-                            </div>
-                            <p>(123) 456-7890</p>
+                            <a href="fax:123-456-7890">
+                                <div className='fax'>
+                                    <img src={fax} alt="fax"/>
+                                </div>
+                                <p>(123) 456-7890</p>
+                            </a>
                         </div>
                     </div>
                     <div className='info_rs'>
@@ -64,7 +71,7 @@ const Footer = () => {
                     <a href="#">CONTACTS</a>
                     <a href="#">PRIVACY POLICY</a>
                 </div>
-                <p className="copy">Copyright © 2022 • COGIP Inc.</p>
+                <p className="copy">Copyright © 2023 • COGIP Inc.</p>
             </div>
         </section>
     );
