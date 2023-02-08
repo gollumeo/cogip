@@ -60,12 +60,12 @@
     }
     .bulb{
         width: 12%;
-        position: absolute;
-        left: 0%;
+        position: relative;
+        left: -45%;
         top: 135%;
         @include desktop{
             width: 9%;
-            left: 0%;
+            left: -46%;
             top: 167%;
         }
     }
