@@ -45,7 +45,6 @@ body{
             }
             .nav_pages{
                 width: 100%;
-                height: 20vh;
                 justify-content: center;
                 position: absolute;
                 top: 8%;
@@ -53,41 +52,58 @@ body{
                 z-index: 1;
                 @include desktop{
                     width: 40%;
-                    top: 7%;
+                    top: 6.5%;
                     left: 20%;
+                    
                 }
                 .list_pages{
                     width: 100%;
-                    padding: 0;
-                    background-color: #000000;
                     display: flex;
                     flex-direction: column;
                     list-style: none;
+                    background-color: #000000;
+                    padding-bottom: 5%;
+                    padding-left: 0;
+                    padding-top: 1.5%;
                     @include desktop{
                         padding: 0;
                         background-color: transparent;
                         flex-direction: row;
                         justify-content: space-around;
+                        align-items: center;
                     }
-                    .page{
-                        padding-top: 2%;
-                        a{
-                            color: rgb(255, 255, 255);
-                            font-family: 'Roboto', sans-serif;
-                            text-decoration: none;
-                            @include desktop{
+                    .nav_link{
+                        font-family: 'Roboto', sans-serif;
+                        text-decoration: none;
+                        color: #ffffff;
+                        &:hover{
+                            color: #F9DE4E;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        @include desktop{
+                            padding: 2% 3.5% 2% 3.5%;
+                            font-size: 110%;
+                            color: black;
+                            &:hover{
+                                color: #F9DE4E;
+                                padding: 2% 3.5% 2% 3.5%;
+                                border-radius: 10px;
                                 font-size: 110%;
-                                color: black;
-                                &:hover{
-                                    color: #F9DE4E;
-                                    padding: 7% 15% 7% 15%;
-                                    border-radius: 10px;
-                                    font-size: 110%;
-                                    background-color: #ffffff;
-                                }
+                                background-color: #ffffff;
+                            }
+                        }
+                        .page{
+                            padding-top: 1%;
+                            padding-bottom: 1%;
+                            @include desktop{
+                                padding-top: 0;
+                                padding-bottom: 0;
                             }
                         }
                     }
+                    
                 }
             }
             .nav_log{
@@ -99,13 +115,13 @@ body{
                 z-index: 1;
                 @include desktop{
                     width: 40%;
-                    top: 7%;
+                    top: 6.5%;
                     left: 60%;
                 }
                 .list_log{
                     width: 100%;
-                    padding: 0;
                     padding-bottom: 3%;
+                    padding-left: 0;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -119,54 +135,64 @@ body{
                         flex-direction: row;
                         justify-content: flex-end;
                     }
-                    .sign_up{
-                        width: 100px;
-                        padding-top: 2%;
-                        @include desktop{
-                            padding-right: 6%;
+                    .nav_link_2{
+                        text-decoration: none;
+                        color: rgb(255, 255, 255);
+                        font-family: 'Roboto', sans-serif;
+                        &:hover{
+                            color: #F9DE4E;
                         }
-                        a{
-                            text-decoration: none;
-                            color: rgb(255, 255, 255);
-                            font-family: 'Roboto', sans-serif;
+                        @include desktop{
+                            margin-right: 5%;
+                            padding: 1% 0% 1% 0%;
+                            border-radius: 10px;
+                            font-size: 110%;
+                            color: black;
+                            background-color: #ffffff;
+                        }
+                        .sign_up{
+                            width: 100px;
+                            padding-top: 2%;
+                            padding-bottom: 1%;
+                            @include desktop{
+                                padding-right: 6%;
+                                padding-top: 0;
+                                padding-bottom: 0;
+                            }
+                        }
+                    }
+                    .nav_link{
+                        text-decoration: none;
+                        color: rgb(255, 255, 255);
+                        font-family: 'Roboto', sans-serif;
+                        &:hover{
+                            color: #F9DE4E;
+                        }
+                        @include desktop{
+                            font-size: 110%;
+                            color: black;
+                            padding: 1% 3% 1% 3%;
                             &:hover{
                                 color: #F9DE4E;
-                            }
-                            @include desktop{
-                                padding: 7% 15% 7% 15%;
+                                padding: 1% 3% 1% 3%;
                                 border-radius: 10px;
                                 font-size: 110%;
-                                color: black;
                                 background-color: #ffffff;
                             }
                         }
-                    }
-                    .login{
-                        padding-top: 2%;
-                        display: flex;
-                        flex-direction: column;
-                        list-style: none;
-                        @include desktop{
-                            width: 20%;
-                        }
-                        a{
-                            text-decoration: none;
-                            color: rgb(255, 255, 255);
-                            font-family: 'Roboto', sans-serif;
+                        .login{
+                            display: flex;
+                            flex-direction: column;
+                            list-style: none;
+                            padding-top: 20%;
+                            padding-bottom: 10%;
                             @include desktop{
-                                font-size: 110%;
-                                color: black;
-                                &:hover{
-                                    color: #F9DE4E;
-                                    padding: 7% 15% 7% 15%;
-                                    border-radius: 10px;
-                                    font-size: 110%;
-                                    background-color: #ffffff;
-                                }
+                                width: 20%;
+                                padding-top: 0;
+                                padding-bottom: 0;
                             }
                         }
                     }
-                    
                 }
             }
             

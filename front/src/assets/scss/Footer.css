@@ -180,7 +180,7 @@
     margin-left: 2%;
   }
 }
-.section_footer .info_content .info_loc_rs .info_rs .logo a:hover {
+.section_footer .info_content .info_loc_rs .info_rs .logo .a_logo:hover {
   transform: scale(1.5);
 }
 .section_footer .grey_line {
