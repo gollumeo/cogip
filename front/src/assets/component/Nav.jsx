@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import "/src/assets/scss/Nav.css";
 import BurgerMenu from '/public/img/burger_menu_icon.png';
 import { useState } from 'react';
@@ -24,16 +25,28 @@ return (
       </button>
       <div className="nav_pages" style={{ display: displayValue, ...(window.matchMedia("(min-width: 1280px)").matches && {display: 'flex'}) }}>
         <ul className='list_pages'>
-          <li className='page'><a href="#">Home</a></li>
-          <li className='page'><a href="#">Invoices</a></li>
-          <li className='page'><a href="#">Companies</a></li>
-          <li className='page'><a href="#">Contacts</a></li>
+          <NavLink to ="/" className="nav_link">
+            <li className='page'>Home</li>
+          </NavLink>
+          <NavLink to="/invoices" className="nav_link">
+            <li className='page'>Invoices</li>
+          </NavLink>
+          <NavLink to="/companies" className="nav_link">
+            <li className='page'>Companies</li>
+          </NavLink>
+          <NavLink to="/contacts" className="nav_link">
+            <li className='page'>Contacts</li>
+          </NavLink>
         </ul>
       </div>
       <div className="nav_log" style={{ display: displayValue, ...(window.matchMedia("(min-width: 1280px)").matches && {display: 'flex'}) }}>
         <ul className='list_log'>
-          <li className='sign_up'><a href="#">Sign up</a></li>
-          <li className='login'><a href="#">Login</a></li>
+          <NavLink to="*" className="nav_link_2">
+            <li className='sign_up'>Sign up</li>
+          </NavLink>
+          <NavLink to="*" className="nav_link">
+            <li className='login'>Login</li>
+          </NavLink>
         </ul>
       </div>
     </nav>
