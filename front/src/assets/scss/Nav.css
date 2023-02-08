@@ -91,17 +91,17 @@ body header .all .nav_pages .list_pages .page a {
   font-family: "Roboto", sans-serif;
   text-decoration: none;
 }
-body header .all .nav_pages .list_pages .page a:hover {
-  color: #F9DE4E;
-  padding: 7% 15% 7% 15%;
-  border-radius: 10px;
-  font-size: 110%;
-  background-color: #ffffff;
-}
 @media screen and (min-width: 1280px) {
   body header .all .nav_pages .list_pages .page a {
     font-size: 110%;
     color: black;
+  }
+  body header .all .nav_pages .list_pages .page a:hover {
+    color: #F9DE4E;
+    padding: 7% 15% 7% 15%;
+    border-radius: 10px;
+    font-size: 110%;
+    background-color: #ffffff;
   }
 }
 body header .all .nav_log {
@@ -145,7 +145,7 @@ body header .all .nav_log .list_log .sign_up {
 }
 @media screen and (min-width: 1280px) {
   body header .all .nav_log .list_log .sign_up {
-    padding-right: 10%;
+    padding-right: 6%;
   }
 }
 body header .all .nav_log .list_log .sign_up a {
@@ -171,17 +171,26 @@ body header .all .nav_log .list_log .login {
   flex-direction: column;
   list-style: none;
 }
+@media screen and (min-width: 1280px) {
+  body header .all .nav_log .list_log .login {
+    width: 20%;
+  }
+}
 body header .all .nav_log .list_log .login a {
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-family: "Roboto", sans-serif;
 }
-body header .all .nav_log .list_log .login a:hover {
-  color: #F9DE4E;
-}
 @media screen and (min-width: 1280px) {
   body header .all .nav_log .list_log .login a {
     font-size: 110%;
     color: black;
+  }
+  body header .all .nav_log .list_log .login a:hover {
+    color: #F9DE4E;
+    padding: 7% 15% 7% 15%;
+    border-radius: 10px;
+    font-size: 110%;
+    background-color: #ffffff;
   }
 }/*# sourceMappingURL=Nav.css.map */

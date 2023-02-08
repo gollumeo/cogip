@@ -75,16 +75,16 @@ body{
                             color: rgb(255, 255, 255);
                             font-family: 'Roboto', sans-serif;
                             text-decoration: none;
-                            &:hover{
-                                color: #F9DE4E;
-                                padding: 7% 15% 7% 15%;
-                                border-radius: 10px;
-                                font-size: 110%;
-                                background-color: #ffffff;
-                            }
                             @include desktop{
                                 font-size: 110%;
                                 color: black;
+                                &:hover{
+                                    color: #F9DE4E;
+                                    padding: 7% 15% 7% 15%;
+                                    border-radius: 10px;
+                                    font-size: 110%;
+                                    background-color: #ffffff;
+                                }
                             }
                         }
                     }
@@ -123,7 +123,7 @@ body{
                         width: 100px;
                         padding-top: 2%;
                         @include desktop{
-                            padding-right: 10%;
+                            padding-right: 6%;
                         }
                         a{
                             text-decoration: none;
@@ -146,16 +146,23 @@ body{
                         display: flex;
                         flex-direction: column;
                         list-style: none;
+                        @include desktop{
+                            width: 20%;
+                        }
                         a{
                             text-decoration: none;
                             color: rgb(255, 255, 255);
                             font-family: 'Roboto', sans-serif;
-                            &:hover{
-                                color: #F9DE4E;
-                            }
                             @include desktop{
                                 font-size: 110%;
                                 color: black;
+                                &:hover{
+                                    color: #F9DE4E;
+                                    padding: 7% 15% 7% 15%;
+                                    border-radius: 10px;
+                                    font-size: 110%;
+                                    background-color: #ffffff;
+                                }
                             }
                         }
                     }
