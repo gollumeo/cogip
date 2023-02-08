@@ -6,12 +6,17 @@
   align-items: center;
   background-color: #F9DE4E;
 }
+.sect_manage .txt_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 @media screen and (min-width: 1280px) {
-  .sect_manage {
+  .sect_manage .txt_img {
     flex-direction: row;
   }
 }
-.sect_manage .manage {
+.sect_manage .txt_img .manage {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-size: 180%;
@@ -22,7 +27,7 @@
   position: relative;
 }
 @media screen and (min-width: 1280px) {
-  .sect_manage .manage {
+  .sect_manage .txt_img .manage {
     width: 50%;
     font-size: 350%;
     text-align: left;
@@ -30,24 +35,16 @@
     margin: 0;
   }
 }
-.sect_manage .homme_1 {
+.sect_manage .txt_img .homme_1 {
   width: 100%;
 }
 @media screen and (min-width: 1280px) {
-  .sect_manage .homme_1 {
+  .sect_manage .txt_img .homme_1 {
     width: 50%;
   }
 }
 .sect_manage .white_shape {
   width: 90%;
-  position: absolute;
+  position: static;
   top: 60.5%;
-}
-@media screen and (min-width: 1280px) {
-  .sect_manage .white_shape {
-    width: 80%;
-    position: absolute;
-    left: 10%;
-    top: 71%;
-  }
 }/*# sourceMappingURL=Manage.css.map */

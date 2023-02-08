@@ -5,9 +5,9 @@ body {
   padding: 0;
 }
 body header {
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
   background: #F9DE4E;
 }
 @media screen and (min-width: 1280px) {
@@ -16,101 +16,166 @@ body header {
   }
 }
 body header h1 {
+  display: flex;
+  justify-content: center;
+  width: 50%;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
 }
 @media screen and (min-width: 1280px) {
   body header h1 {
-    width: 15%;
-    display: flex;
-    justify-content: center;
+    width: 20%;
     font-size: 250%;
   }
 }
-@media screen and (min-width: 1280px) {
-  body header .nav_pages {
-    width: 35%;
-  }
+body header .all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
 }
-body header .nav_pages .list_pages {
-  display: none;
-}
-@media screen and (min-width: 1280px) {
-  body header .nav_pages .list_pages {
-    display: flex;
-    list-style: none;
-    padding: 0;
-  }
-}
-@media screen and (min-width: 1280px) {
-  body header .nav_pages .list_pages .page {
-    padding: 4%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  body header .nav_pages .list_pages .page a {
-    text-decoration: none;
-    color: black;
-    font-family: "Roboto", sans-serif;
-    font-size: 110%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  body header nav {
-    width: 30%;
-  }
-}
-body header nav .list_log {
-  display: none;
-}
-@media screen and (min-width: 1280px) {
-  body header nav .list_log {
-    display: flex;
-    list-style: none;
-    justify-content: flex-end;
-  }
-}
-@media screen and (min-width: 1280px) {
-  body header nav .list_log .sign_up {
-    padding: 5%;
-    width: 25%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  body header nav .list_log .sign_up a {
-    text-decoration: none;
-    color: black;
-    font-family: "Roboto", sans-serif;
-    font-size: 110%;
-    background-color: #fff;
-    padding: 7% 15% 7% 15%;
-    border-radius: 10px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  body header nav .list_log .login {
-    padding: 5%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  body header nav .list_log .login a {
-    text-decoration: none;
-    color: black;
-    font-family: "Roboto", sans-serif;
-    font-size: 110%;
-  }
-}
-body header button {
+body header .all button {
   border: none;
   background-color: #F9DE4E;
   color: none;
 }
 @media screen and (min-width: 1280px) {
-  body header button {
+  body header .all button {
     display: none;
   }
 }
-body header button .burger_menu {
+body header .all button .burger_menu {
   width: 5wv;
   height: 3vh;
+}
+body header .all .nav_pages {
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  top: 8%;
+  left: 0%;
+  z-index: 1;
+  height: 20vh;
+}
+@media screen and (min-width: 1280px) {
+  body header .all .nav_pages {
+    width: 40%;
+    left: 20%;
+  }
+}
+body header .all .nav_pages .list_pages {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  background-color: #000000;
+}
+@media screen and (min-width: 1280px) {
+  body header .all .nav_pages .list_pages {
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: transparent;
+  }
+}
+body header .all .nav_pages .list_pages .page {
+  padding-top: 2%;
+}
+body header .all .nav_pages .list_pages .page a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto", sans-serif;
+}
+body header .all .nav_pages .list_pages .page a:hover {
+  color: #F9DE4E;
+}
+@media screen and (min-width: 1280px) {
+  body header .all .nav_pages .list_pages .page a {
+    font-size: 110%;
+    color: black;
+  }
+}
+body header .all .nav_log {
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  top: 23.5%;
+  left: 0%;
+  z-index: 1;
+}
+@media screen and (min-width: 1280px) {
+  body header .all .nav_log {
+    width: 40%;
+    top: 8%;
+    left: 60%;
+  }
+}
+body header .all .nav_log .list_log {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  padding-bottom: 3%;
+  background-color: #000000;
+}
+@media screen and (min-width: 1280px) {
+  body header .all .nav_log .list_log {
+    padding: 0;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 15%;
+    width: 100%;
+    background-color: transparent;
+  }
+}
+body header .all .nav_log .list_log .sign_up {
+  padding-top: 2%;
+  width: 100px;
+}
+@media screen and (min-width: 1280px) {
+  body header .all .nav_log .list_log .sign_up {
+    padding-right: 10%;
+  }
+}
+body header .all .nav_log .list_log .sign_up a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto", sans-serif;
+}
+body header .all .nav_log .list_log .sign_up a:hover {
+  color: #F9DE4E;
+}
+@media screen and (min-width: 1280px) {
+  body header .all .nav_log .list_log .sign_up a {
+    font-size: 110%;
+    background-color: #ffffff;
+    padding: 7% 15% 7% 15%;
+    border-radius: 10px;
+    color: black;
+  }
+}
+body header .all .nav_log .list_log .login {
+  padding-top: 2%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+body header .all .nav_log .list_log .login a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto", sans-serif;
+}
+body header .all .nav_log .list_log .login a:hover {
+  color: #F9DE4E;
+}
+@media screen and (min-width: 1280px) {
+  body header .all .nav_log .list_log .login a {
+    font-size: 110%;
+    color: black;
+  }
 }/*# sourceMappingURL=Nav.css.map */
