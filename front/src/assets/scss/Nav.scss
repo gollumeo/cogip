@@ -53,6 +53,7 @@ body{
                 z-index: 1;
                 @include desktop{
                     width: 40%;
+                    top: 7%;
                     left: 20%;
                 }
                 .list_pages{
@@ -76,6 +77,10 @@ body{
                             text-decoration: none;
                             &:hover{
                                 color: #F9DE4E;
+                                padding: 7% 15% 7% 15%;
+                                border-radius: 10px;
+                                font-size: 110%;
+                                background-color: #ffffff;
                             }
                             @include desktop{
                                 font-size: 110%;
@@ -94,7 +99,7 @@ body{
                 z-index: 1;
                 @include desktop{
                     width: 40%;
-                    top: 8%;
+                    top: 7%;
                     left: 60%;
                 }
                 .list_log{

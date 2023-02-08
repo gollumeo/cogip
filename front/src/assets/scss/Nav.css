@@ -63,6 +63,7 @@ body header .all .nav_pages {
 @media screen and (min-width: 1280px) {
   body header .all .nav_pages {
     width: 40%;
+    top: 7%;
     left: 20%;
   }
 }
@@ -92,6 +93,10 @@ body header .all .nav_pages .list_pages .page a {
 }
 body header .all .nav_pages .list_pages .page a:hover {
   color: #F9DE4E;
+  padding: 7% 15% 7% 15%;
+  border-radius: 10px;
+  font-size: 110%;
+  background-color: #ffffff;
 }
 @media screen and (min-width: 1280px) {
   body header .all .nav_pages .list_pages .page a {
@@ -110,7 +115,7 @@ body header .all .nav_log {
 @media screen and (min-width: 1280px) {
   body header .all .nav_log {
     width: 40%;
-    top: 8%;
+    top: 7%;
     left: 60%;
   }
 }
