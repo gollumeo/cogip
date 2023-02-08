@@ -29,6 +29,8 @@ class CompaniesController
         $companiesData->setUpdatedAt(date('Y-m-d H:i:s'));
 
         $this->companiesService->createCompanies($companiesData);
+
+        echo "Company successfully created!";
     }
 
     public function updateCompanies()
@@ -43,6 +45,8 @@ class CompaniesController
         $companiesData->setUpdatedAt(date('Y-m-d H:i:s'));
 
         $this->companiesService->createCompanies($companiesData);
+
+        echo "Company successfully updated!";
     }
 
     public function deleteCompanies()
@@ -52,19 +56,25 @@ class CompaniesController
         $companiesData->setId($_POST['id']);
 
         $this->companiesService->deleteCompanies($companiesData);
+
+        echo "Company successfully deleted!";
     }
 
     public function getAllCompanies()
     {
-        $this->companiesService->getAllCompanies();
+        $allCompanies = $this->companiesService->getAllCompanies();
+        header('Content-Type: application/json');
+        echo $allCompanies;
     }
 
-    public function getCompaniesByid()
+    public function getCompaniesById()
     {
         $companiesData = new Companies();
 
         $companiesData->setId($_GET['id']);
 
-        $this->companiesService->getCompaniesByid($companiesData);
+        $companiesByid = $this->companiesService->getCompaniesByid($companiesData);
+        header('Content-Type: application/json');
+        echo $companiesByid;
     }
 }
