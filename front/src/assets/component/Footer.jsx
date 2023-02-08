@@ -12,6 +12,7 @@ import instagram from "/public/img/instagram.png";
 import google from "/public/img/GooglePlus.png";
 import pinterest from "/public/img/pinterest.png";
 import rss from "/public/img/rss.png";
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -50,14 +51,14 @@ const Footer = () => {
                     <div className='info_rs'>
                         <p className='social_media'>Social Media</p>
                         <div className='logo'>
-                            <a href="#"><img src={facebook} alt="facebook"/></a>
-                            <a href="#"><img src={twitter} alt="twitter"/></a>
-                            <a href="#"><img src={linkedin} alt="linkedin"/></a>
-                            <a href="#"><img src={youtube} alt="youtube"/></a>
-                            <a href="#"><img src={instagram} alt="instagram"/></a>
-                            <a href="#"><img src={google} alt="google"/></a>
-                            <a href="#"><img src={pinterest} alt="pinterest"/></a>
-                            <a href="#"><img src={rss} alt="rss"/></a>
+                            <a href="#"><img src={facebook} alt="facebook" className='a_logo'/></a>
+                            <a href="#"><img src={twitter} alt="twitter" className='a_logo'/></a>
+                            <a href="#"><img src={linkedin} alt="linkedin" className='a_logo'/></a>
+                            <a href="#"><img src={youtube} alt="youtube" className='a_logo'/></a>
+                            <a href="#"><img src={instagram} alt="instagram" className='a_logo'/></a>
+                            <a href="#"><img src={google} alt="google" className='a_logo'/></a>
+                            <a href="#"><img src={pinterest} alt="pinterest" className='a_logo'/></a>
+                            <a href="#"><img src={rss} alt="rss" className='a_logo'/></a>
                         </div>
                     </div>
                 </div>
@@ -65,11 +66,21 @@ const Footer = () => {
             <hr className='grey_line'/>
             <div className='under_links'>
                 <div className='links'>
-                    <a href="#">HOME</a>
-                    <a href="#">INVOICES</a>
-                    <a href="#">COMPANIES</a>
-                    <a href="#">CONTACTS</a>
-                    <a href="#">PRIVACY POLICY</a>
+                    <NavLink to="/">
+                        <p>HOME</p>
+                    </NavLink>
+                    <NavLink to="/invoices">
+                        <p>INVOICES</p>
+                    </NavLink>
+                    <NavLink to="/companies">
+                        <p>COMPANIES</p>
+                    </NavLink>
+                    <NavLink to="/contacts">
+                        <p>CONTACTS</p>
+                    </NavLink>
+                    <NavLink to="*">
+                        <p>PRIVACY POLICY</p>
+                    </NavLink>
                 </div>
                 <p className="copy">Copyright © 2023 • COGIP Inc.</p>
             </div>
