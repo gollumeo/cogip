@@ -17,6 +17,9 @@ class ContactsRepository
 
     public function create(Contacts $contactsData)
     {
+        $query = "USE cogip";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
         // Prepare the SQL query
         $query = "INSERT INTO contacts (name, company_id, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)";
 
@@ -43,6 +46,9 @@ class ContactsRepository
 
     public function update(Contacts $contactsData): string
     {
+        $query = "USE cogip";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
         // Prepare the query
         $query = "UPDATE contacts SET name = :name, company_id = :company_id, email = :email, phone = :phone, created_at = :created_at, updated_at = :created_at WHERE id = :id";
 
@@ -70,6 +76,9 @@ class ContactsRepository
 
     public function delete(Contacts $contactsData): string
     {
+        $query = "USE cogip";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
         // Prepare the query
         $query = "DELETE FROM contacts WHERE id = :id";
 
@@ -91,6 +100,9 @@ class ContactsRepository
 
     public function getAllContacts()
     {
+        $query = "USE cogip";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
         // Prepare the query
         $query = "SELECT * FROM contacts";
 
@@ -112,6 +124,9 @@ class ContactsRepository
 
     public function getContactsById(Contacts $contactsData)
     {
+        $query = "USE cogip";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
         // Prepare the query
         $query = "SELECT * FROM contacts WHERE id = :id";
 

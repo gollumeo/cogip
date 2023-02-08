@@ -10,7 +10,6 @@
         "filp/whoops": "^2.14",
         "vlucas/phpdotenv": "^5.5",
       "ext-pdo": "*",
-        "ext-mysql_xdevapi": "*",
       "ext-json": "*"
     }
 }
