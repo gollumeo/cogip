@@ -62,14 +62,14 @@
 }
 .section_last_contacts .bulb {
   width: 12%;
-  position: absolute;
-  left: 0%;
+  position: relative;
+  left: -45%;
   top: 135%;
 }
 @media screen and (min-width: 1280px) {
   .section_last_contacts .bulb {
     width: 9%;
-    left: 0%;
+    left: -46%;
     top: 167%;
   }
 }/*# sourceMappingURL=Last_contacts.css.map */
