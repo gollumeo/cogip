@@ -1,113 +1,107 @@
 <?php
 
 namespace App\Routes;
-
+use App\Controllers\CompaniesController;
+use App\Controllers\ContactsController;
+use App\Controllers\InvoicesController;
 use Bramus\Router\Router;
-use App\Controllers\HomeController;
+
+if (isset($_SERVER['HTTP_ORIGIN'])) {
+    // Decide if the origin in $_SERVER['HTTP_ORIGIN'] is one
+    // you want to allow, and if so:
+    header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Allow-Credentials: true');
+    header('Access-Control-Max-Age: 1000');
+}
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD'])) {
+        // may also be using PUT, PATCH, HEAD etc
+        header("Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE, PATCH, HEAD");
+    }
+
+    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS'])) {
+        header("Access-Control-Allow-Headers: Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization");
+    }
+    exit(0);
+}
 
 $router = new Router();
 
-///////////////////////////////////////////
-////////////// INVOICES /////////////
-///////////////////////////////////////////
 
-// GET endpoint for retrieving all invoices
-$router->get('/invoices', function() {
-    // code to retrieve all invoices from the database
-    // return the invoices in JSON format
+$router->get('/invoices', function () {
+
+    return (new InvoicesController())->getAllInvoices();
 });
 
-// GET endpoint for retrieving a specific invoice
-$router->get('/invoices/{id}', function($id) {
-    // code to retrieve a specific invoice from the database using the id parameter
-    // return the invoice in JSON format
+$router->get('/invoices/{id}', function ($id) {
+
+    return  (new InvoicesController())->getInvoiceById($id);
 });
 
-// POST endpoint for creating a new invoice
-$router->post('/invoices', function() {
-    // code to process the incoming data and create a new invoice in the database
-    // return a success message in JSON format
+$router->post('/invoices', function () {
+     (new InvoicesController())->createInvoice();
 });
 
-// PUT endpoint for updating an existing invoice
-$router->put('/invoices/{id}', function($id) {
-    // code to process the incoming data and update an existing invoice in the database using the id parameter
-    // return a success message in JSON format
+$router->put('/invoices/{id}', function ($id) {
+    (new InvoicesController())->updateInvoice($id);
 });
 
-// DELETE endpoint for deleting an invoice
-$router->delete('/invoices/{id}', function($id) {
-    // code to delete an existing invoice from the database using the id parameter
-    // return a success message in JSON format
+$router->delete('/invoices/{id}', function ($id) {
+    (new InvoicesController())->deleteInvoice($id);
 });
+
 
 ///////////////////////////////////////////
 ////////// COMPANIES ////////////
 ///////////////////////////////////////////
 
-// GET endpoint for retrieving all companies
-$router->get('/companies', function() {
-    // code to retrieve all companies from the database
-    // return the companies in JSON format
+$companiesController = new CompaniesController();
+
+$router->get('/companies', function () {
+    return (new CompaniesController())->getAllCompanies();
 });
 
-// GET endpoint for retrieving a specific company
-$router->get('/companies/{id}', function($id) {
-    // code to retrieve a specific company from the database using the id parameter
-    // return the company in JSON format
+$router->get('/companies/{id}', function ($id) {
+    header('Content-Type: application/json');
+    return (new CompaniesController())->getCompaniesById($id);
 });
 
-// POST endpoint for creating a new company
-$router->post('/companies', function() {
-    // code to process the incoming data and create a new company in the database
-    // return a success message in JSON format
+$router->post('/companies', function () {
+    (new CompaniesController())->createCompanies();
 });
 
-// PUT endpoint for updating an existing company
-$router->put('/companies/{id}', function($id) {
-    // code to process the incoming data and update an existing company in the database using the id parameter
-    // return a success message in JSON format
+$router->put('/companies/{id}', function ($id) {
+    (new CompaniesController())->updateCompanies($id);
 });
 
-// DELETE endpoint for deleting a company
-$router->delete('/companies/{id}', function($id) {
-    // code to delete an existing company from the database using the id parameter
-    // return a success message in JSON format
+$router->delete('/companies/{id}', function ($id) {
+    (new CompaniesController())->deleteCompanies($id);
 });
 
 ///////////////////////////////////////////
 ///////////// CONTACTS /////////////
 ///////////////////////////////////////////
 
-// GET endpoint for retrieving all contacts
-$router->get('/contacts', function() {
-    // code to retrieve all contacts from the database
-    // return the contacts in JSON format
+$contactsController = new ContactsController();
+
+$router->get('/contacts', function () {
+    return (new ContactsController())->getAllContacts();
 });
 
-// GET endpoint for retrieving a specific contact
-$router->get('/contacts/{id}', function($id) {
-    // code to retrieve a specific contact from the database using the id parameter
-    // return the contact in JSON format
+$router->get('/contacts/{id}', function ($id) {
+    return (new ContactsController())->getContactsById($id);
 });
 
-// POST endpoint for creating a new contact
-$router->post('/contacts', function() {
-    // code to process the incoming data and create a new contact in the database
-    // return a success message in JSON format
+$router->post('/contacts', function () {
+    (new ContactsController())->createContacts();
 });
 
-// PUT endpoint for updating an existing contact
-$router->put('/contacts/{id}', function($id) {
-    // code to process the incoming data and update an existing contact in the database using the id parameter
-    // return a success message in JSON format
+$router->put('/contacts/{id}', function ($id) {
+    (new ContactsController())->updateContacts($id);
 });
 
-// DELETE endpoint for deleting a contact
-$router->delete('/contacts/{id}', function($id) {
-    // code to delete an existing contact from the database using the id parameter
-    // return a success message in JSON format
+$router->delete('/contacts/{id}', function ($id) {
+    (new ContactsController())->deleteContacts($id);
 });
-
 
 $router->run();

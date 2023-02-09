@@ -36,7 +36,8 @@ if (isset($_POST['button'])) {
         }
     } else {
         // Les informations d'identification sont incorrectes, affichez un message d'erreur et redirigez l'utilisateur vers la page de connexion
-        ?><span style="color: red;"><br>Nom d'utilisateur ou mot de passe incorrect.</span> <?php
+        ?><span style="color: red;"><br>Nom d'utilisateur ou mot de passe incorrect.</span>
+        <?php
         exit;
     }
 }
