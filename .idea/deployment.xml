@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="pierre-mauriello.be" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="lws">
     <serverData>
-      <paths name="pierre-mauriello.be">
+      <paths name="lws">
         <serverdata>
           <mappings>
-            <mapping deploy="/staging.pierre-mauriello.be" local="$PROJECT_DIR$" web="/staging.pierre-mauriello.be" />
+            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
     </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>
