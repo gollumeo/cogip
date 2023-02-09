@@ -19,6 +19,10 @@ class InvoicesRepository
 
     public function create(Invoices $invoiceData)
     {
+
+        $query = "USE cogip";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
         // Prepare the SQL query
         $query = "INSERT INTO invoices (company_id, created_at, updated_at) VALUES (?, ?, ?)";
 
@@ -43,6 +47,10 @@ class InvoicesRepository
 
     public function update(Invoices $invoiceData): string
     {
+
+        $query = "USE cogip";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
         // Prepare the query
         $query = "UPDATE invoices SET company_id = :company_id, updated_at = :updated_at WHERE id = :id";
 
@@ -66,6 +74,9 @@ class InvoicesRepository
 
     public function delete(Invoices $invoiceData): string
     {
+        $query = "USE cogip";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
         // Prepare the query
         $query = "DELETE FROM invoices WHERE id = :id";
 
@@ -87,6 +98,10 @@ class InvoicesRepository
 
     public function getAllInvoices()
     {
+        $query = "USE cogip";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
+
         // Prepare the query
         $query = "SELECT * FROM invoices";
 
@@ -109,6 +124,9 @@ class InvoicesRepository
 
     public function getInvoiceById(Invoices $invoiceData)
     {
+        $query = "USE cogip";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
         // Prepare the query
         $query = "SELECT * FROM invoices WHERE id = :id";
 

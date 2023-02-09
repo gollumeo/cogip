@@ -21,9 +21,9 @@ class InvoicesController
 
     public function createInvoice()
     {
-        $invoiceData = new Invoices();
+        $companyId = $_POST['company_id'];
+        $invoiceData = new Invoices($companyId);
 
-        $invoiceData->setCompanyId($_POST['company_id']);
         $invoiceData->setCreatedAt(date('Y-m-d H:i:s'));
         $invoiceData->setUpdatedAt(date('Y-m-d H:i:s'));
 
@@ -52,7 +52,9 @@ class InvoicesController
 
     public function getAllInvoices()
     {
-        return $this->invoicesService->getAllInvoices();
+        $allInvoices = $this->invoicesService->getAllInvoices();
+        header('Content-Type: application/json');
+        echo $allInvoices;
     }
 
     public function getInvoiceById()
@@ -61,6 +63,9 @@ class InvoicesController
 
         $invoiceData->setId($_GET['id']);
 
-        $this->invoicesService->getInvoiceById($invoiceData);
+        $invoiceById = $this->invoicesService->getInvoiceById($invoiceData);
+        header('Content-Type: application/json');
+        echo $invoiceById;
+
     }
 }

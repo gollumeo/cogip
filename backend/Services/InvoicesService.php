@@ -16,17 +16,20 @@ class InvoicesService
 
     public function createInvoice(Invoices $invoiceData)
     {
-        return $this->invoicesRepository->create($invoiceData);
+        $this->invoicesRepository->create($invoiceData);
+        echo "Invoice successfully created!";
     }
 
     public function updateInvoice(Invoices $invoiceData)
     {
-        return $this->invoicesRepository->update($invoiceData);
+        $this->invoicesRepository->update($invoiceData);
+        echo "Invoice successfully updated!";
     }
 
     public function deleteInvoice(Invoices $invoiceData)
     {
-        return $this->invoicesRepository->delete($invoiceData);
+        $this->invoicesRepository->delete($invoiceData);
+        echo "Invoice successfully deleted!";
     }
 
     public function getAllInvoices()

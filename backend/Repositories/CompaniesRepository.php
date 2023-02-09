@@ -17,6 +17,9 @@ class CompaniesRepository
 
     public function create(Companies $companiesDate)
     {
+        $query = "USE cogip";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
         // Prepare the SQL query
         $query = "INSERT INTO companies (name, type_id, country, tva, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)";
 
@@ -43,6 +46,9 @@ class CompaniesRepository
 
     public function update(Companies $companiesDate): string
     {
+        $query = "USE cogip";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
         // Prepare the query
         $query = "UPDATE companies SET name = :name, type_id = :type_id, country = :country, tva = :tva, created_at = :created_at, updated_at = :created_at WHERE id = :id";
 
@@ -70,6 +76,9 @@ class CompaniesRepository
 
     public function delete(Companies $companiesData): string
     {
+        $query = "USE cogip";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
         // Prepare the query
         $query = "DELETE FROM companies WHERE id = :id";
 
@@ -91,6 +100,9 @@ class CompaniesRepository
 
     public function getAllCompanies()
     {
+        $query = "USE cogip";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
         // Prepare the query
         $query = "SELECT * FROM companies";
 
@@ -112,6 +124,9 @@ class CompaniesRepository
 
     public function getCompaniesById(Companies $companiesData)
     {
+        $query = "USE cogip";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
         // Prepare the query
         $query = "SELECT * FROM companies WHERE id = :id";
 
