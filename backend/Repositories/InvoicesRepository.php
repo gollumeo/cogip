@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Repositories;
+
 use App\Core\Database;
 use App\Models\Invoices;
 use PDO;
@@ -8,14 +9,20 @@ use PDO;
 class InvoicesRepository
 {
     private $database;
+    private $hostname;
 
     public function __construct()
     {
+
         $this->database = Database::getInstance()->getConnection();
     }
 
     public function create(Invoices $invoiceData)
     {
+
+        $query = "USE cogip";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
         // Prepare the SQL query
         $query = "INSERT INTO invoices (company_id, created_at, updated_at) VALUES (?, ?, ?)";
 
@@ -25,7 +32,7 @@ class InvoicesRepository
         // Bind the parameters
         $stmt->bindValue(1, $invoiceData->getCompanyId());
         $stmt->bindValue(2, $invoiceData->getCreatedAt());
-        $stmt->bindValue(3, $invoiceData->getCreatedAt());
+        $stmt->bindValue(3, $invoiceData->getUpdatedAt());
 
         // Execute the statement
         $stmt->execute();
@@ -35,10 +42,15 @@ class InvoicesRepository
 
         header('Content-type: application/json');
         return $json_encode;
+
     }
 
     public function update(Invoices $invoiceData): string
     {
+
+        $query = "USE cogip";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
         // Prepare the query
         $query = "UPDATE invoices SET company_id = :company_id, updated_at = :updated_at WHERE id = :id";
 
@@ -62,6 +74,9 @@ class InvoicesRepository
 
     public function delete(Invoices $invoiceData): string
     {
+        $query = "USE cogip";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
         // Prepare the query
         $query = "DELETE FROM invoices WHERE id = :id";
 
@@ -83,6 +98,10 @@ class InvoicesRepository
 
     public function getAllInvoices()
     {
+        $query = "USE cogip";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
+
         // Prepare the query
         $query = "SELECT * FROM invoices";
 
@@ -92,26 +111,35 @@ class InvoicesRepository
         // Execute the query
         $stmt->execute();
 
-
         $invoiceData = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // Set the json response
         $json_encode = json_encode($invoiceData, true);
 
         header('Content-type: application/json');
-        echo $json_encode;
+        return $json_encode;
+
+
     }
 
-    public function getInvoiceById(Invoices $invoiceData): string
+    public function getInvoiceById(Invoices $invoiceData)
     {
+        $query = "USE cogip";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
         // Prepare the query
         $query = "SELECT * FROM invoices WHERE id = :id";
 
         // Prepare the statement
         $stmt = $this->database->prepare($query);
 
-        // Bind the parameters
-        $stmt->bindValue(':id', $invoiceData->getId());
-        return 'This invoice has been successfully displayed!';
+        // Execute the query
+        $stmt->execute();
+
+        // Set the json response
+        $json_encode = json_encode($invoiceData, true);
+
+        header('Content-type: application/json');
+        echo $json_encode;
     }
 }
