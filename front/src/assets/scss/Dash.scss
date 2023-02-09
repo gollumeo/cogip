@@ -1,0 +1,9 @@
+@import "mixin";
+
+.div-dash {
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+    }
+}

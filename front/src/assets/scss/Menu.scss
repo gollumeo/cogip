@@ -1,0 +1,200 @@
+@import "mixin";
+
+body {
+    @include desktop {
+    margin: 0;
+    padding: 0;
+    background-color: #E7E7E7;
+    display: flex;
+    flex-direction: row;
+    }
+}
+.div-menu {
+    @include desktop {
+        display:flex;
+        flex-direction: column;
+        width: 14%;
+        height:100%;
+    }
+}
+.div-menu .div-user {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding-bottom: 0;
+    padding-top: 2vw;
+    @include desktop {
+        display:flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+}
+.div-menu .div-user .user-img {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 45px;
+    margin: 4vw 0vw 3vw 5vw;
+    @include desktop {
+        display:flex;
+        align-items: center;
+        width: 6vw;
+        height: 6vw;
+        border-radius: 125px;
+        margin-top: 2vw;
+        margin-left: 4vw;
+    }
+}
+.div-menu .div-user .user-name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 6vw;
+    text-align: left;
+    width: 30vw;
+    margin-right: 8vw;
+    margin-top: 7vw;
+    @include desktop {
+        font-size: 2vw;
+        width: 6vw;
+        text-align: center;
+        margin: 1vw 1vw 4vw 4vw;
+    }
+}
+.div-menu .div-logout-mobile {
+    font-family: "Inter", sans-serif;
+    font-size: 3vw;
+    font-weight: 900;
+    color: #9698D6;
+    background-color: white;
+    text-align: right;
+    padding: 0 6vw 4vw 0;
+    @include desktop {
+        display: none;
+    }
+}
+.div-menu .div-nav {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: white;
+    border-top: solid #E0E0E0;
+    height: 13vw;
+    @include desktop {
+        display:flex;
+        flex-direction: column;
+        max-width: 100%;
+        height: max-content;
+    }
+}
+.div-menu .div-nav .div-dashboard {
+    text-align: center;
+    line-height: 1vw;
+    font-family: 'Inter', sans-serif;
+    font-size: 3vw;
+    padding-top: 2vw;
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        margin: 0 2vw 0 2vw;
+        font-size: 1.5vw;
+        height: 1vw;
+    }
+}
+.div-menu .div-nav .dashboard-img {
+    width: 4vw;
+    height: 4vw;
+    @include desktop {
+        width: 1vw;
+        height: 1vw;
+        padding-right: 2vw;
+    }
+}
+.div-menu .div-nav .div-invoices {
+    text-align: center;
+    line-height: 1vw;
+    font-family: 'Inter', sans-serif;
+    font-size: 3vw;
+    padding-top: 2vw;
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        margin: 0 2vw 0 2vw;
+        font-size: 1.5vw;
+        height: 1vw;
+    }
+}
+.div-menu .div-nav .invoices-img {
+    width: 4vw;
+    height: 4vw;
+    @include desktop {
+        width: 1vw;
+        height: 1vw;
+        padding-right: 2vw;
+    }
+}
+.div-menu .div-nav .div-companies {
+    text-align: center;
+    line-height: 1vw;
+    font-family: 'Inter', sans-serif;
+    font-size: 3vw;
+    padding-top: 2vw;
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        margin: 0 2vw 0 2vw;
+        font-size: 1.5vw;        
+        height: 1vw;
+    }
+}
+.div-menu .div-nav .companies-img {
+    width: 4vw;
+    height: 4vw;
+    @include desktop {
+        width: 1vw;
+        height: 1vw;
+        padding-right: 2vw;
+    }
+}
+.div-menu .div-nav .div-contact {
+    text-align: center;
+    line-height: 1vw;
+    font-family: 'Inter', sans-serif;
+    font-size: 3vw;
+    padding-top: 2vw;
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        margin: 0 2vw 100% 2vw;
+        font-size: 1.5vw;
+        height: 1vw;
+    }
+}
+.div-menu .div-nav .contact-img {
+    width: 4vw;
+    height: 4vw;
+    @include desktop {
+        width: 1vw;
+        height: 1vw;
+        padding-right: 2vw;
+    }
+}
+.div-menu .div-logout-desktop {
+    display: none;
+    @include desktop {
+        display: flex;
+        justify-content: center;
+        align-items:baseline;
+        background-color: white;
+        font-family: "Inter", sans-serif;
+        font-size: 2vw;
+        font-weight: 900;
+        color: #9698D6;
+    }
+}
