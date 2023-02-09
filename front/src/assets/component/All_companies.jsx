@@ -1,13 +1,11 @@
-import React, {useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
-import ReactPaginate from 'react-paginate';
-import '../scss/All_invoices.scss'
+import React from 'react';
+import '../scss/All_companies.scss';
 import yellow_rectangle from '/public/img/Rectangle 19.svg'
 
-const All_invoices = () => {
+const All_contacts = () => {
     return (
         <section className='section_last_invoices'>
-            <h3>All invoices</h3>
+            <h3>All companies</h3>
             <img src={yellow_rectangle} alt="yellow_rectangle" className='yellow_rectangle'/>
             <input type="text" placeholder='Search company' className='input_text'/>
             <section className='table_last_invoices'>
@@ -58,4 +56,4 @@ const All_invoices = () => {
     );
 };
 
-export default All_invoices;
+export default All_contacts;

@@ -22,7 +22,7 @@
   width: 30%;
   position: absolute;
   top: 15.5%;
-  left: 25.5%;
+  left: 27%;
   z-index: 0;
 }
 @media screen and (min-width: 1280px) {
@@ -86,4 +86,4 @@
 }
 .section_last_invoices .table_last_invoices table tbody tr:nth-child(odd) {
   background-color: #ffffff;
-}/*# sourceMappingURL=All_invoices.css.map */
+}/*# sourceMappingURL=All_companies.css.map */
