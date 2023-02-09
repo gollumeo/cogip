@@ -2,84 +2,70 @@
 
 namespace App\Controllers;
 
-use App\Core\Controller;
+use App\Models\Invoices;
+use App\Repositories\InvoicesRepository;
+use App\Services\InvoicesService;
 
-class InvoicesController extends Controller
+// TODO: Sanitization & Validation of inputs
+
+class InvoicesController
 {
-    public function index()
-    {
-        // Fetch all invoices from the database
-        $invoices = $this->db->query("SELECT * FROM invoices");
+//    private $invoicesRepository;
+    private $invoicesService;
 
-        return response()->json([
-            'data' => $invoices
-        ], 200);
+    public function __construct()
+    {
+        $this->invoicesRepository = new InvoicesRepository();
+        $this->invoicesService = new InvoicesService();
     }
 
-    public function show($id)
+    public function createInvoice()
     {
-        // Fetch a single invoice by its ID from the database
-        $invoice = $this->db->query("SELECT * FROM invoices WHERE id = :id", [
-            'id' => $id
-        ]);
+        $companyId = $_POST['company_id'];
+        $invoiceData = new Invoices($companyId);
 
-        return response()->json([
-            'data' => $invoice
-        ], 200);
+        $invoiceData->setCreatedAt(date('Y-m-d H:i:s'));
+        $invoiceData->setUpdatedAt(date('Y-m-d H:i:s'));
+
+        $this->invoicesService->createInvoice($invoiceData);
     }
 
-    public function store($request)
+    public function updateInvoice()
     {
-        // Validate the incoming data
-        $data = validate($request->getParams(), [
-            'customer_id' => 'required',
-            'amount' => 'required|numeric',
-            'due_date' => 'required|date'
-        ]);
+        $invoiceData = new Invoices();
 
-        // Insert the validated data into the database
-        $this->db->query("INSERT INTO invoices (customer_id, amount, due_date) VALUES (:customer_id, :amount, :due_date)", [
-            'customer_id' => $data['customer_id'],
-            'amount' => $data['amount'],
-            'due_date' => $data['due_date']
-        ]);
+        $invoiceData->setId($_POST['id']);
+        $invoiceData->setCompanyId($_POST['company_id']);
+        $invoiceData->setUpdatedAt(date('Y-m-d H:i:s'));
 
-        return response()->json([
-            'message' => 'Invoice created successfully'
-        ], 201);
+        $this->invoicesService->updateInvoice($invoiceData);
     }
 
-    public function update($request, $id)
+    public function deleteInvoice()
     {
-        // Validate the incoming data
-        $data = validate($request->getParams(), [
-            'customer_id' => 'sometimes|required',
-            'amount' => 'sometimes|required|numeric',
-            'due_date' => 'sometimes|required|date'
-        ]);
+        $invoiceData = new Invoices();
 
-        // Update the existing invoice in the database
-        $this->db->query("UPDATE invoices SET customer_id = :customer_id, amount = :amount, due_date = :due_date WHERE id = :id", [
-            'id' => $id,
-            'customer_id' => $data['customer_id'],
-            'amount' => $data['amount'],
-            'due_date' => $data['due_date']
-        ]);
+        $invoiceData->setId($_POST['id']);
 
-        return response()->json([
-            'message' => 'Invoice updated successfully'
-        ], 200);
+        $this->invoicesService->deleteInvoice($invoiceData);
     }
 
-    public function delete($id)
+    public function getAllInvoices()
     {
-        // Delete the invoice from the database
-        $this->db->query("DELETE FROM invoices WHERE id = :id", [
-            'id' => $id
-        ]);
+        $allInvoices = $this->invoicesService->getAllInvoices();
+        header('Content-Type: application/json');
+        echo $allInvoices;
+    }
 
-        return response()->json([
-            'message' => 'Invoice deleted successfully'
-        ], 200);
+    public function getInvoiceById()
+    {
+        $invoiceData = new Invoices();
+
+        $invoiceData->setId($_GET['id']);
+
+        $invoiceById = $this->invoicesService->getInvoiceById($invoiceData);
+        header('Content-Type: application/json');
+        echo $invoiceById;
+
     }
 }
