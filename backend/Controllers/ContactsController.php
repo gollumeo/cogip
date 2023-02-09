@@ -29,6 +29,8 @@ class ContactsController
         $contactsData->setUpdatedAt(date('Y-m-d H:i:s'));
 
         $this->contactsService->createCompanies($contactsData);
+
+        echo "Contact successfully created!";
     }
 
     public function updateContacts()
@@ -43,6 +45,9 @@ class ContactsController
         $contactsData->setUpdatedAt(date('Y-m-d H:i:s'));
 
         $this->contactsService->createCompanies($contactsData);
+
+        echo "Contact successfully updated!";
+
     }
 
     public function deleteContacts()
@@ -52,11 +57,16 @@ class ContactsController
         $contactsData->setId($_POST['id']);
 
         $this->contactsService->deleteContacts($contactsData);
+
+        echo "Contact successfully created!";
+
     }
 
     public function getAllContacts()
     {
-        $this->contactsService->getAllContacts();
+        $allContacts = $this->contactsService->getAllContacts();
+        header('Content-Type: application/json');
+        echo $allContacts;
     }
 
     public function getContactsByid()
@@ -65,6 +75,8 @@ class ContactsController
 
         $contactsData->setId($_GET['id']);
 
-        $this->contactsService->getContactsByid($contactsData);
+        $contactsByid = $this->contactsService->getContactsById($contactsData);
+        header('Content-Type: application/json');
+        echo $contactsByid;
     }
 }

@@ -1,40 +1,53 @@
 <?php
 
 namespace App\Routes;
-
 use App\Controllers\CompaniesController;
 use App\Controllers\ContactsController;
 use App\Controllers\InvoicesController;
 use Bramus\Router\Router;
 
+if (isset($_SERVER['HTTP_ORIGIN'])) {
+    // Decide if the origin in $_SERVER['HTTP_ORIGIN'] is one
+    // you want to allow, and if so:
+    header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Allow-Credentials: true');
+    header('Access-Control-Max-Age: 1000');
+}
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD'])) {
+        // may also be using PUT, PATCH, HEAD etc
+        header("Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE, PATCH, HEAD");
+    }
+
+    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS'])) {
+        header("Access-Control-Allow-Headers: Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization");
+    }
+    exit(0);
+}
+
 $router = new Router();
 
-$invoicesController = new InvoicesController();
 
 $router->get('/invoices', function () {
-//    header('Content-Type: application/json');
-//    echo $invoicesController->getAllInvoices();
-    echo "coucou";
+
+    return (new InvoicesController())->getAllInvoices();
 });
 
-$router->get('/invoices/{id}', function ($id) use ($invoicesController) {
-    header('Content-Type: application/json');
-    echo $invoicesController->getInvoiceById($id);
+$router->get('/invoices/{id}', function ($id) {
+
+    return  (new InvoicesController())->getInvoiceById($id);
 });
 
-$router->post('/invoices', function () use ($invoicesController) {
-    header('Content-Type: application/json');
-    echo $invoicesController->createInvoice();
+$router->post('/invoices', function () {
+     (new InvoicesController())->createInvoice();
 });
 
-$router->put('/invoices/{id}', function ($id) use ($invoicesController) {
-    header('Content-Type: application/json');
-    echo $invoicesController->updateInvoice($id);
+$router->put('/invoices/{id}', function ($id) {
+    (new InvoicesController())->updateInvoice($id);
 });
 
-$router->delete('/invoices/{id}', function ($id) use ($invoicesController) {
-    header('Content-Type: application/json');
-    echo $invoicesController->deleteInvoice($id);
+$router->delete('/invoices/{id}', function ($id) {
+    (new InvoicesController())->deleteInvoice($id);
 });
 
 
@@ -44,29 +57,25 @@ $router->delete('/invoices/{id}', function ($id) use ($invoicesController) {
 
 $companiesController = new CompaniesController();
 
-$router->get('/companies', function () use ($companiesController) {
-    header('Content-Type: application/json');
-    echo $companiesController->getAllCompanies();
+$router->get('/companies', function () {
+    return (new CompaniesController())->getAllCompanies();
 });
 
-$router->get('/companies/{id}', function ($id) use ($companiesController) {
+$router->get('/companies/{id}', function ($id) {
     header('Content-Type: application/json');
-    echo $companiesController->getCompaniesById($id);
+    return (new CompaniesController())->getCompaniesById($id);
 });
 
-$router->post('/companies', function () use ($companiesController) {
-    header('Content-Type: application/json');
-    echo $companiesController->createCompanies();
+$router->post('/companies', function () {
+    (new CompaniesController())->createCompanies();
 });
 
-$router->put('/companies/{id}', function ($id) use ($companiesController) {
-    header('Content-Type: application/json');
-    echo $companiesController->updateCompanies($id);
+$router->put('/companies/{id}', function ($id) {
+    (new CompaniesController())->updateCompanies($id);
 });
 
-$router->delete('/companies/{id}', function ($id) use ($companiesController) {
-    header('Content-Type: application/json');
-    echo $companiesController->deleteCompanies($id);
+$router->delete('/companies/{id}', function ($id) {
+    (new CompaniesController())->deleteCompanies($id);
 });
 
 ///////////////////////////////////////////
@@ -75,29 +84,24 @@ $router->delete('/companies/{id}', function ($id) use ($companiesController) {
 
 $contactsController = new ContactsController();
 
-$router->get('/contacts', function () use ($contactsController) {
-    header('Content-Type: application/json');
-    echo $contactsController->getAllContacts();
+$router->get('/contacts', function () {
+    return (new ContactsController())->getAllContacts();
 });
 
-$router->get('/contacts/{id}', function ($id) use ($contactsController) {
-    header('Content-Type: application/json');
-    echo $contactsController->getContactsById($id);
+$router->get('/contacts/{id}', function ($id) {
+    return (new ContactsController())->getContactsById($id);
 });
 
-$router->post('/contacts', function () use ($contactsController) {
-    header('Content-Type: application/json');
-    echo $contactsController->createContacts();
+$router->post('/contacts', function () {
+    (new ContactsController())->createContacts();
 });
 
-$router->put('/contacts/{id}', function ($id) use ($contactsController) {
-    header('Content-Type: application/json');
-    echo $contactsController->updateContacts($id);
+$router->put('/contacts/{id}', function ($id) {
+    (new ContactsController())->updateContacts($id);
 });
 
-$router->delete('/contacts/{id}', function ($id) use ($contactsController) {
-    header('Content-Type: application/json');
-    echo $contactsController->deleteContacts($id);
+$router->delete('/contacts/{id}', function ($id) {
+    (new ContactsController())->deleteContacts($id);
 });
 
 $router->run();

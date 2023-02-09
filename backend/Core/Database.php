@@ -2,9 +2,10 @@
 
 namespace App\Core;
 
-use Dotenv;
+require_once __DIR__ . '/../vendor/autoload.php';
 use PDO;
 use PDOException;
+use Dotenv\Dotenv;
 
 class Database
 {
@@ -18,13 +19,14 @@ class Database
 
     private function __construct()
     {
-        $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+        $dotenv = Dotenv::createImmutable(__DIR__);
         $dotenv->load();
+
         $this->conn = null;
-        $this->hostname = "185.98.131.160";
-        $this->dbname = "pierr2048665";
-        $this->username = "pierr2048665";
-        $this->password = "0147852369Pit!";
+        $this->hostname = $_ENV['DB_HOST'];
+        $this->dbname = $_ENV['DB_NAME'];
+        $this->username = $_ENV['DB_USER'];
+        $this->password = $_ENV['DB_PASS'];
 
 
         try {
