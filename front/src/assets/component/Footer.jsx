@@ -1,17 +1,17 @@
 import React from 'react';
 import "/src/assets/scss/Footer.css";
 
-import localisation from "/public/img/localisation.png";
-import phone from "/public/img/phone.png";
-import fax from "/public/img/fax.png";
-import facebook from "/public/img/facebook.png";
-import twitter from "/public/img/twitter.png";
-import linkedin from "/public/img/linkedin.png";
-import youtube from "/public/img/youtube.png";
-import instagram from "/public/img/instagram.png";
-import google from "/public/img/GooglePlus.png";
-import pinterest from "/public/img/pinterest.png";
-import rss from "/public/img/rss.png";
+import localisation from "../../../public/img/localisation.png";
+import phone from "../../../public/img/phone.png";
+import fax from "../../../public/img/fax.png";
+import facebook from "../../../public/img/Facebook.png";
+import twitter from "../../../public/img/Twitter.png";
+import linkedin from "../../../public/img/Linkedin.png";
+import youtube from "./public/img/Youtube.png";
+import instagram from "./public/img/Instagram.png";
+import google from "./public/img/GooglePlus.png";
+import pinterest from "./public/img/Pinterest.png";
+import rss from "./public/img/rss.png";
 import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
