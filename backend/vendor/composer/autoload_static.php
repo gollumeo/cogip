@@ -32,6 +32,10 @@ class ComposerStaticInitbb692557b4519dba913e38b16f9a5bf6
         array (
             'GrahamCampbell\\ResultType\\' => 26,
         ),
+        'F' => 
+        array (
+            'Faker\\' => 6,
+        ),
         'D' => 
         array (
             'Dotenv\\' => 7,
@@ -70,6 +74,10 @@ class ComposerStaticInitbb692557b4519dba913e38b16f9a5bf6
         'GrahamCampbell\\ResultType\\' => 
         array (
             0 => __DIR__ . '/..' . '/graham-campbell/result-type/src',
+        ),
+        'Faker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
         ),
         'Dotenv\\' => 
         array (
