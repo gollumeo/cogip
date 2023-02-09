@@ -4,6 +4,7 @@ import Home from './assets/pages/Home';
 import Invoices from './assets/pages/Invoices';
 import Companies from './assets/pages/Companies';
 import Contacts from './assets/pages/Contacts';
+import Dashboard from './assets/pages/Dashboard';
 
 const App = () => {
     return (
@@ -14,6 +15,7 @@ const App = () => {
                 <Route path='/companies' element={<Companies />} />
                 <Route path='/contacts' element={<Contacts />} />
                 <Route path='*' element={<Home />} />
+                <Route path='/dashboard' element={<Dashboard />} />
             </Routes>
         </BrowserRouter>
     );
