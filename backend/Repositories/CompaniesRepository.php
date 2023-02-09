@@ -40,7 +40,6 @@ class CompaniesRepository
         // Set the json response
         $json_encode = json_encode(['message' => 'Companies successfully created!'], true);
 
-        header('Content-type: application/json');
         return $json_encode;
     }
 
@@ -70,7 +69,6 @@ class CompaniesRepository
         // Set the json response
         $json_encode = json_encode(['message' => 'Companies successfully updated!'], true);
 
-        header('Content-type: application/json');
         return $json_encode;
     }
 
@@ -92,17 +90,19 @@ class CompaniesRepository
         $stmt->execute();
 
         // Set the json response
-        $json_encode = json_encode(['message' => 'Companies successfully created!'], true);
+        $json_response = json_encode(['message' => 'Company successfully deleted!'], JSON_THROW_ON_ERROR);
 
-        header('Content-type: application/json');
-        return $json_encode;
+        header('Content-Type: application/json');
+        return $json_response;
     }
 
-    public function getAllCompanies()
+
+    public function getAllCompanies(): string
     {
         $query = "USE cogip";
         $stmt = $this->database->prepare($query);
         $stmt->execute();
+
         // Prepare the query
         $query = "SELECT * FROM companies";
 
@@ -112,34 +112,40 @@ class CompaniesRepository
         // Execute the query
         $stmt->execute();
 
-
         $companiesData = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // Set the json response
-        $json_encode = json_encode($companiesData, true);
+        $json = json_encode($companiesData, JSON_PRETTY_PRINT);
 
         header('Content-type: application/json');
-        echo $json_encode;
+        return $json;
     }
+
 
     public function getCompaniesById(Companies $companiesData)
     {
         $query = "USE cogip";
         $stmt = $this->database->prepare($query);
         $stmt->execute();
+
         // Prepare the query
         $query = "SELECT * FROM companies WHERE id = :id";
-
-        // Prepare the statement
         $stmt = $this->database->prepare($query);
 
-        // Execute the query
+        // Bind the parameters
+        $stmt->bindValue(':id', $companiesData->getId());
+
+        // Execute the statement
         $stmt->execute();
 
+        // Fetch the result
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
         // Set the json response
-        $json_encode = json_encode($companiesData, true);
+        $json_response = json_encode($result, JSON_PRETTY_PRINT);
 
         header('Content-type: application/json');
-        echo $json_encode;
+        echo $json_response;
     }
+
 }

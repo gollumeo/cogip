@@ -69,7 +69,7 @@ class ContactsController
         echo $allContacts;
     }
 
-    public function getContactsByid()
+    public function getContactsById()
     {
         $contactsData = new Contacts();
 

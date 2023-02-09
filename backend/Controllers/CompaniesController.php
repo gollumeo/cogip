@@ -73,8 +73,8 @@ class CompaniesController
 
         $companiesData->setId($_GET['id']);
 
-        $companiesByid = $this->companiesService->getCompaniesByid($companiesData);
+        $companiesById = $this->companiesService->getCompaniesByid($companiesData);
         header('Content-Type: application/json');
-        echo $companiesByid;
+        echo $companiesById;
     }
 }
