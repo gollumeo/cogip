@@ -10,12 +10,26 @@
   font-family: "Inter", sans-serif;
   font-size: 160%;
   text-align: left;
+  z-index: 1;
 }
 @media screen and (min-width: 1280px) {
   .section_last_invoices h3 {
     margin-top: 5%;
     font-size: 200%;
   }
+}
+.section_last_invoices .yellow_rectangle {
+  width: 13%;
+  position: absolute;
+  top: 28%;
+  left: 16%;
+  z-index: 0;
+}
+.section_last_invoices .input_text {
+  padding: 0.5%;
+  border-radius: 10px;
+  border: solid 1px;
+  border-color: #636363;
 }
 .section_last_invoices .table_last_invoices {
   width: 80%;
@@ -59,17 +73,4 @@
 }
 .section_last_invoices .table_last_invoices table tbody tr:nth-child(odd) {
   background-color: #ffffff;
-}
-.section_last_invoices .green_arm {
-  width: 15%;
-  position: relative;
-  left: 43%;
-  top: 97%;
-}
-@media screen and (min-width: 1280px) {
-  .section_last_invoices .green_arm {
-    width: 10%;
-    left: 45%;
-    top: 125%;
-  }
-}/*# sourceMappingURL=Last_invoices.css.map */
+}/*# sourceMappingURL=All_invoices.css.map */
