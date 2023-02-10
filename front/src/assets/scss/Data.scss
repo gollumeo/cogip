@@ -1,0 +1,200 @@
+.div-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+//-------------------------- Statistics ------------------------------//
+.div-content .div-stat {
+    background-color: white;
+    padding: 1vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    font-family: "Inter", sans-serif;
+}
+.div-content .div-stat .h2-stat {
+    font-size: 3vw;
+    font-weight: 700;
+    padding-right: 70vw;
+    padding-bottom: 3vw;
+    margin-left: 8vw;
+}
+.div-content .div-stat .div-invoices {
+    background:url("/img/EllipseBleue.png");
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    width: 25vw;
+    height: 25vw;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 1vw;
+    padding-top: 1vw;
+}
+.div-content .div-stat .invoices-stat {
+    font-size: 4vw;
+    width: 20vw;
+}
+.div-content .div-stat .div-contacts {
+    background:url("/img/EllipseLavande.png");
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    width: 25vw;
+    height: 25vw;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: -1vw;
+    padding-top: 1vw;
+}
+.div-content .div-stat .contacts-stat {
+    font-size: 4vw;
+}
+.div-content .div-stat .div-companies {
+    background:url("/img/EllipseRose.png");
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    width: 25vw;
+    height: 25vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+.div-content .div-stat .companies-stat {
+    font-size: 4vw;
+}
+//-------------------------- Invoices ------------------------------//
+.div-content .Tb_Invoices-section {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4vw;
+    padding-bottom: 4vw;
+    margin-top: 2vw;
+    background-color: #ffffff;
+  }
+  .div-content .Tb_Invoices-section h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 5vw;
+    text-align: left;
+  }
+  .div-content .Tb_Invoices-section .line-h3tb {
+    padding-bottom: 4vw;
+    max-width: 90%;
+  }
+  .div-content .Tb_Invoices-section .Tb_Invoices-table {
+    margin-right: 6vw;
+    overflow-x: auto;
+  }
+  .div-content .Tb_Invoices-section .Tb_Invoices-table table {
+    width: 150vw;
+    border-collapse: collapse;
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+  }
+  .div-content .Tb_Invoices-section .Tb_Invoices-table table thead tr th {
+    font-size: 4vw;
+    font-weight: 900;
+    padding: 2vw;
+  }
+  .div-content .Tb_Invoices-section .Tb_Invoices-table table tbody tr th {
+    font-size: 4vw;
+    font-weight: 500;
+  }
+  .div-content .Tb_Invoices-section .Tb_Invoices-table table tbody tr .invoice-number {
+    padding: 2vw 0 2vw 0;
+  }
+  .div-content .Tb_Invoices-section .Tb_Invoices-table table tbody tr .company {
+    padding-left: 15vw;
+    text-align: left;
+  }
+  //-------------------------- Contacts ------------------------------//
+  .div-content .Tb_Contacts-section {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4vw;
+    padding-bottom: 4vw;
+    margin-top: 2vw;
+    background-color: #ffffff;
+  }
+  .div-content .Tb_Contacts-section h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 5vw;
+    text-align: left;
+  }
+  .div-content .Tb_Contacts-section .line-h3tb {
+    padding-bottom: 4vw;
+    max-width: 90%;
+  }
+  .div-content .Tb_Contacts-section .Tb_Contacts-table {
+    margin-right: 6vw;
+    overflow-x: auto;
+  }
+  .div-content .Tb_Contacts-section .Tb_Contacts-table table {
+    width: 150vw;
+    border-collapse: collapse;
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+  }
+  .div-content .Tb_Contacts-section .Tb_Contacts-table table thead tr th {
+    font-size: 4vw;
+    font-weight: 900;
+    padding: 2vw;
+  }
+  .div-content .Tb_Contacts-section .Tb_Contacts-table table tbody tr th {
+    font-size: 4vw;
+    font-weight: 500;
+  }
+  .div-content .Tb_Contacts-section .Tb_Contacts-table table tbody tr .name {
+    padding: 2vw 0 2vw 6vw;
+    text-align: left;
+  }
+  .div-content .Tb_Contacts-section .Tb_Contacts-table table tbody tr .email {
+    padding-left: 15vw;
+    text-align: left;
+  }
+  //-------------------------- Companies ------------------------------//
+  .div-content .Tb_Companies-section {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4vw;
+    padding-bottom: 4vw;
+    margin-top: 2vw;
+    margin-bottom:8vw;
+    background-color: #ffffff;
+  }
+  .div-content .Tb_Companies-section h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 5vw;
+    text-align: left;
+  }
+  .div-content .Tb_Companies-section .line-h3tb {
+    padding-bottom: 4vw;
+    max-width: 90%;
+  }
+  .div-content .Tb_Companies-section .Tb_Companies-table {
+    margin-right: 6vw;
+    overflow-x: auto;
+  }
+  .div-content .Tb_Companies-section .Tb_Companies-table table {
+    width: 150vw;
+    border-collapse: collapse;
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+  }
+  .div-content .Tb_Companies-section .Tb_Companies-table table thead tr th {
+    font-size: 4vw;
+    font-weight: 900;
+    padding: 2vw;
+  }
+  .div-content .Tb_Companies-section .Tb_Companies-table table tbody tr th {
+    font-size: 4vw;
+    font-weight: 500;
+  }
+  .div-content .Tb_Companies-section .Tb_Companies-table table tbody tr .name {
+    padding: 2vw 0 2vw 6vw;
+    text-align: left;
+  }
+  .div-content .Tb_Companies-section .Tb_Companies-table table tbody tr .country {
+    padding-left: 15vw;
+    text-align: left;
+  }

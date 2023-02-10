@@ -13,7 +13,7 @@ body {
     @include desktop {
         display:flex;
         flex-direction: column;
-        width: 14%;
+        width: 22vw;
         height:100%;
     }
 }
@@ -37,11 +37,11 @@ body {
     @include desktop {
         display:flex;
         align-items: center;
-        width: 6vw;
-        height: 6vw;
-        border-radius: 125px;
         margin-top: 2vw;
-        margin-left: 4vw;
+        margin-left: 7vw;
+        width: 8vw;
+        height: 8vw;
+        border-radius: 125px;
     }
 }
 .div-menu .div-user .user-name {
@@ -53,10 +53,10 @@ body {
     margin-right: 8vw;
     margin-top: 7vw;
     @include desktop {
-        font-size: 2vw;
+        font-size: 2.5vw;
         width: 6vw;
         text-align: center;
-        margin: 1vw 1vw 4vw 4vw;
+        margin: 0 0 4vw 7vw;
     }
 }
 .div-menu .div-logout-mobile {
@@ -83,6 +83,7 @@ body {
         flex-direction: column;
         max-width: 100%;
         height: max-content;
+        padding-left: 3vw;
     }
 }
 .div-menu .div-nav .div-dashboard {
