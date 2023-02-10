@@ -9,6 +9,13 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="d72efdb0-e419-4ce8-a9e3-40f1c46fcd8a" name="LWS API" url="http://ftp.pierre-mauriello.be">
+        <fileTransfer host="ftp.pierre-mauriello.be" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

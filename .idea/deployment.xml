@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="lws">
+  <component name="PublishConfigData" autoUpload="Always" serverName="lws-cogip (main)">
     <serverData>
-      <paths name="lws">
+      <paths name="LWS API">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="lws-cogip (main)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="pierre-mauriello.be">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
