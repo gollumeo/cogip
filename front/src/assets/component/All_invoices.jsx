@@ -1,6 +1,4 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
-// import ReactPaginate from 'react-paginate';
 import '../scss/All_invoices.scss'
 import { useEffect, useState } from 'react'
 
@@ -15,6 +13,8 @@ const All_invoices = () => {
             });
     }, 
     []);
+    console.log(data);
+
     return (
         <section className='section_last_invoices'>
             <h3>All invoices</h3>
