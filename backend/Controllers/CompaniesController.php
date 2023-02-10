@@ -38,10 +38,9 @@ class CompaniesController
         $companiesData = new Companies();
 
         $companiesData->setName($_POST['name']);
-        $companiesData->setTypeid($_POST['type_id']);
+        $companiesData->setTypeId($_POST['type_id']);
         $companiesData->setCountry($_POST['country']);
         $companiesData->setTva($_POST['tva']);
-        $companiesData->setCreatedAt(date('Y-m-d H:i:s'));
         $companiesData->setUpdatedAt(date('Y-m-d H:i:s'));
 
         $this->companiesService->createCompanies($companiesData);
