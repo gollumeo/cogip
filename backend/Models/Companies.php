@@ -40,7 +40,7 @@ class Companies
         $this->name = $name;
     }
 
-    public function getTypeid()
+    public function getTypeId()
     {
         return $this->type_id;
     }
