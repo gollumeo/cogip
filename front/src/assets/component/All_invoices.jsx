@@ -8,7 +8,8 @@ const All_invoices = () => {
     return (
         <section className='section_last_invoices'>
             <h3>All invoices</h3>
-            <img src={yellow_rectangle} alt="yellow_rectangle" className='yellow_rectangle'/>
+            {/* <img src={yellow_rectangle} alt="yellow_rectangle" className='yellow_rectangle'/> */}
+            <hr className='yellow_rectangle'/>
             <input type="text" placeholder='Search company' className='input_text'/>
             <section className='table_last_invoices'>
                 <table>
