@@ -6,7 +6,8 @@ const All_contacts = () => {
     return (
         <section className='section_last_invoices'>
             <h3>All contacts</h3>
-            <img src={yellow_rectangle} alt="yellow_rectangle" className='yellow_rectangle'/>
+            {/* <img src={yellow_rectangle} alt="yellow_rectangle" className='yellow_rectangle'/> */}
+            <hr className='yellow_rectangle_2'/>
             <input type="text" placeholder='Search company' className='input_text'/>
             <section className='table_last_invoices'>
                 <table>
