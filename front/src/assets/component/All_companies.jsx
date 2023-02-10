@@ -1,9 +1,8 @@
 import React from 'react';
-import "/src/assets/scss/Last_contacts.css";
-import bulb from "/public/img/bulb.png";
+import '../scss/All_companies.scss';
 import { useEffect, useState } from 'react'
 
-const Last_contacts = () => {
+const All_contacts = () => {
     const [data, setData] = useState([]);
     
     useEffect(() => {
@@ -15,28 +14,28 @@ const Last_contacts = () => {
     }, 
     []);
     return (
-        <section className='section_last_contacts'>
-            <h3>Last Contacts</h3>
-            <section className='table_last_contacts'>
+        <section className='section_last_invoices'>
+            <h3>All companies</h3>
+            <hr className='yellow_rectangle_3'/>
+            <input type="text" placeholder='Search company' className='input_text'/>
+            <section className='table_last_invoices'>
                 <table>
                     <thead> 
                         <tr>
-                            <th>IName</th>
-                            <th>Phone</th>
-                            <th>Mail</th>
+                            <th>Invoice number</th>
+                            <th>Dates due</th>
                             <th>Company</th>
                             <th>Created at</th>
                         </tr> 
                     </thead>
                     <tbody>
                         {
-                            data.slice(0, 5).map((companie) => {
+                            data.map((companie) => {
                                 return( 
                                 <tr>
                                     <th>{companie.id}</th>
                                     <th>{companie.company_id}</th>
                                     <th>{companie.created_at}</th>
-                                    <th>{companie.updated_at}</th>
                                     <th>{companie.updated_at}</th>
                                 </tr>
                                 )
@@ -45,9 +44,8 @@ const Last_contacts = () => {
                     </tbody>
                 </table>
             </section>
-            <img src={bulb} alt="bulb" className='bulb' />
         </section>
     );
 };
 
-export default Last_contacts;
+export default All_contacts;

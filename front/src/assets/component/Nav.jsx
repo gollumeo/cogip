@@ -7,11 +7,11 @@ import { useState } from 'react';
 function Nav(){
 
   const [ isOpen, setIsOpen ] = useState(false);
-  console.log(isOpen);
+  // console.log(isOpen);
 
-  // const showBurgerMenu = () => {
-  //   setIsOpen(!isOpen)
-  // };
+  const showBurgerMenu = () => {
+    setIsOpen(!isOpen)
+  };
 
 
 const displayValue = isOpen ? 'flex' : 'none';
@@ -44,7 +44,7 @@ return (
           <NavLink to="*" className="nav_link_2">
             <li className='sign_up'>Sign up</li>
           </NavLink>
-          <NavLink to="dashboard" className="nav_link">
+          <NavLink to="/dashboard" className="nav_link">
             <li className='login'>Login</li>
           </NavLink>
         </ul>

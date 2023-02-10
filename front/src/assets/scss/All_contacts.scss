@@ -17,17 +17,17 @@
             font-size: 250%;
         }
     }
-    .yellow_rectangle{
+    .yellow_rectangle_2{
         background-color:#F9DE4E;
         border: none;
         height: 1rem;
         width: 35%;
         position: absolute;
         top: 14.5%;
-        left: 25%;
+        left: 27.5%;
         @include desktop{
             top: 28%;
-            left: 17.5%;
+            left: 18.5%;
             height: 1.5rem;
             width: 17%;
         }
