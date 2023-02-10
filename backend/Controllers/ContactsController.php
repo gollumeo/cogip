@@ -41,7 +41,6 @@ class ContactsController
         $contactsData->setCompanyId($_POST['company_id']);
         $contactsData->setEmail($_POST['email']);
         $contactsData->setPhone($_POST['phone']);
-        $contactsData->setCreatedAt(date('Y-m-d H:i:s'));
         $contactsData->setUpdatedAt(date('Y-m-d H:i:s'));
 
         $this->contactsService->createCompanies($contactsData);
@@ -80,3 +79,5 @@ class ContactsController
         echo $contactsByid;
     }
 }
+
+// TODO: bug company_id bdd (type_id) & populate contacts

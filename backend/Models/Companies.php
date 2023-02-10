@@ -45,7 +45,7 @@ class Companies
         return $this->type_id;
     }
 
-    public function setTypeid($type_id)
+    public function setTypeId($type_id)
     {
         $this->type_id = $type_id;
     }
