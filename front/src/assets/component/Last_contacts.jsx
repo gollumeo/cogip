@@ -1,8 +1,19 @@
 import React from 'react';
 import "/src/assets/scss/Last_contacts.css";
 import bulb from "/public/img/bulb.png";
+import { useEffect, useState } from 'react'
 
 const Last_contacts = () => {
+    const [data, setData] = useState([]);
+    
+    useEffect(() => {
+        fetch("https://cogip-api.pierre-mauriello.be/invoices")
+            .then ((resp) => resp.json())
+            .then ((apiData) => {
+                setData(apiData);
+            });
+    }, 
+    []);
     return (
         <section className='section_last_contacts'>
             <h3>Last Contacts</h3>
@@ -18,41 +29,19 @@ const Last_contacts = () => {
                         </tr> 
                     </thead>
                     <tbody>
-                        <tr>
-                            <th>Peter Gregory</th>
-                            <th>1555-8765</th>
-                            <th>peter.gregory@raviga.com</th>
-                            <th>Raviga</th>
-                            <th>25/09/2020</th>
-                        </tr>
-                        <tr>
-                            <th>Cameron How</th>
-                            <th>555-8765</th>
-                            <th>cam.how@mutiny.net</th>
-                            <th>Mutiny</th>
-                            <th>25/09/2020</th>
-                        </tr>
-                        <tr>
-                            <th>Gavin Belson</th>
-                            <th>555-6354</th>
-                            <th>gavin@hooli.com</th>
-                            <th>Hooli</th>
-                            <th>25/09/2020</th>
-                        </tr>
-                        <tr>
-                            <th>Jian Yang</th>
-                            <th>555-8765</th>
-                            <th>jian.yan@phoque.off</th>
-                            <th>Phoque Off</th>
-                            <th>25/09/2020</th>
-                        </tr>
-                        <tr>
-                            <th>Bertram Gilfoyle</th>
-                            <th>555-5434</th>
-                            <th>gilfoy@piedpiper.com</th>
-                            <th>Pied Pipper</th>
-                            <th>25/09/2020</th>
-                        </tr>
+                        {
+                            data.slice(0, 5).map((companie) => {
+                                return( 
+                                <tr>
+                                    <th>{companie.id}</th>
+                                    <th>{companie.company_id}</th>
+                                    <th>{companie.created_at}</th>
+                                    <th>{companie.updated_at}</th>
+                                    <th>{companie.updated_at}</th>
+                                </tr>
+                                )
+                            })
+                        }
                     </tbody>
                 </table>
             </section>
