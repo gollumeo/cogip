@@ -7,11 +7,11 @@ import { useState } from 'react';
 function Nav(){
 
   const [ isOpen, setIsOpen ] = useState(false);
-  console.log(isOpen);
+  // console.log(isOpen);
 
-  // const showBurgerMenu = () => {
-  //   setIsOpen(!isOpen)
-  // };
+  const showBurgerMenu = () => {
+    setIsOpen(!isOpen)
+  };
 
 
 const displayValue = isOpen ? 'flex' : 'none';
