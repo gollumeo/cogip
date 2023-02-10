@@ -1,8 +1,8 @@
-import henry from '/public/img/Henry.png';
-import dashboard from '/public/img/dashboard.png';
-import invoices from '/public/img/invoices.png';
-import companies from '/public/img/companies.png';
-import contact from '/public/img/contact.png';
+import henry from '/img/Henry.png';
+import dashboard from '/img/dashboard.png';
+import invoices from '/img/invoices.png';
+import companies from '/img/companies.png';
+import contact from '/img/contact.png';
 import "../scss/Menu.scss";
 import React from 'react';
 

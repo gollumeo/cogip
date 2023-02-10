@@ -1,0 +1,7 @@
+@media screen and (min-width: 1280px) {
+  .div-dash {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+}/*# sourceMappingURL=Dash.css.map */

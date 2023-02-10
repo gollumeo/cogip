@@ -1,0 +1,96 @@
+@import "mixin";
+
+.div-top {
+    font-family: 'Inter', sans-serif;
+    @include desktop {
+        width: 90vw;
+        height: 40vw;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-right: 4vw;
+    }
+}
+/*.div-top .div-header {
+    @include desktop {
+        margin-left: 4vw;
+        margin-right: 4vw;
+        width: 90vw;
+        height: 30vw;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}*/
+.div-top .illustr-welcome {
+    width: 45vw;
+    height: auto;
+    @include desktop {
+        width: 30vw;
+        height: auto;
+        z-index: auto;
+        }
+    }
+.div-top .div-header .title-header {
+    font-size: 6vw;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 8vw;
+    line-height: 0%;
+    @include desktop {
+        font-size: 2.5vw;
+        text-align: left;
+        padding-top: 3vw;
+    }
+}
+.div-top .div-header .folder-header {
+    font-size: 4vw;
+    text-align: center;
+    padding-bottom: 2vw;
+    @include desktop {
+        font-size: 1.5vw;
+        text-align: left;
+        line-height: 1vw;
+    }
+}
+.div-top .div-welcome {
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column;
+    @include desktop {
+        width: 80vw;
+        height: 13vw;
+        margin: 1vw 3vw 0vw 3vw;
+        line-height: 3vw;
+        padding-left: 3vw;
+        padding-bottom: 1vw;
+        background-image: url('/img/Rectangle 22.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: index;
+    }
+}
+.div-top .div-welcome .h1-welcome {
+    font-weight: 900;
+    font-size: 7vw;
+    margin-top: 5vw;
+    margin-bottom: 1vw;
+    @include desktop {
+        font-size: 2.5vw;
+        text-align: left;
+        width:30vw;
+        line-height: 1vw;
+    }
+}
+.div-top .div-welcome .p-welcome {
+    font-size: 4.5vw;
+    text-align: center;
+    width: 90vw;
+    @include desktop {
+        font-size: 1vw;
+        width: 65vw;
+        line-height: 1.5;
+        text-align: left;
+    }  
+}

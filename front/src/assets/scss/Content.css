@@ -1,0 +1,7 @@
+@media screen and (min-width: 1280px) {
+  .div-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}/*# sourceMappingURL=Content.css.map */

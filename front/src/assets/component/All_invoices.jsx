@@ -1,6 +1,6 @@
 import React, {useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
-import ReactPaginate from 'react-paginate';
+//import ReactDOM from 'react-dom';
+//import ReactPaginate from 'react-paginate';
 import '../scss/All_invoices.scss'
 import yellow_rectangle from '/public/img/Rectangle 19.svg'
 
