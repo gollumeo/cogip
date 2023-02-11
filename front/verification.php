@@ -17,6 +17,13 @@ if (isset($_POST['button'])) {
     $query = 'SELECT * FROM user WHERE email = :email';
     $stmp = $pdo->prepare($query);
 
+    //Synetisation
+    if (isset($_POST["button"])) {
+        $inputs = array(
+            "email" => FILTER_SANITIZE_EMAIL,
+        );
+    }
+
     $stmp->bindParam(":email", $mail);
 
     // Exécution de la requête
@@ -26,6 +33,15 @@ if (isset($_POST['button'])) {
     $user = $stmp->fetch() ?: null;
 
     // Vérification des informations d'identification
+    // TODO verifier le mot de passe.
+    $password = 'motdepasse';
+    if ((isset($_POST['password']) && ($_POST['password'])) != $password) {
+        if (!isset($_SESSION['count'])) {
+            $_SESSION['count'] = 0;
+        } else {
+            $_SESSION['count']++;
+        }
+    }
     if ($user && $password === $user['password']) {
 
         // Les informations d'identification sont correctes, définir une variable de session pour indiquer que l'utilisateur est connecté
@@ -41,4 +57,3 @@ if (isset($_POST['button'])) {
         exit;
     }
 }
-?>
