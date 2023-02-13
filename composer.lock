@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a4e0803f2ff1f8b2aa83c7ecc06e0623",
+    "content-hash": "2b43aa62a988c8e2a9d67ed830bf0bb6",
     "packages": [
         {
             "name": "carbondate/carbon",
@@ -816,7 +816,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "ext-pdo": "*"
+        "ext-pdo": "*",
+        "ext-json": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
