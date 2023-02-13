@@ -6,7 +6,7 @@ const All_contacts = () => {
     const [data, setData] = useState([]);
     
     useEffect(() => {
-        fetch("https://cogip-api.pierre-mauriello.be/invoices")
+        fetch("https://cogip-api.pierre-mauriello.be/companies")
             .then ((resp) => resp.json())
             .then ((apiData) => {
                 setData(apiData);
@@ -22,9 +22,10 @@ const All_contacts = () => {
                 <table>
                     <thead> 
                         <tr>
-                            <th>Invoice number</th>
-                            <th>Dates due</th>
-                            <th>Company</th>
+                            <th>Name</th>
+                            <th>TVA</th>
+                            <th>Country</th>
+                            <th>Type</th>
                             <th>Created at</th>
                         </tr> 
                     </thead>
@@ -33,10 +34,11 @@ const All_contacts = () => {
                             data.map((companie) => {
                                 return( 
                                 <tr>
-                                    <th>{companie.id}</th>
-                                    <th>{companie.company_id}</th>
+                                    <th>{companie.name}</th>
+                                    <th>{companie.tva}</th>
+                                    <th>{companie.country}</th>
+                                    <th>{companie.type_id}</th>
                                     <th>{companie.created_at}</th>
-                                    <th>{companie.updated_at}</th>
                                 </tr>
                                 )
                             })

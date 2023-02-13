@@ -6,7 +6,7 @@ const Last_companies = () => {
     const [data, setData] = useState([]);
     
     useEffect(() => {
-        fetch("https://cogip-api.pierre-mauriello.be/invoices")
+        fetch("https://cogip-api.pierre-mauriello.be/companies")
             .then ((resp) => resp.json())
             .then ((apiData) => {
                 setData(apiData);
@@ -32,11 +32,11 @@ const Last_companies = () => {
                             data.slice(Math.max(data.length - 5, 1)).reverse().map((companie) => {
                                 return( 
                                 <tr>
-                                    <th>{companie.id}</th>
-                                    <th>{companie.company_id}</th>
+                                    <th>{companie.name}</th>
+                                    <th>{companie.tva}</th>
+                                    <th>{companie.country}</th>
+                                    <th>{companie.type_id}</th>
                                     <th>{companie.created_at}</th>
-                                    <th>{companie.updated_at}</th>
-                                    <th>{companie.updated_at}</th>
                                 </tr>
                                 )
                             })

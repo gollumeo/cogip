@@ -6,7 +6,7 @@ const All_contacts = () => {
     const [data, setData] = useState([]);
     
     useEffect(() => {
-        fetch("https://cogip-api.pierre-mauriello.be/invoices")
+        fetch("https://cogip-api.pierre-mauriello.be/contacts")
             .then ((resp) => resp.json())
             .then ((apiData) => {
                 setData(apiData);
