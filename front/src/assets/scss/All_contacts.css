@@ -18,18 +18,21 @@
     font-size: 250%;
   }
 }
-.section_last_invoices .yellow_rectangle {
-  width: 30%;
+.section_last_invoices .yellow_rectangle_2 {
+  background-color: #F9DE4E;
+  border: none;
+  height: 1rem;
+  width: 35%;
   position: absolute;
-  top: 15.5%;
-  left: 25.5%;
-  z-index: 0;
+  top: 14.5%;
+  left: 27.5%;
 }
 @media screen and (min-width: 1280px) {
-  .section_last_invoices .yellow_rectangle {
-    width: 25%;
+  .section_last_invoices .yellow_rectangle_2 {
     top: 28%;
-    left: 17.5%;
+    left: 18.5%;
+    height: 1.5rem;
+    width: 17%;
   }
 }
 .section_last_invoices .input_text {

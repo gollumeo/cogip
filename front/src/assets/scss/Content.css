@@ -1,7 +1,9 @@
+.div-content {
+  display: flex;
+  flex-direction: column;
+}
 @media screen and (min-width: 1280px) {
   .div-content {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    width: 80%;
   }
 }/*# sourceMappingURL=Content.css.map */

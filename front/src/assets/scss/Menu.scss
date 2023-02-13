@@ -1,27 +1,17 @@
 @import "mixin";
 
-body {
-    @include desktop {
-    margin: 0;
-    padding: 0;
-    background-color: #E7E7E7;
-    display: flex;
-    flex-direction: row;
-    }
-}
 .div-menu {
-    @include desktop {
         display:flex;
         flex-direction: column;
-        width: 22vw;
-        height:100%;
+    @include desktop {
+        width: 20%;
+        max-height:max-content;
     }
 }
 .div-menu .div-user {
     display: flex;
     justify-content: space-around;
     background-color: white;
-    padding-bottom: 0;
     padding-top: 2vw;
     @include desktop {
         display:flex;
@@ -38,7 +28,7 @@ body {
         display:flex;
         align-items: center;
         margin-top: 2vw;
-        margin-left: 7vw;
+        margin-left: 6vw;
         width: 8vw;
         height: 8vw;
         border-radius: 125px;
@@ -56,7 +46,13 @@ body {
         font-size: 2.5vw;
         width: 6vw;
         text-align: center;
-        margin: 0 0 4vw 7vw;
+        margin: 0 0 4vw 6vw;
+    }
+}
+.div-menu .separation1-img {
+    display: none;
+    @include desktop {
+        width: 20%;
     }
 }
 .div-menu .div-logout-mobile {
@@ -76,14 +72,14 @@ body {
     justify-content: space-around;
     flex-direction: row;
     background-color: white;
-    border-top: solid #E0E0E0;
     height: 13vw;
     @include desktop {
         display:flex;
         flex-direction: column;
         max-width: 100%;
         height: max-content;
-        padding-left: 3vw;
+        padding-left: 1vw;
+        padding-bottom: 27vw;
     }
 }
 .div-menu .div-nav .div-dashboard {
@@ -186,16 +182,31 @@ body {
         padding-right: 2vw;
     }
 }
+.div-menu .separation-img3 {
+    display: none;
+    @include desktop {
+        width: 20%;
+    }
+}
 .div-menu .div-logout-desktop {
     display: none;
     @include desktop {
         display: flex;
-        justify-content: center;
-        align-items:baseline;
+        justify-content: space-around;
+        align-items:center;
         background-color: white;
         font-family: "Inter", sans-serif;
-        font-size: 2vw;
-        font-weight: 900;
+        font-size: 1.5vw;
         color: #9698D6;
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+    }
+}
+.div-menu .div-logout-desktop .user-imgSmall {
+    display: none;
+    @include desktop {
+        width: 3vw;
+        height: 3vw;
+        border-radius: 45%;
     }
 }
