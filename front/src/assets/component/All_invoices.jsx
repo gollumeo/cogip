@@ -1,10 +1,10 @@
-import React from 'react';
-import '../scss/All_invoices.scss'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState }from 'react';
+import '../scss/All_invoices.scss';
+import Pagination from './Pagination';
 
 const All_invoices = () => {
     const [data, setData] = useState([]);
-    
+
     useEffect(() => {
         fetch("https://cogip-api.pierre-mauriello.be/invoices")
             .then ((resp) => resp.json())
@@ -45,6 +45,7 @@ const All_invoices = () => {
                         }
                     </tbody>
                 </table>
+                <Pagination />
             </section>
         </section>
     );
