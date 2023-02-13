@@ -40,7 +40,6 @@ class InvoicesRepository
         // Set the json response
         $json_encode = json_encode(['message' => 'Invoice successfully created!'], true);
 
-        header('Content-type: application/json');
         return $json_encode;
 
     }
@@ -68,7 +67,6 @@ class InvoicesRepository
         // Set the json response
         $json_encode = json_encode(['message' => 'Invoice successfully updated!'], true);
 
-        header('Content-type: application/json');
         return $json_encode;
     }
 
@@ -90,10 +88,10 @@ class InvoicesRepository
         $stmt->execute();
 
         // Set the json response
-        $json_encode = json_encode(['message' => 'Invoice successfully created!'], true);
+        $json_response = json_encode(['message' => 'Invoice successfully deleted!'], JSON_THROW_ON_ERROR);
 
-        header('Content-type: application/json');
-        return $json_encode;
+        header('Content-Type: application/json');
+        return $json_response;
     }
 
     public function getAllInvoices()
@@ -114,12 +112,10 @@ class InvoicesRepository
         $invoiceData = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // Set the json response
-        $json_encode = json_encode($invoiceData, true);
+        $json = json_encode($invoiceData, JSON_PRETTY_PRINT);
 
         header('Content-type: application/json');
-        return $json_encode;
-
-
+        return $json;
     }
 
     public function getInvoiceById(Invoices $invoiceData)
@@ -136,10 +132,13 @@ class InvoicesRepository
         // Execute the query
         $stmt->execute();
 
+        // Fetch the result
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
         // Set the json response
-        $json_encode = json_encode($invoiceData, true);
+        $json_response = json_encode($result, JSON_PRETTY_PRINT);
 
         header('Content-type: application/json');
-        echo $json_encode;
+        echo $json_response;
     }
 }
