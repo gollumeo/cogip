@@ -123,7 +123,6 @@ class CompaniesRepository
         return $json;
     }
 
-
     public function getCompaniesById(Companies $companiesData)
     {
         $query = "USE cogip";

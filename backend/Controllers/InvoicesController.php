@@ -5,67 +5,105 @@ namespace App\Controllers;
 use App\Models\Invoices;
 use App\Repositories\InvoicesRepository;
 use App\Services\InvoicesService;
-
-// TODO: Sanitization & Validation of inputs
+use Exception;
 
 class InvoicesController
 {
-//    private $invoicesRepository;
     private $invoicesService;
 
     public function __construct()
     {
-        $this->invoicesRepository = new InvoicesRepository();
         $this->invoicesService = new InvoicesService();
     }
 
     public function createInvoice()
     {
-        $companyId = $_POST['company_id'];
-        $invoiceData = new Invoices($companyId);
+        try {
+            $companyId = (int)$_POST['company_id'];
+            if (!filter_var($companyId, FILTER_VALIDATE_INT)) {
+                throw new Exception('Invalid company id');
+            }
+            $invoiceData = new Invoices($companyId);
 
-        $invoiceData->setCreatedAt(date('Y-m-d H:i:s'));
-        $invoiceData->setUpdatedAt(date('Y-m-d H:i:s'));
+            $invoiceData->setCreatedAt(date('Y-m-d H:i:s'));
+            $invoiceData->setUpdatedAt(date('Y-m-d H:i:s'));
 
-        $this->invoicesService->createInvoice($invoiceData);
+            $this->invoicesService->createInvoice($invoiceData);
+        } catch (Exception $e) {
+            error_log($e->getMessage());
+        }
     }
 
     public function updateInvoice()
     {
-        $invoiceData = new Invoices();
+        try {
+            $invoiceData = new Invoices();
 
-        $invoiceData->setId($_POST['id']);
-        $invoiceData->setCompanyId($_POST['company_id']);
-        $invoiceData->setUpdatedAt(date('Y-m-d H:i:s'));
+            $invoiceData->setId((int)$_POST['id']);
+            if (!filter_var($invoiceData->getId(), FILTER_VALIDATE_INT)) {
+                throw new Exception('Invalid invoice id');
+            }
 
-        $this->invoicesService->updateInvoice($invoiceData);
+            $invoiceData->setCompanyId((int)$_POST['company_id']);
+            if (!filter_var($invoiceData->getCompanyId(), FILTER_VALIDATE_INT)) {
+                throw new Exception('Invalid company id');
+            }
+
+            $invoiceData->setUpdatedAt(date('Y-m-d H:i:s'));
+
+            $this->invoicesService->updateInvoice($invoiceData);
+        } catch (Exception $e) {
+            error_log($e->getMessage());
+        }
     }
 
     public function deleteInvoice()
     {
-        $invoiceData = new Invoices();
+        try {
+            $invoiceData = new Invoices();
 
-        $invoiceData->setId($_POST['id']);
+            $invoiceData->setId((int)$_POST['id']);
+            if (!filter_var($invoiceData->getId(), FILTER_VALIDATE_INT)) {
+                throw new Exception('Invalid invoice id');
+            }
 
-        $this->invoicesService->deleteInvoice($invoiceData);
+            $this->invoicesService->deleteInvoice($invoiceData);
+        } catch (Exception $e) {
+            error_log($e->getMessage());
+        }
     }
 
     public function getAllInvoices()
     {
-        $allInvoices = $this->invoicesService->getAllInvoices();
-        header('Content-Type: application/json');
-        echo $allInvoices;
+        try {
+            $allInvoices = $this->invoicesService->getAllInvoices();
+            header('Content-Type: application/json');
+            echo $allInvoices;
+        } catch (Exception $e) {
+            error_log($e->getMessage());
+        }
     }
 
     public function getInvoiceById()
     {
-        $invoiceData = new Invoices();
+        if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
+            header('HTTP/1.1 400 Bad Request');
+            echo 'Invalid invoice ID';
+            return;
+        }
 
-        $invoiceData->setId($_GET['id']);
+        $invoiceData = new Invoices();
+        $invoiceData->setId(intval($_GET['id']));
 
         $invoiceById = $this->invoicesService->getInvoiceById($invoiceData);
+
+        if (!$invoiceById) {
+            header('HTTP/1.1 404 Not Found');
+            echo 'Invoice not found';
+            return;
+        }
+
         header('Content-Type: application/json');
         echo $invoiceById;
-
     }
 }

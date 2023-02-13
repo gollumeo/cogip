@@ -38,9 +38,8 @@ class ContactsRepository
         $stmt->execute();
 
         // Set the json response
-        $json_encode = json_encode(['message' => 'Contacts successfully created!'], true);
+        $json_encode = json_encode(['message' => 'Contact successfully created!'], true);
 
-        header('Content-type: application/json');
         return $json_encode;
     }
 
@@ -68,9 +67,8 @@ class ContactsRepository
         $stmt->execute();
 
         // Set the json response
-        $json_encode = json_encode(['message' => 'Contacts successfully updated!'], true);
+        $json_encode = json_encode(['message' => 'Contact successfully updated!'], true);
 
-        header('Content-type: application/json');
         return $json_encode;
     }
 
@@ -92,10 +90,10 @@ class ContactsRepository
         $stmt->execute();
 
         // Set the json response
-        $json_encode = json_encode(['message' => 'Contacts successfully created!'], true);
+        $json_response = json_encode(['message' => 'Contact successfully deleted!'], JSON_THROW_ON_ERROR);
 
-        header('Content-type: application/json');
-        return $json_encode;
+        header('Content-Type: application/json');
+        return $json_response;
     }
 
     public function getAllContacts()
@@ -116,10 +114,10 @@ class ContactsRepository
         $contactsData = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // Set the json response
-        $json_encode = json_encode($contactsData, true);
+        $json = json_encode($contactsData, JSON_PRETTY_PRINT);
 
         header('Content-type: application/json');
-        echo $json_encode;
+        return $json;
     }
 
     public function getContactsById(Contacts $contactsData)
@@ -136,10 +134,12 @@ class ContactsRepository
         // Execute the query
         $stmt->execute();
 
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
         // Set the json response
-        $json_encode = json_encode($contactsData, true);
+        $json_response = json_encode($result, JSON_PRETTY_PRINT);
 
         header('Content-type: application/json');
-        echo $json_encode;
+        echo $json_response;
     }
 }
