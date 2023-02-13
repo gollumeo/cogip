@@ -1,7 +1,3 @@
-<?php
-session_start();
-
-?>
 <!DOCTYPE html>
 <html>
 
@@ -15,11 +11,11 @@ session_start();
   <form action="#" method="post">
     <div>
       <label for="mail">Adresse-email:</label>
-      <input type="text" name="mail">
+      <input type="text" name="mail" required>
     </div>
     <div>
       <label for="password">Mot de passe:</label>
-      <input type="password" name="password">
+      <input type="password" name="password" required>
     </div>
     <div>
       <button type="submit" name="button">Se connecter</button>
