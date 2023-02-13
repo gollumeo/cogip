@@ -1,18 +1,25 @@
 import React from 'react';
 import "/src/assets/scss/Last_companies.css";
 import { useEffect, useState } from 'react'
+import useFetch from '../hook/useFetch';
 
 const Last_companies = () => {
-    const [data, setData] = useState([]);
+    const {loading, error, data} = useFetch("https://cogip-api.pierre-mauriello.be/companies")
+
+    if(loading) return <p>Loading</p>
+    if(error) return <p>Unable to load</p>
+    console.log(data);
+
+    // const [data, setData] = useState([]);
     
-    useEffect(() => {
-        fetch("https://cogip-api.pierre-mauriello.be/companies")
-            .then ((resp) => resp.json())
-            .then ((apiData) => {
-                setData(apiData);
-            });
-    }, 
-    []);
+    // useEffect(() => {
+    //     fetch("https://cogip-api.pierre-mauriello.be/companies")
+    //         .then ((resp) => resp.json())
+    //         .then ((apiData) => {
+    //             setData(apiData);
+    //         });
+    // }, 
+    // []);
     return (
         <section className='section_last_companies'>
             <h3>Last companies</h3>
@@ -31,7 +38,7 @@ const Last_companies = () => {
                         {
                             data.slice(Math.max(data.length - 5, 1)).reverse().map((companie) => {
                                 return( 
-                                <tr>
+                                <tr key={data}>
                                     <th>{companie.name}</th>
                                     <th>{companie.tva}</th>
                                     <th>{companie.country}</th>
