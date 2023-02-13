@@ -3,88 +3,86 @@
 namespace App\Repositories;
 
 use App\Core\Database;
-use App\Models\Companies;
+use App\Models\Invoices;
 use PDO;
 
-class CompaniesRepository
+class InvoicesRepository
 {
     private $database;
+    private $hostname;
 
     public function __construct()
     {
+
         $this->database = Database::getInstance()->getConnection();
     }
 
-    public function create(Companies $companiesDate)
+    public function create(Invoices $invoiceData)
     {
+
         $query = "USE cogip";
         $stmt = $this->database->prepare($query);
         $stmt->execute();
         // Prepare the SQL query
-        $query = "INSERT INTO companies (name, type_id, country, tva, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)";
+        $query = "INSERT INTO invoices (company_id, created_at, updated_at) VALUES (?, ?, ?)";
 
         // Prepare the statement
         $stmt = $this->database->prepare($query);
 
         // Bind the parameters
-        $stmt->bindValue(1, $companiesDate->getName());
-        $stmt->bindValue(2, $companiesDate->getTypeid());
-        $stmt->bindValue(3, $companiesDate->getCountry());
-        $stmt->bindValue(4, $companiesDate->getTva());
-        $stmt->bindValue(5, $companiesDate->getCreatedat());
-        $stmt->bindValue(6, $companiesDate->getUpdatedat());
+        $stmt->bindValue(1, $invoiceData->getCompanyId());
+        $stmt->bindValue(2, $invoiceData->getCreatedAt());
+        $stmt->bindValue(3, $invoiceData->getUpdatedAt());
 
         // Execute the statement
         $stmt->execute();
 
         // Set the json response
-        $json_encode = json_encode(['message' => 'Companies successfully created!'], true);
+        $json_encode = json_encode(['message' => 'Invoices successfully created!'], true);
 
         return $json_encode;
+
     }
 
-    public function update(Companies $companiesDate): string
+    public function update(Invoices $invoiceData): string
     {
+
         $query = "USE cogip";
         $stmt = $this->database->prepare($query);
         $stmt->execute();
         // Prepare the query
-        $query = "UPDATE companies SET name = :name, type_id = :type_id, country = :country, tva = :tva, created_at = :created_at, updated_at = :created_at WHERE id = :id";
-
-        // Prepare the statement
-        $stmt = $this->database->prepare($query);
-
-        // // Bind the parameters
-        $stmt->bindValue(':id', $companiesDate->getId());
-        $stmt->bindValue(':name', $companiesDate->getName());
-        $stmt->bindValue(':type_id', $companiesDate->getTypeid());
-        $stmt->bindValue(':country', $companiesDate->getCountry());
-        $stmt->bindValue(':tva', $companiesDate->getTva());
-        $stmt->bindValue(':created_at', $companiesDate->getCreatedAt());
-        $stmt->bindValue(':updated_at', $companiesDate->getUpdatedAt());
-
-        // Execute the statement
-        $stmt->execute();
-
-        // Set the json response
-        $json_encode = json_encode(['message' => 'Companies successfully updated!'], true);
-
-        return $json_encode;
-    }
-
-    public function delete(Companies $companiesData): string
-    {
-        $query = "USE cogip";
-        $stmt = $this->database->prepare($query);
-        $stmt->execute();
-        // Prepare the query
-        $query = "DELETE FROM companies WHERE id = :id";
+        $query = "UPDATE invoices SET company_id = :company_id, updated_at = :updated_at WHERE id = :id";
 
         // Prepare the statement
         $stmt = $this->database->prepare($query);
 
         // Bind the parameters
-        $stmt->bindValue(':id', $companiesData->getId());
+        $stmt->bindValue(':id', $invoiceData->getId());
+        $stmt->bindValue(':company_id', $invoiceData->getCompanyId());
+        $stmt->bindValue(':updated_at', $invoiceData->getUpdatedAt());
+
+        // Execute the statement
+        $stmt->execute();
+
+        // Set the json response
+        $json_encode = json_encode(['message' => 'Invoices successfully updated!'], true);
+
+        return $json_encode;
+    }
+
+    public function delete(Invoices $invoiceData): string
+    {
+        $query = "USE cogip";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
+        // Prepare the query
+        $query = "DELETE FROM invoices WHERE id = :id";
+
+        // Prepare the statement
+        $stmt = $this->database->prepare($query);
+
+        // Bind the parameters
+        $stmt->bindValue(':id', $invoiceData->getId());
 
         // Execute the statement
         $stmt->execute();
@@ -96,15 +94,14 @@ class CompaniesRepository
         return $json_response;
     }
 
-
-    public function getAllCompanies(): string
+    public function getAllInvoices()
     {
         $query = "USE cogip";
         $stmt = $this->database->prepare($query);
         $stmt->execute();
 
         // Prepare the query
-        $query = "SELECT * FROM companies";
+        $query = "SELECT * FROM invoices";
 
         // Prepare the statement
         $stmt = $this->database->prepare($query);
@@ -112,30 +109,27 @@ class CompaniesRepository
         // Execute the query
         $stmt->execute();
 
-        $companiesData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $invoiceData = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // Set the json response
-        $json = json_encode($companiesData, JSON_PRETTY_PRINT);
+        $json = json_encode($invoiceData, JSON_PRETTY_PRINT);
 
         header('Content-type: application/json');
         return $json;
     }
 
-
-    public function getCompaniesById(Companies $companiesData)
+    public function getInvoiceById(Invoices $invoiceData)
     {
         $query = "USE cogip";
         $stmt = $this->database->prepare($query);
         $stmt->execute();
-
         // Prepare the query
-        $query = "SELECT * FROM companies WHERE id = :id";
+        $query = "SELECT * FROM invoices WHERE id = :id";
+
+        // Prepare the statement
         $stmt = $this->database->prepare($query);
 
-        // Bind the parameters
-        $stmt->bindValue(':id', $companiesData->getId());
-
-        // Execute the statement
+        // Execute the query
         $stmt->execute();
 
         // Fetch the result
@@ -147,5 +141,4 @@ class CompaniesRepository
         header('Content-type: application/json');
         echo $json_response;
     }
-
 }
