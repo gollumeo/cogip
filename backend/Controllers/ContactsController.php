@@ -63,7 +63,7 @@ class ContactsController
 
     public function getAllContacts()
     {
-        $allContacts = $this->contactsService->getAllContacts();
+        $allContacts = trim($this->contactsService->getAllContacts());
         header('Content-Type: application/json');
         echo $allContacts;
     }
@@ -79,5 +79,3 @@ class ContactsController
         echo $contactsById;
     }
 }
-
-// TODO: bug company_id bdd (type_id) & populate contacts

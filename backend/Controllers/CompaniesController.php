@@ -61,7 +61,9 @@ class CompaniesController
 
     public function getAllCompanies()
     {
-        $allCompanies = $this->companiesService->getAllCompanies();
+        error_reporting(E_ALL);
+        ini_set('display_errors', 1);
+        $allCompanies = trim($this->companiesService->getAllCompanies());
         header('Content-Type: application/json');
         echo $allCompanies;
     }

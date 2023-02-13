@@ -97,7 +97,7 @@ class CompaniesRepository
     }
 
 
-    public function getAllCompanies(): string
+    public function getAllCompanies()
     {
         $query = "USE cogip";
         $stmt = $this->database->prepare($query);
