@@ -1,0 +1,218 @@
+@import "mixin";
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+.section_footer{
+    margin-top: 8%;
+    .yellow_line{
+        background-color:#F9DE4E;
+        border: none;
+        height: 0.1rem;
+        width: 75%;
+    }
+    .info_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include desktop{
+            margin-top: 5%;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .logo_footer{
+            width: 18%;
+            font-size: 150%;
+            font-weight: 900;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            padding: 0.5%;
+            margin: 5%;
+            border: 2px solid #F9DE4E;
+            @include desktop{
+                width: 8%;
+                font-size: 200%;
+                margin-right: 2%;
+
+            }
+        }
+        .info_loc_rs{
+            font-family: 'Inter', sans-serif;
+            font-size: 70%;
+            width: 70%;
+            @include desktop{
+                width: 50%;
+            }
+            .info_loc{
+                @include desktop{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
+                .content_localisation{
+                    @include desktop{
+                        width: 50%;
+                    }
+                    a{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        text-decoration: none;
+                        color: black;
+                        .localisation{
+                            width: 10%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        p{
+                            width: 80%;
+                            margin-left: 5%;
+                            &:hover{
+                                color: #F9DE4E;
+                            }
+                            @include desktop{
+                                margin-left: 2%;
+                                font-size: 125%;
+                            }
+                        }
+                    }
+                }
+                .content_phone{
+                    @include desktop{
+                        width: 50%;
+                    }
+                    a{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        text-decoration: none;
+                        color: black;
+                        .phone{
+                            width: 10%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        p{
+                            width: 90%;
+                            margin-left: 5%;
+                            &:hover{
+                                color: #F9DE4E;
+                            }
+                            @include desktop{
+                                margin-left: 2%;
+                                font-size: 125%;
+                            }
+                        }
+                    }
+                }
+                .content_fax{
+                    @include desktop{
+                        width: 100%;
+                    }
+                    a{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        text-decoration: none;
+                        color: black;
+                        .fax{
+                            width: 10%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            @include desktop{
+                                width: 5%;
+                            }
+                        }
+                        p{
+                            width: 90%;
+                            margin-left: 5%;
+                            &:hover{
+                                color: #F9DE4E;
+                            }
+                            @include desktop{
+                                margin-left: 2%;
+                                font-size: 125%;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            .info_rs{
+                @include desktop{
+                    display: flex;
+                    flex-direction: row;
+                }
+                .social_media{
+                    text-align: center;
+                }
+                p{
+                    @include desktop{
+                        margin-left: 2%;
+                        font-size: 125%;
+                    }
+                }
+                .logo{
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    @include desktop{
+                        width: 50%;
+                        justify-content: space-around;
+                        align-items: center;
+                        margin-left: 2%;
+                    }
+                    .a_logo{
+                        &:hover{
+                            transform: scale(1.5);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .grey_line{
+        margin-top: 5%;
+        background-color:#7BB9FC;
+        opacity: 20%;
+        border: none;
+        height: 0.01rem;
+        width: 75%;
+    }
+    .under_links{
+        @include desktop{
+            display: flex;
+            align-items: center;
+            width: 80%;
+            margin: auto;
+            padding-top: 2%;
+            padding-bottom: 7%;
+        }
+        .links{
+            font-family: 'Inter', sans-serif;
+            font-size: 65%;
+            display: flex;
+            justify-content: space-evenly;
+            @include desktop{
+                width: 60%;
+            }
+            a{
+                font-family: 'Inter', sans-serif;
+                text-decoration: none;
+                color: black;
+                &:hover{
+                    color: #F9DE4E;
+                }
+            }
+        }
+        .copy{
+            font-family: 'Inter', sans-serif;
+            font-size: 65%;
+            display: flex;
+            justify-content: center;
+            @include desktop{
+                width: 40%;
+            }
+        }
+    }
+}
