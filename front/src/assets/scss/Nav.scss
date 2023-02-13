@@ -1,0 +1,202 @@
+@import "mixin";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    header{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background: #F9DE4E;
+        @include desktop{
+            padding-top: 3%;
+        }
+        h1{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            @include desktop {
+                width: 20%;
+                font-size: 250%;
+            }
+        }
+        .all{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            button{
+                background-color: #F9DE4E;
+                color: none;
+                border: none;
+                cursor: pointer;
+                @include desktop{
+                    display: none;
+                }
+                .burger_menu{
+                    width: 5vw;
+                    height: 3vh;
+                }
+            }
+            .nav_pages{
+                width: 100%;
+                justify-content: center;
+                position: absolute;
+                top: 8%;
+                left: 0%;
+                z-index: 1;
+                @include desktop{
+                    width: 40%;
+                    top: 6.5%;
+                    left: 20%;
+                    
+                }
+                .list_pages{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    list-style: none;
+                    background-color: #000000;
+                    padding-bottom: 5%;
+                    padding-left: 0;
+                    padding-top: 1.5%;
+                    @include desktop{
+                        padding: 0;
+                        background-color: transparent;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        align-items: center;
+                    }
+                    .nav_link{
+                        font-family: 'Roboto', sans-serif;
+                        text-decoration: none;
+                        color: #ffffff;
+                        &:hover{
+                            color: #F9DE4E;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        @include desktop{
+                            padding: 2% 3.5% 2% 3.5%;
+                            font-size: 110%;
+                            color: black;
+                            &:hover{
+                                color: #F9DE4E;
+                                padding: 2% 3.5% 2% 3.5%;
+                                border-radius: 10px;
+                                font-size: 110%;
+                                background-color: #ffffff;
+                            }
+                        }
+                        .page{
+                            padding-top: 1%;
+                            padding-bottom: 1%;
+                            @include desktop{
+                                padding-top: 0;
+                                padding-bottom: 0;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            .nav_log{
+                width: 100%;
+                top: 23.5%;
+                left: 0%;
+                justify-content: center;
+                position: absolute;
+                z-index: 1;
+                @include desktop{
+                    width: 40%;
+                    top: 6.5%;
+                    left: 60%;
+                }
+                .list_log{
+                    width: 100%;
+                    padding-bottom: 3%;
+                    padding-left: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    list-style: none;
+                    background-color: #000000;
+                    @include desktop{
+                        width: 100%;
+                        padding: 0;
+                        margin-right: 15%;
+                        background-color: transparent;
+                        flex-direction: row;
+                        justify-content: flex-end;
+                    }
+                    .nav_link_2{
+                        text-decoration: none;
+                        color: rgb(255, 255, 255);
+                        font-family: 'Roboto', sans-serif;
+                        &:hover{
+                            color: #F9DE4E;
+                        }
+                        @include desktop{
+                            margin-right: 5%;
+                            padding: 1% 0% 1% 0%;
+                            border-radius: 10px;
+                            font-size: 110%;
+                            color: black;
+                            background-color: #ffffff;
+                        }
+                        .sign_up{
+                            width: 100px;
+                            padding-top: 2%;
+                            padding-bottom: 1%;
+                            @include desktop{
+                                padding-right: 6%;
+                                padding-top: 0;
+                                padding-bottom: 0;
+                            }
+                        }
+                    }
+                    .nav_link{
+                        text-decoration: none;
+                        color: rgb(255, 255, 255);
+                        font-family: 'Roboto', sans-serif;
+                        &:hover{
+                            color: #F9DE4E;
+                        }
+                        @include desktop{
+                            font-size: 110%;
+                            color: black;
+                            padding: 1% 3% 1% 3%;
+                            &:hover{
+                                color: #F9DE4E;
+                                padding: 1% 3% 1% 3%;
+                                border-radius: 10px;
+                                font-size: 110%;
+                                background-color: #ffffff;
+                            }
+                        }
+                        .login{
+                            display: flex;
+                            flex-direction: column;
+                            list-style: none;
+                            padding-top: 20%;
+                            padding-bottom: 10%;
+                            @include desktop{
+                                width: 20%;
+                                padding-top: 0;
+                                padding-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    
+}

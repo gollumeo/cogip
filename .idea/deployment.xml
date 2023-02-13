@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="PublishConfigData">
     <serverData>
       <paths name="lws-cogip (main)">
+=======
+  <component name="PublishConfigData" autoUpload="Always" serverName="lws">
+    <serverData>
+      <paths name="lws">
+>>>>>>> 1d99ba09cdc3b7c0030cd2f357547211007f4364
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
@@ -10,5 +16,9 @@
         </serverdata>
       </paths>
     </serverData>
+<<<<<<< HEAD
+=======
+    <option name="myAutoUpload" value="ALWAYS" />
+>>>>>>> 1d99ba09cdc3b7c0030cd2f357547211007f4364
   </component>
 </project>
