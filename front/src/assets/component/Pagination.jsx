@@ -1,28 +1,39 @@
-import {useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import ReactPaginate from 'react-paginate';
 
-function Pagination(props) {
-    const { data } = props;
+function Pagination(data) {
+    // const { data } = data;
+    console.log(data);
+    const [currentItems, setCurrentItems] = useState([]);
+    const [pageCount, setPageCount] = useState(0);
     const [itemOffset, setItemOffset] = useState(0);
-    const endOffset = itemOffset + itemsPerPage;
-    const currentItems = data.slice(itemOffset, endOffset);
-    const pageCount = Math.ceil(data.length / itemsPerPage);
     const itemsPerPage = 10;
 
-    const handlePageClick = (event) => {
-        const newOffset = (event.selected * itemsPerPage) % data.length;
+    useEffect(() => {
+        const endOffset = itemOffset + itemsPerPage;
+        setCurrentItems(data.data.slice(itemOffset, endOffset));
+        setPageCount(Math.ceil(data.data.length / itemsPerPage));
+    }, [itemOffset, itemsPerPage, data.data]);
+
+    const handlePageClick = (event) =>{
+        const newOffset = (event.selected * itemsPerPage) % data.data.length;
         setItemOffset(newOffset);
     };
 
-    console.log(currentItems);
     return (
         <>
         <div className='lists'>
             {currentItems.map(list => {
+                console.log(list);
                 return (
-                    <div className='list'>
-                        
-                    </div>
+                    <>
+                        <tr key={list.id}>
+                            <th>{list.id}</th>
+                            <th>{list.company_id}</th>
+                            <th>{list.created_at}</th>
+                            <th>{list.updated_at}</th>
+                        </tr>
+                    </>
                 );
             })}
 
@@ -35,6 +46,11 @@ function Pagination(props) {
             pageCount={pageCount}
             previousLabel="<"
             renderOnZeroPageCount={null}
+            containerClassName="pagination"
+            pageLinkClassName='page-num'
+            previousLinkClassName='page-num'
+            nextLinkClassName='page-num'
+            activeLinkClassName='active'
         />
         </>
     );

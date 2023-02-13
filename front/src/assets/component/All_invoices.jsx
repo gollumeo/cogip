@@ -1,19 +1,13 @@
-import React, { useEffect, useState }from 'react';
+import React from 'react';
 import '../scss/All_invoices.scss';
+import useFetch from '../hook/useFetch';
 import Pagination from './Pagination';
 
 const All_invoices = () => {
-    const [data, setData] = useState([]);
+    const {loading, error, data} = useFetch('https://cogip-api.pierre-mauriello.be/invoices')
 
-    useEffect(() => {
-        fetch("https://cogip-api.pierre-mauriello.be/invoices")
-            .then ((resp) => resp.json())
-            .then ((apiData) => {
-                setData(apiData);
-            });
-    }, 
-    []);
-    console.log(data);
+    if(loading) return <p>Loading of articles</p>
+    if(error) return <p>Unable to load articles</p>
 
     return (
         <section className='section_last_invoices'>
@@ -31,10 +25,11 @@ const All_invoices = () => {
                         </tr> 
                     </thead>
                     <tbody>
-                        {
+                    <Pagination data={data}/>
+                        {/* {
                             data.map((companie) => {
                                 return( 
-                                <tr>
+                                <tr key={companie.id}>
                                     <th>{companie.id}</th>
                                     <th>{companie.company_id}</th>
                                     <th>{companie.created_at}</th>
@@ -42,10 +37,10 @@ const All_invoices = () => {
                                 </tr>
                                 )
                             })
-                        }
+                        } */}
                     </tbody>
                 </table>
-                <Pagination />
+                
             </section>
         </section>
     );
