@@ -30,7 +30,7 @@ const Last_contacts = () => {
                     </thead>
                     <tbody>
                         {
-                            data.slice(0, 5).map((companie) => {
+                            data.slice(Math.max(data.length - 5, 1)).reverse().map((companie) => {
                                 return( 
                                 <tr>
                                     <th>{companie.id}</th>

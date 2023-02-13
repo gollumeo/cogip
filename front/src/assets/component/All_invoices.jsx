@@ -19,7 +19,7 @@ const All_invoices = () => {
         <section className='section_last_invoices'>
             <h3>All invoices</h3>
             <hr className='yellow_rectangle'/>
-            <input type="text" placeholder='Search company' className='input_text'/>
+            <input type="text" placeholder='Search invoice' className='input_text'/>
             <section className='table_last_invoices'>
                 <table>
                     <thead> 
