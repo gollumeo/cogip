@@ -1,44 +1,24 @@
 .div-top {
   font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (min-width: 1280px) {
   .div-top {
-    width: 90vw;
-    height: 40vw;
-    display: flex;
-    flex-direction: column;
+    height: 30vw;
     flex-wrap: wrap;
-    padding-right: 4vw;
   }
 }
 
-/*.div-top .div-header {
-    @include desktop {
-        margin-left: 4vw;
-        margin-right: 4vw;
-        width: 90vw;
-        height: 30vw;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-}*/
-.div-top .illustr-welcome {
-  width: 45vw;
-  height: auto;
-}
-@media screen and (min-width: 1280px) {
-  .div-top .illustr-welcome {
-    width: 30vw;
-    height: auto;
-    z-index: auto;
-  }
+.div-top .div-header {
+  height: 40vw;
 }
 
 .div-top .div-header .title-header {
   font-size: 6vw;
   font-weight: 900;
-  text-align: center;
+  text-align: left;
+  margin-left: 5vw;
   padding-top: 8vw;
   line-height: 0%;
 }
@@ -47,47 +27,49 @@
     font-size: 2.5vw;
     text-align: left;
     padding-top: 3vw;
+    margin-left: 3vw;
   }
 }
 
 .div-top .div-header .folder-header {
   font-size: 4vw;
-  text-align: center;
+  text-align: left;
   padding-bottom: 2vw;
+  margin-left: 5vw;
 }
 @media screen and (min-width: 1280px) {
   .div-top .div-header .folder-header {
-    font-size: 1.5vw;
+    font-size: 1vw;
     text-align: left;
     line-height: 1vw;
+    margin-left: 3vw;
   }
 }
 
 .div-top .div-welcome {
   color: white;
   display: flex;
-  justify-content: flex-start;
   flex-flow: column;
+  background-color: #9698D6;
+  height: 58vw;
 }
 @media screen and (min-width: 1280px) {
   .div-top .div-welcome {
+    justify-content: flex-start;
     width: 80vw;
     height: 13vw;
     margin: 1vw 3vw 0vw 3vw;
     line-height: 3vw;
     padding-left: 3vw;
     padding-bottom: 1vw;
-    background-image: url("/img/Rectangle 22.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: index;
   }
 }
 
 .div-top .div-welcome .h1-welcome {
+  text-align: center;
   font-weight: 900;
   font-size: 7vw;
-  margin-top: 5vw;
+  margin-top: 12vw;
   margin-bottom: 1vw;
 }
 @media screen and (min-width: 1280px) {
@@ -102,13 +84,28 @@
 .div-top .div-welcome .p-welcome {
   font-size: 4.5vw;
   text-align: center;
+  margin-top: 8vw;
+  margin-left: 4vw;
   width: 90vw;
 }
 @media screen and (min-width: 1280px) {
   .div-top .div-welcome .p-welcome {
     font-size: 1vw;
-    width: 65vw;
+    width: 20vw;
     line-height: 1.5;
     text-align: left;
+  }
+}
+
+.div-top .div-welcome .illustr-welcome {
+  width: 50.5vw;
+  margin-top: -85vw;
+  margin-left: 45vw;
+}
+@media screen and (min-width: 1280px) {
+  .div-top .div-welcome .illustr-welcome {
+    width: 29vw;
+    margin-left: 35vw;
+    margin-top: -24vw;
   }
 }/*# sourceMappingURL=Top.css.map */

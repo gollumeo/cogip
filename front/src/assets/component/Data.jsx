@@ -7,7 +7,7 @@ const Data = () => {
     const nbContacts = 245;
     const nbCompanies = 245;
     return (
-        <div className='div-content'>
+        <div className='div-data'>
             <div className="div-stat">
                 <h2 className="h2-stat">Statistics</h2>
                 <div className="div-invoices">

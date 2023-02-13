@@ -1,9 +1,9 @@
 @import "mixin";
 
 .div-content {
-    @include desktop {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }
+display: flex;
+flex-direction: column;
+        @include desktop {
+        width: 80%;
+        }
 }
