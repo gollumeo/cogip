@@ -9,9 +9,17 @@
 <body>
   <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
     <div>
-      <label for="mail">Adresse-email:</label>
-      <input type="email" name="mail" required>
+      <label for="first_name">First Name:</label>
+      <input type="text" name="first_name" required>
     </div>
+      <div>
+          <label for="mail">Last Name:</label>
+          <input type="text" name="last_name" required>
+      </div>
+      <div>
+          <label for="mail">Adresse-email:</label>
+          <input type="email" name="mail" required>
+      </div>
     <div>
       <label for="password">Mot de passe:</label>
       <input type="password" name="password" required>
