@@ -8,7 +8,6 @@ function Nav(){
 
   const [ isOpen, setIsOpen ] = useState(false);
   // console.log(isOpen);
-
   const showBurgerMenu = () => {
     setIsOpen(!isOpen)
   };
