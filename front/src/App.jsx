@@ -1,23 +1,23 @@
 import React from 'react';
-import Nav from './assets/component/Nav'
-import Manage from './assets/component/Manage'
-import Last_invoices from './assets/component/Last_invoices'
-import Last_contacts from './assets/component/Last_contacts'
-import Last_companies from './assets/component/Last_companies';
-import Work from './assets/component/Work';
-import Footer from './assets/component/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './assets/pages/Home';
+import Invoices from './assets/pages/Invoices';
+import Companies from './assets/pages/Companies';
+import Contacts from './assets/pages/Contacts';
+import Dashboard from './assets/pages/Dashboard';
 
 const App = () => {
     return (
-        <>
-            <Nav />
-            <Manage />
-            <Last_invoices />
-            <Last_contacts />
-            <Last_companies />
-            <Work />
-            <Footer />
-        </>
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/invoices' element={<Invoices />} />
+                <Route path='/companies' element={<Companies />} />
+                <Route path='/contacts' element={<Contacts />} />
+                <Route path='*' element={<Home />} />
+                <Route path='/dashboard' element={<Dashboard />} />
+            </Routes>
+        </BrowserRouter>
     );
 };
 

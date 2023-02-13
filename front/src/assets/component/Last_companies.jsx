@@ -1,7 +1,18 @@
 import React from 'react';
 import "/src/assets/scss/Last_companies.css";
+import { useEffect, useState } from 'react'
 
 const Last_companies = () => {
+    const [data, setData] = useState([]);
+    
+    useEffect(() => {
+        fetch("https://cogip-api.pierre-mauriello.be/invoices")
+            .then ((resp) => resp.json())
+            .then ((apiData) => {
+                setData(apiData);
+            });
+    }, 
+    []);
     return (
         <section className='section_last_companies'>
             <h3>Last companies</h3>
@@ -17,41 +28,19 @@ const Last_companies = () => {
                         </tr> 
                     </thead>
                     <tbody>
-                        <tr>
-                            <th>Raviga</th>
-                            <th>US456 654 321</th>
-                            <th>United States</th>
-                            <th>Supplier</th>
-                            <th>25/09/2020</th>
-                        </tr>
-                        <tr>
-                            <th>Dunder Mifflin</th>
-                            <th>US676 787 767</th>
-                            <th>United States</th>
-                            <th>Client</th>
-                            <th>25/09/2020</th>
-                        </tr>
-                        <tr>
-                            <th>Pierre Cailloux</th>
-                            <th>FR 676 676 676</th>
-                            <th>France</th>
-                            <th>Supplier</th>
-                            <th>25/09/2020</th>
-                        </tr>
-                        <tr>
-                            <th>Belgalol</th>
-                            <th>BE0987 876 787</th>
-                            <th>Belgium</th>
-                            <th>Supplier</th>
-                            <th>25/09/2020</th>
-                        </tr>
-                        <tr>
-                            <th>Jouet Jean-Michel</th>
-                            <th>FR 787 776 999</th>
-                            <th>France</th>
-                            <th>Client</th>
-                            <th>25/09/2020</th>
-                        </tr>
+                        {
+                            data.slice(0, 5).map((companie) => {
+                                return( 
+                                <tr>
+                                    <th>{companie.id}</th>
+                                    <th>{companie.company_id}</th>
+                                    <th>{companie.created_at}</th>
+                                    <th>{companie.updated_at}</th>
+                                    <th>{companie.updated_at}</th>
+                                </tr>
+                                )
+                            })
+                        }
                     </tbody>
                 </table>
             </section>
