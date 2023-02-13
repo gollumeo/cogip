@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+  <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
     <div>
       <label for="mail">Adresse-email:</label>
       <input type="email" name="mail" required>
@@ -20,6 +20,6 @@
       <button type="submit" name="register">S'inscrire</button>
     </div>
   </form>
-  <?php include './verification.php'; ?>
+  <?php include './verification_register.php'; ?>
 </body>
 </html>
