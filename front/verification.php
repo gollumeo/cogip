@@ -1,10 +1,38 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+session_start();
+
+// Vérifier si le bouton "S'inscrire" a été cliqué
+if (isset($_POST['register'])) {
+    // Paramètres de connexion à la base de données
+    $host = "localhost";
+    $dbname = "becode";
+    $username = "my_user";
+    $password = "my_password";
+
+    // Établir une connexion à la base de données
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+
+    // Récupération des informations de l'utilisateur
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+    // Préparation de la requête d'insertion
+    $query = 'INSERT INTO user (email, password) VALUES (:email, :password)';
+    $stmt = $pdo->prepare($query);
+
+    // Systématisation des données d'entrée
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':password', $password);
+
+    // Exécution de la requête
+    $stmt->execute();
+
+    // Redirection de l'utilisateur vers la page de connexion
+    header('Location: login.php');
+}
+
+// Vérifier si le bouton "Se connecter" a été cliqué
 if (isset($_POST['button'])) {
-
-
     $host = "localhost";
     $dbname = "becode";
     $username = "my_user";
@@ -14,46 +42,28 @@ if (isset($_POST['button'])) {
     // Récupération des informations d'identification de l'utilisateur
     $mail = $_POST['mail'];
     $password = $_POST['password'];
+
+    // Préparation de la requête pour récupérer les informations de l'utilisateur
     $query = 'SELECT * FROM user WHERE email = :email';
     $stmp = $pdo->prepare($query);
-
-    //Synetisation
-    if (isset($_POST["button"])) {
-        $inputs = array(
-            "email" => FILTER_SANITIZE_EMAIL,
-        );
-    }
-
     $stmp->bindParam(":email", $mail);
-
-    // Exécution de la requête
     $stmp->execute();
 
     // Stockage des résultats
     $user = $stmp->fetch() ?: null;
 
-    // Vérification des informations d'identification
-    // TODO verifier le mot de passe.
-    $password = 'motdepasse';
-    if ((isset($_POST['password']) && ($_POST['password'])) != $password) {
-        if (!isset($_SESSION['count'])) {
-            $_SESSION['count'] = 0;
-        } else {
-            $_SESSION['count']++;
-        }
-    }
-    if ($user && $password === $user['password']) {
-
-        // Les informations d'identification sont correctes, définir une variable de session pour indiquer que l'utilisateur est connecté
-        $_SESSION['id'] = $user['id'];
-        header('Location: src/dashboard');
-        if (!isset($_SESSION)) {
-            session_start();
-        }
+    // Vérification de l'existence de ladresse e-mail dans la base de données
+    if (!$user) {
+        echo 'Adresse e-mail incorrecte.';
     } else {
-        // Les informations d'identification sont incorrectes, affichez un message d'erreur et redirigez l'utilisateur vers la page de connexion
-        ?><span style="color: red;"><br>Nom d'utilisateur ou mot de passe incorrect.</span>
-        <?php
-        exit;
+        // Vérification du mot de passe
+        if (password_verify($password, $user['password'])) {
+            // Démarrage de la session et redirection de l'utilisateur vers la page protégée
+            session_start();
+            $_SESSION['user'] = $user;
+            header('Location: index.html');
+        } else {
+            echo 'Mot de passe incorrect.';
+        }
     }
 }
