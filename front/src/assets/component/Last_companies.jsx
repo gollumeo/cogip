@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import useFetch from '../hook/useFetch';
 
 const Last_companies = () => {
-    const {loading, error, data} = useFetch("https://cogip-api.pierre-mauriello.be/companies")
+    const {loading, error, data} = useFetch("https://cogip-api.pierre-mauriello.be/invoices")
 
     if(loading) return <p>Loading</p>
     if(error) return <p>Unable to load</p>

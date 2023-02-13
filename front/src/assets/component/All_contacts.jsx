@@ -1,7 +1,7 @@
 import React from 'react';
 import '../scss/All_contacts.scss';
 import useFetch from '../hook/useFetch';
-import Pagination from './Pagination_invoices';
+import Pagination from './Pagination_contacts';
 
 const All_contacts = () => {
     const {loading, error, data} = useFetch('https://cogip-api.pierre-mauriello.be/invoices')
