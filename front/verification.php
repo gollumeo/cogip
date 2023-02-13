@@ -1,5 +1,9 @@
 <?php
 
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__ . '/backend/Core');
+$dotenv->load();
 // Vérifier si le bouton "S'inscrire" a été cliqué
 if (isset($_POST['register'])) {
     // Paramètres de connexion à la base de données
@@ -16,7 +20,7 @@ if (isset($_POST['register'])) {
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     // Préparation de la requête d'insertion
-    $query = 'INSERT INTO user (email, password) VALUES (:email, :password)';
+    $query = 'INSERT INTO users (email, password) VALUES (:email, :password)';
     $stmt = $pdo->prepare($query);
 
     // Systématisation des données d'entrée
@@ -32,10 +36,10 @@ if (isset($_POST['register'])) {
 
 // Vérifier si le bouton "Se connecter" a été cliqué
 if (isset($_POST['button'])) {
-    $host = "localhost";
-    $dbname = "becode";
-    $username = "my_user";
-    $password = "my_password";
+    $host = $_ENV['DB_HOST'];
+    $dbname = $_ENV['DB_NAME'];
+    $username = $_ENV['DB_USER'];
+    $password = $_ENV['DB_PASS'];
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 
     // Récupération des informations d'identification de l'utilisateur
@@ -43,7 +47,7 @@ if (isset($_POST['button'])) {
     $password = $_POST['password'];
 
     // Préparation de la requête pour récupérer les informations de l'utilisateur
-    $query = 'SELECT * FROM user WHERE email = :email';
+    $query = 'SELECT * FROM users WHERE email = :email';
     $stmp = $pdo->prepare($query);
     $stmp->bindParam(":email", $mail);
     $stmp->execute();
@@ -60,7 +64,7 @@ if (isset($_POST['button'])) {
             // Démarrage de la session et redirection de l'utilisateur vers la page protégée
             session_start();
             $_SESSION['user'] = $user;
-            header('Location: index.html');
+            header('Location: https://cogip.pierre-mauriello.be/dashboard');
         } else {
             echo 'Mot de passe incorrect.';
         }
