@@ -4,7 +4,7 @@ import useFetch from '../hook/useFetch';
 import Pagination from './Pagination_contacts';
 
 const All_contacts = () => {
-    const {loading, error, data} = useFetch('https://cogip-api.pierre-mauriello.be/invoices')
+    const {loading, error, data} = useFetch('https://cogip-api.pierre-mauriello.be/contacts')
 
     if(loading) return <p>Loading</p>
     if(error) return <p>Unable to load</p>
