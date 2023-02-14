@@ -8,7 +8,7 @@ const Manage = () => {
     return (
         <section className='sect_manage'>
             <div className='txt_img'>
-                <h2 className='manage'>MANAGE YOUR CUSTOMERS AND INVOICES EASLY</h2>
+                <h2 className='manage'>MANAGE YOUR CUSTOMERS AND INVOICES EASILY</h2>
                 <img src={Homme_1} alt="Homme" className='homme_1'/>
             </div>
             <img src={white_shape} alt="white shape" className='white_shape' />
