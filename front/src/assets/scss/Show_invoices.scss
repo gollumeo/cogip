@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
+@import "mixin";
+
+.show_invoices {
+  font-family: "inter";
+  margin: 5%;
+}
+
+.page {
+  position: relative;
+  .green_arm {
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+}
+
+.title {
+  font-size: 5vw;
+  font-family: "inter";
+  position: relative;
+  @include desktop {
+    font-size: 4vw;
+  }
+}
+
+.title::after {
+  content: "";
+  display: block;
+  background-color: #f9de4e;
+  position: absolute;
+  height: 40%;
+  width: 34%;
+  bottom: 0;
+  left: 3%;
+  z-index: -1;
+  @include desktop {
+    height: 40%;
+    width: 27%;
+  }
+}
+
+.title2 {
+  font-size: 3vw;
+  font-family: "inter";
+  position: relative;
+  @include desktop {
+    font-size: 2vw;
+  }
+}
+
+.company_infos {
+  font-size: 3vw;
+  list-style-type: none;
+  @media screen and (min-width: 800px) {
+    font-size: 180%;
+  }
+}
+
+.contact_cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.invoices_table {
+  display: flex;
+  justify-content: center;
+  margin: 0 -5%;
+}
+
+.table_last_invoices {
+  width: 80%;
+  overflow-x: auto;
+  position: relative;
+  @include desktop {
+    overflow-x: visible;
+  }
+  table {
+    table-layout: auto;
+    width: 200%;
+    border-collapse: collapse;
+    @include desktop {
+      width: 100%;
+    }
+    thead {
+      font-family: "Roboto", sans-serif;
+      background-color: #f9de4e;
+      tr {
+        th {
+          padding: 1%;
+          text-align: left;
+          padding-left: 5%;
+        }
+      }
+    }
+    tbody {
+      font-family: "Roboto", sans-serif;
+      tr {
+        background-color: #f5f5f5;
+        th {
+          padding: 1%;
+          text-align: left;
+          padding-left: 4%;
+        }
+      }
+      tr:nth-child(odd) {
+        background-color: #ffffff;
+      }
+    }
+  }
+}
