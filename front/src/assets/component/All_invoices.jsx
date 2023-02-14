@@ -13,7 +13,6 @@ const All_invoices = () => {
         <section className='section_last_invoices'>
             <h3>All invoices</h3>
             <hr className='yellow_rectangle'/>
-            <input type="text" placeholder='Search invoice' className='input_text'/>
             <Pagination data={data}/>
         </section>
     );

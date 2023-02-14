@@ -13,7 +13,6 @@ const All_contacts = () => {
         <section className='section_last_invoices'>
             <h3>All companies</h3>
             <hr className='yellow_rectangle_3'/>
-            <input type="text" placeholder='Search company' className='input_text'/>
             <Pagination data={data}/>
         </section>
     );
