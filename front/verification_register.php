@@ -24,7 +24,7 @@ if (isset($_POST['register'])) {
         // Afficher un message d'erreur ou rediriger vers la page d'inscription
         echo "Les mots de passe ne correspondent pas.";
         exit;
-    }
+    } else
 
     // Préparation de la requête d'insertion
     $query = 'INSERT INTO users (first_name, last_name, email, password, created_at, updated_at) VALUES (:first_name, :last_name,:email, :password, :created_at, :updated_at)';

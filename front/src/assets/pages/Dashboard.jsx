@@ -6,7 +6,7 @@ const Dashboard = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     useEffect(() => {
-        axios.get('/verification_login.php')
+        axios.get('https://cogip.pierre-mauriello.be/verification_login.php')
             .then(response => setIsLoggedIn(response.data.isLoggedIn))
             .catch(error => console.error(error));
     }, []);
