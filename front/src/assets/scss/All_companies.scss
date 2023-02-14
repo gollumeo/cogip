@@ -51,7 +51,7 @@
         }
         table{
             table-layout: auto;
-            width: 200%;
+            width: 300%;
             border-collapse: collapse;
             @include desktop{
                 width: 100%;
@@ -61,7 +61,7 @@
                 background-color:#F9DE4E;
                 tr{
                     th{
-                        padding: 1% 1% 1% 2%;
+                        padding: 1% 1% 1% 1%;
                         text-align: left;
                     }
                 }
@@ -74,7 +74,18 @@
                         padding: 1% 1% 1% 2%;
                         text-align: left;
                     }
-                    
+                    .table_last_companies_name{
+                        width: 35%;
+                    }
+                    .table_last_companies_tva{
+                        width: 15%;
+                    }
+                    .table_last_companies_country{
+                        width: 23%;
+                    }
+                    .table_last_companies_type{
+                        width: 7%;
+                    }
                 }
                 tr:nth-child(odd){
                     background-color:#ffffff;

@@ -44,11 +44,11 @@ function Pagination(data) {
                             return (
                                 <>
                                     <tr key={list.id}>
-                                        <th>{list.name}</th>
-                                        <th>{list.tva}</th>
-                                        <th>{list.country}</th>
-                                        <th>{list.type}</th>
-                                        <th>{list.created_at}</th>
+                                        <th className='table_last_companies_name'>{list.name}</th>
+                                        <th className='table_last_companies_tva'>{list.tva}</th>
+                                        <th className='table_last_companies_country'>{list.country}</th>
+                                        <th className='table_last_companies_type'>{list.type_id}</th>
+                                        <th className='table_last_companies_created'>{list.created_at}</th>
                                     </tr>
                                 </>
                             );
