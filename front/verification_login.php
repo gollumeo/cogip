@@ -1,7 +1,9 @@
 <?php
 
 use Dotenv\Dotenv;
-require_once 'vendor/vlucas/phpdotenv/src/Dotenv.php';
+
+require_once './vendor/vlucas/phpdotenv/src/Dotenv.php';
+require_once './vendor/autoload.php';
 
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
@@ -27,15 +29,22 @@ if (isset($_POST['button'])) {
     // Stockage des résultats
     $user = $stmp->fetch() ?: null;
 
+    var_dump($user['password']);
+    var_dump($password);
     // Vérification de l'existence de l'adresse e-mail dans la base de données
     if (!$user) {
         echo 'Adresse e-mail incorrecte.';
     } else {
         // Vérification du mot de passe
-        if (password_verify($password, $user['password'])) {
+        if (password_verify($password, password_hash($user['password'], PASSWORD_DEFAULT))) {
             // Démarrage de la session et redirection de l'utilisateur vers la page protégée
             session_start();
             $_SESSION['user'] = $user;
+            $_SESSION['isLoggedIn'] = true;
+
+            header('Content-Type: application/json');
+            echo json_encode(['isLoggedIn' => true]);
+
             header('Location: https://cogip.pierre-mauriello.be/dashboard');
         } else {
             echo 'Mot de passe incorrect.';
