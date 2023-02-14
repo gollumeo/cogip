@@ -1,8 +1,19 @@
 import React from 'react';
 import "/src/assets/scss/Last_invoices.css";
 import black_notebook_and_green_arm from "/public/img/black notebook and green arm.png";
+import { useEffect, useState } from 'react'
 
 const Last_invoices = () => {
+    const [data, setData] = useState([]);
+    
+    useEffect(() => {
+        fetch("https://cogip-api.pierre-mauriello.be/invoices")
+            .then ((resp) => resp.json())
+            .then ((apiData) => {
+                setData(apiData);
+            });
+    }, 
+    []);
     return (
         <section className='section_last_invoices'>
             <h3>Last invoices</h3>
@@ -17,36 +28,18 @@ const Last_invoices = () => {
                         </tr> 
                     </thead>
                     <tbody>
-                        <tr>
-                            <th>F20220915-001</th>
-                            <th>15/09/2022</th>
-                            <th>Jouet Jean-Michel</th>
-                            <th>25/09/2020</th>
-                        </tr>
-                        <tr>
-                            <th>F20220915-002</th>
-                            <th>15/09/2022</th>
-                            <th>Dunder Mifflin</th>
-                            <th>25/09/2020</th>
-                        </tr>
-                        <tr>
-                            <th>F20220915-003</th>
-                            <th>15/09/2022</th>
-                            <th>Pierre Cailloux</th>
-                            <th>25/09/2020</th>
-                        </tr>
-                        <tr>
-                            <th>F20220915-004</th>
-                            <th>15/09/2022</th>
-                            <th>Pier Pipper</th>
-                            <th>25/09/2020</th>
-                        </tr>
-                        <tr>
-                            <th>F20220915-005</th>
-                            <th>15/09/2022</th>
-                            <th>Raviga</th>
-                            <th>25/09/2020</th>
-                        </tr>
+                        {
+                            data.slice(Math.max(data.length - 5, 1)).reverse().map((companie) => {
+                                return( 
+                                <tr>
+                                    <th>{companie.id}</th>
+                                    <th>{companie.company_id}</th>
+                                    <th>{companie.created_at}</th>
+                                    <th>{companie.updated_at}</th>
+                                </tr>
+                                )
+                            })
+                        }
                     </tbody>
                 </table>
             </section>
