@@ -16,6 +16,15 @@ if (isset($_POST['register'])) {
     $first_name = filter_input(INPUT_POST, 'first_name', FILTER_SANITIZE_EMAIL);
     $last_name = filter_input(INPUT_POST, 'last_name', FILTER_SANITIZE_EMAIL);
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $password_confirm = $_POST['password_confirm'];
+
+    // Vérification des champs de mot de passe
+    if ($password !== $password_confirm) {
+        // Les mots de passe ne correspondent pas
+        // Afficher un message d'erreur ou rediriger vers la page d'inscription
+        echo "Les mots de passe ne correspondent pas.";
+        exit;
+    }
 
     // Préparation de la requête d'insertion
     $query = 'INSERT INTO users (first_name, last_name, email, password, created_at, updated_at) VALUES (:first_name, :last_name,:email, :password, :created_at, :updated_at)';
@@ -27,7 +36,11 @@ if (isset($_POST['register'])) {
     $stmt->bindParam(':email', $email);
     $stmt->bindParam(':first_name', $first_name);
     $stmt->bindParam(':last_name', $last_name);
-    $stmt->bindParam(':password', $password);
+
+    // Utilisation de la fonction password_hash() pour chiffrer le mot de passe
+    $password_hash = password_hash($password, PASSWORD_DEFAULT);
+    $stmt->bindParam(':password', $password_hash);
+
     $stmt->bindParam(':created_at', $now);
     $stmt->bindParam(':updated_at', $now);
 
@@ -36,4 +49,5 @@ if (isset($_POST['register'])) {
 
     // Redirection de l'utilisateur vers la page de connexion
     header('Location: login.php');
+
 }
