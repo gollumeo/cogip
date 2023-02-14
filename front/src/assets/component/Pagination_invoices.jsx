@@ -9,11 +9,11 @@ function Pagination(data) {
     const itemsPerPage = 10;
     const [valeurInput, setValeurInput] = useState('');
 
-    // useEffect(() => {
-    //     const endOffset = itemOffset + itemsPerPage;
-    //     setCurrentItems(data.data.slice(itemOffset, endOffset).filter(element => element.name.toLowerCase().includes(valeurInput.toLowerCase())));
-    //     setPageCount(Math.ceil(data.data.length / itemsPerPage));
-    // }, [itemOffset, itemsPerPage, data.data, valeurInput]);
+    useEffect(() => {
+        const endOffset = itemOffset + itemsPerPage;
+        setCurrentItems(data.data.slice(itemOffset, endOffset).filter(element => element.id.toString().includes(valeurInput)));
+        setPageCount(Math.ceil(data.data.length / itemsPerPage));
+    }, [itemOffset, itemsPerPage, data.data, valeurInput]);
 
     const handlePageClick = (event) =>{
         const newOffset = (event.selected * itemsPerPage) % data.data.length;
