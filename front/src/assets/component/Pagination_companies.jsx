@@ -40,10 +40,11 @@ function Pagination(data) {
                             return (
                                 <>
                                     <tr key={list.id}>
-                                        <th>{list.id}</th>
-                                        <th>{list.company_id}</th>
+                                        <th>{list.name}</th>
+                                        <th>{list.tva}</th>
+                                        <th>{list.country}</th>
+                                        <th>{list.type_id}</th>
                                         <th>{list.created_at}</th>
-                                        <th>{list.updated_at}</th>
                                     </tr>
                                 </>
                             );
