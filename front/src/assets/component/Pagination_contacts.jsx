@@ -9,20 +9,26 @@ function Pagination(data) {
     const [pageCount, setPageCount] = useState(0);
     const [itemOffset, setItemOffset] = useState(0);
     const itemsPerPage = 10;
+    const [valeurInput, setValeurInput] = useState('');
 
     useEffect(() => {
         const endOffset = itemOffset + itemsPerPage;
-        setCurrentItems(data.data.slice(itemOffset, endOffset));
+        setCurrentItems(data.data.slice(itemOffset, endOffset).filter(element => element.name.toLowerCase().includes(valeurInput.toLowerCase())));
         setPageCount(Math.ceil(data.data.length / itemsPerPage));
-    }, [itemOffset, itemsPerPage, data.data]);
+    }, [itemOffset, itemsPerPage, data.data, valeurInput]);
 
     const handlePageClick = (event) =>{
         const newOffset = (event.selected * itemsPerPage) % data.data.length;
         setItemOffset(newOffset);
     };
 
+    function trierTable(e) {
+        setValeurInput(e.target.value);
+    }
+
     return (
         <>
+            <input type="text" placeholder='Search company' className='input_text' value={valeurInput} onChange={trierTable}/>
             <section className='table_last_invoices'>
                 <table>
                     <thead> 
