@@ -1,4 +1,5 @@
-backend/vendor/
+front/vendor/
 node_modules/
 front/vendor/
+front/node_modules/
 

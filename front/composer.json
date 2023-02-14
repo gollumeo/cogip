@@ -2,6 +2,7 @@
     "require": {
         "vlucas/phpdotenv": "^5.5",
       "ext-pdo": "*",
-        "fakerphp/faker": "^1.21"
+        "fakerphp/faker": "^1.21",
+        "filp/whoops": "^2.14"
     }
 }
