@@ -28,7 +28,7 @@ class ContactsController
         $contactsData->setCreatedAt(date('Y-m-d H:i:s'));
         $contactsData->setUpdatedAt(date('Y-m-d H:i:s'));
 
-        $this->contactsService->createCompanies($contactsData);
+        $this->contactsService->createContacts($contactsData);
 
         echo "Contact successfully created!";
     }
@@ -63,7 +63,7 @@ class ContactsController
 
     public function getAllContacts()
     {
-        $allContacts = $this->contactsService->getAllContacts();
+        $allContacts = trim($this->contactsService->getAllContacts());
         header('Content-Type: application/json');
         echo $allContacts;
     }
@@ -74,10 +74,8 @@ class ContactsController
 
         $contactsData->setId($_GET['id']);
 
-        $contactsByid = $this->contactsService->getContactsById($contactsData);
+        $contactsById = $this->contactsService->getContactsById($contactsData);
         header('Content-Type: application/json');
-        echo $contactsByid;
+        echo $contactsById;
     }
 }
-
-// TODO: bug company_id bdd (type_id) & populate contacts
