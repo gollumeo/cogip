@@ -31,10 +31,10 @@ function Pagination(data) {
                 <table>
                     <thead> 
                         <tr>
-                            <th>Invoice number</th>
-                            <th>Dates due</th>
-                            <th>Company</th>
-                            <th>Created at</th>
+                            <th className='table_last_invoices_number'>Invoice number</th>
+                            <th className='table_last_invoices_dates'>Dates due</th>
+                            <th className='table_last_invoices_company'>Company</th>
+                            <th className='table_last_invoices_created'>Created at</th>
                         </tr> 
                     </thead>
                     <tbody>
