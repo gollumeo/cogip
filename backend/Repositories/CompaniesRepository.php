@@ -40,6 +40,7 @@ class CompaniesRepository
         // Set the json response
         $json_encode = json_encode(['message' => 'Companies successfully created!'], true);
 
+//        header('Content-type: application/json');
         return $json_encode;
     }
 
@@ -69,6 +70,7 @@ class CompaniesRepository
         // Set the json response
         $json_encode = json_encode(['message' => 'Companies successfully updated!'], true);
 
+//        header('Content-type: application/json');
         return $json_encode;
     }
 
@@ -97,7 +99,7 @@ class CompaniesRepository
     }
 
 
-    public function getAllCompanies()
+    public function getAllCompanies(): string
     {
         $query = "USE cogip";
         $stmt = $this->database->prepare($query);

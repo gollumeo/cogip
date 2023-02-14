@@ -10,6 +10,8 @@
         "filp/whoops": "^2.14",
         "vlucas/phpdotenv": "^5.5",
       "ext-pdo": "*",
-      "ext-json": "*"
+      "ext-json": "*",
+        "fzaninotto/faker": "^1.5",
+        "carbondate/carbon": "^1.33"
     }
 }
