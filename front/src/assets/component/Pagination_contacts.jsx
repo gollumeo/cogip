@@ -50,7 +50,7 @@ function Pagination(data) {
                                         <th>{list.phone}</th>
                                         <th>{list.email}</th>
                                         <th>{list.company_id}</th>
-                                        <th>{list.created_at}</th>
+                                        <th>{list.created_at.split(' ').join(' ').substr(0, 11)}</th>
                                     </tr>
                                 </>
                             );
