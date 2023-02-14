@@ -7,7 +7,7 @@ const Last_contacts = () => {
     const [data, setData] = useState([]);
     
     useEffect(() => {
-        fetch("https://cogip-api.pierre-mauriello.be/invoices")
+        fetch("https://cogip-api.pierre-mauriello.be/contacts")
             .then ((resp) => resp.json())
             .then ((apiData) => {
                 setData(apiData);
@@ -21,7 +21,7 @@ const Last_contacts = () => {
                 <table>
                     <thead> 
                         <tr>
-                            <th>IName</th>
+                            <th>Name</th>
                             <th>Phone</th>
                             <th>Mail</th>
                             <th>Company</th>
@@ -34,10 +34,11 @@ const Last_contacts = () => {
                                 return( 
                                 <tr>
                                     <th>{companie.id}</th>
+                                    <th>{companie.name}</th>
+                                    <th>{companie.phone}</th>
+                                    <th>{companie.email}</th>
                                     <th>{companie.company_id}</th>
                                     <th>{companie.created_at}</th>
-                                    <th>{companie.updated_at}</th>
-                                    <th>{companie.updated_at}</th>
                                 </tr>
                                 )
                             })
