@@ -9,11 +9,11 @@ function Pagination(data) {
     const itemsPerPage = 10;
     const [valeurInput, setValeurInput] = useState('');
 
-    // useEffect(() => {
-    //     const endOffset = itemOffset + itemsPerPage;
-    //     setCurrentItems(data.data.slice(itemOffset, endOffset).filter(element => element.name.toLowerCase().includes(valeurInput.toLowerCase())));
-    //     setPageCount(Math.ceil(data.data.length / itemsPerPage));
-    // }, [itemOffset, itemsPerPage, data.data, valeurInput]);
+    useEffect(() => {
+        const endOffset = itemOffset + itemsPerPage;
+        setCurrentItems(data.data.slice(itemOffset, endOffset).filter(element => element.id.toString().includes(valeurInput)));
+        setPageCount(Math.ceil(data.data.length / itemsPerPage));
+    }, [itemOffset, itemsPerPage, data.data, valeurInput]);
 
     const handlePageClick = (event) =>{
         const newOffset = (event.selected * itemsPerPage) % data.data.length;
@@ -31,10 +31,10 @@ function Pagination(data) {
                 <table>
                     <thead> 
                         <tr>
-                            <th>Invoice number</th>
-                            <th>Dates due</th>
-                            <th>Company</th>
-                            <th>Created at</th>
+                            <th className='table_last_invoices_number'>Invoice number</th>
+                            <th className='table_last_invoices_dates'>Dates due</th>
+                            <th className='table_last_invoices_company'>Company</th>
+                            <th className='table_last_invoices_created'>Created at</th>
                         </tr> 
                     </thead>
                     <tbody>
