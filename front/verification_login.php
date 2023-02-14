@@ -29,8 +29,6 @@ if (isset($_POST['button'])) {
     // Stockage des résultats
     $user = $stmp->fetch() ?: null;
 
-    var_dump($user['password']);
-    var_dump($password);
     // Vérification de l'existence de l'adresse e-mail dans la base de données
     if (!$user) {
         echo 'Adresse e-mail incorrecte.';
@@ -40,12 +38,11 @@ if (isset($_POST['button'])) {
             // Démarrage de la session et redirection de l'utilisateur vers la page protégée
             session_start();
             $_SESSION['user'] = $user;
-            $_SESSION['isLoggedIn'] = true;
 
             header('Content-Type: application/json');
-            echo json_encode(['isLoggedIn' => true]);
+            echo json_encode(['isLoggedIn' => true], JSON_PRETTY_PRINT);
 
-            header('Location: https://cogip.pierre-mauriello.be/dashboard');
+//            header('Location: https://cogip.pierre-mauriello.be/dashboard');
         } else {
             echo 'Mot de passe incorrect.';
         }
