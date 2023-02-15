@@ -27,11 +27,14 @@ body {
     .all {
       width: 50%;
       display: flex;
+      z-index: 2;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      button {
+      .burger{
+        display: flex;
+        justify-content: center;
         background-color: #f9de4e;
         color: none;
         border: none;
@@ -48,6 +51,7 @@ body {
         width: 100%;
         justify-content: center;
         position: absolute;
+        background-color: #000000;
         top: 8%;
         left: 0%;
         z-index: 1;
@@ -55,6 +59,7 @@ body {
           width: 40%;
           top: 6.5%;
           left: 20%;
+          background-color: transparent;
         }
         .list_pages {
           width: 100%;
@@ -64,7 +69,6 @@ body {
           background-color: #000000;
           padding-bottom: 5%;
           padding-left: 0;
-          padding-top: 1.5%;
           @include desktop {
             padding: 0;
             background-color: transparent;
@@ -75,6 +79,7 @@ body {
           .nav_link {
             font-family: "Roboto", sans-serif;
             text-decoration: none;
+            font-weight: 700;
             color: #ffffff;
             &:hover {
               color: #f9de4e;
@@ -138,6 +143,7 @@ body {
             text-decoration: none;
             color: rgb(255, 255, 255);
             font-family: "Roboto", sans-serif;
+            font-weight: 700;
             &:hover {
               color: #f9de4e;
             }
@@ -164,6 +170,7 @@ body {
             text-decoration: none;
             color: rgb(255, 255, 255);
             font-family: "Roboto", sans-serif;
+            font-weight: 700;
             &:hover {
               color: #f9de4e;
             }

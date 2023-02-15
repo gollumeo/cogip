@@ -35,9 +35,8 @@
                 background-color:#F9DE4E;
                 tr{
                     th{
-                        padding: 1%;
+                        padding: 1% 1% 1% 1%;
                         text-align: left;
-                        padding-left: 5%;
                     }
                 }
             }
@@ -46,9 +45,23 @@
                 tr{
                     background-color:#F5F5F5;
                     th{
-                        padding: 1%;
+                        padding: 1% 1% 1% 2%;
                         text-align: left;
-                        padding-left: 4%;
+                    }
+                    .table_last_contacts_name{
+                        width: 20%;
+                    }
+                    .table_last_contacts_phone{
+                        width: 20%;
+                    }
+                    .table_last_contacts_mail{
+                        width: 20%;
+                    }
+                    .table_last_contacts_company{
+                        width: 15%;
+                    }
+                    .table_last_contacts_created{
+                        width: 20%;
                     }
                 }
                 tr:nth-child(odd){

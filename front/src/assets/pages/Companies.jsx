@@ -1,12 +1,12 @@
 import React from 'react';
-import Nav from '../component/Nav';
+import Nav2 from '../component/Nav2';
 import All_companies from '../component/All_companies';
 import Footer from '../component/Footer';
 
 const Companies = () => {
     return (
         <div>
-            <Nav />
+            <Nav2 />
             <All_companies />
             <Footer />
         </div>
