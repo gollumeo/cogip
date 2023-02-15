@@ -32,8 +32,9 @@ class InvoicesController
 
     public function updateInvoice()
     {
-        $invoiceData = new Invoices();
-
+        $company_id = $_POST['company_id'];
+        $invoiceData = new Invoices($company_id);
+        
         $invoiceData->setId($_POST['id']);
         $invoiceData->setCompanyId($_POST['company_id']);
         $invoiceData->setUpdatedAt(date('Y-m-d H:i:s'));
