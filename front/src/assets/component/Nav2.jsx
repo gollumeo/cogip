@@ -8,11 +8,6 @@ import "/src/assets/scss/Nav2.scss";
 
 function Nav2() {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
-
-  // const showBurgerMenu = () => {
-  //   setIsOpen(!isOpen)
-  // };
 
   const displayValue = isOpen ? "flex" : "none";
 

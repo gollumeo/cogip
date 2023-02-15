@@ -41,9 +41,20 @@
   background-color: #F9DE4E;
 }
 .section_last_companies .table_last_companies table thead tr th {
-  padding: 1%;
+  padding: 1% 1% 1% 1%;
   text-align: left;
-  padding-left: 5%;
+}
+.section_last_companies .table_last_companies table thead tr .table_last_companies_name {
+  width: 30%;
+}
+.section_last_companies .table_last_companies table thead tr .table_last_companies_tva {
+  width: 15%;
+}
+.section_last_companies .table_last_companies table thead tr .table_last_companies_country {
+  width: 20%;
+}
+.section_last_companies .table_last_companies table thead tr .table_last_companies_type {
+  width: 10%;
 }
 .section_last_companies .table_last_companies table tbody {
   font-family: "Roboto", sans-serif;
@@ -52,9 +63,8 @@
   background-color: #F5F5F5;
 }
 .section_last_companies .table_last_companies table tbody tr th {
-  padding: 1%;
+  padding: 1% 1% 1% 2%;
   text-align: left;
-  padding-left: 4%;
 }
 .section_last_companies .table_last_companies table tbody tr:nth-child(odd) {
   background-color: #ffffff;

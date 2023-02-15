@@ -42,9 +42,8 @@
   background-color: #F9DE4E;
 }
 .section_last_contacts .table_last_contacts table thead tr th {
-  padding: 1%;
+  padding: 1% 1% 1% 1%;
   text-align: left;
-  padding-left: 5%;
 }
 .section_last_contacts .table_last_contacts table tbody {
   font-family: "Roboto", sans-serif;
@@ -53,9 +52,23 @@
   background-color: #F5F5F5;
 }
 .section_last_contacts .table_last_contacts table tbody tr th {
-  padding: 1%;
+  padding: 1% 1% 1% 2%;
   text-align: left;
-  padding-left: 4%;
+}
+.section_last_contacts .table_last_contacts table tbody tr .table_last_contacts_name {
+  width: 20%;
+}
+.section_last_contacts .table_last_contacts table tbody tr .table_last_contacts_phone {
+  width: 20%;
+}
+.section_last_contacts .table_last_contacts table tbody tr .table_last_contacts_mail {
+  width: 20%;
+}
+.section_last_contacts .table_last_contacts table tbody tr .table_last_contacts_company {
+  width: 15%;
+}
+.section_last_contacts .table_last_contacts table tbody tr .table_last_contacts_created {
+  width: 20%;
 }
 .section_last_contacts .table_last_contacts table tbody tr:nth-child(odd) {
   background-color: #ffffff;
