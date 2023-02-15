@@ -12,6 +12,10 @@ class InvoicesController
 {
 //    private $invoicesRepository;
     private $invoicesService;
+    /**
+     * @var InvoicesRepository
+     */
+    private $invoicesRepository;
 
     public function __construct()
     {
@@ -32,7 +36,8 @@ class InvoicesController
 
     public function updateInvoice()
     {
-        $invoiceData = new Invoices();
+        $company_id = $_POST['company_id'];
+        $invoiceData = new Invoices($company_id);
 
         $invoiceData->setId($_POST['id']);
         $invoiceData->setCompanyId($_POST['company_id']);
