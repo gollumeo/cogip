@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import "mixin";
+
+.new_invoice {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 2%;
+  border-radius: 10px;
+  margin-top: 3%;
+}
+
+.new_invoice_title {
+  margin: 10px 0;
+}
+
+hr {
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-family: "inter";
+  input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+}
+
+button {
+  text-align: left;
+  background-color: #9698d6;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: white;
+}

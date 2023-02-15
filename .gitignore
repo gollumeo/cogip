@@ -1,4 +1,6 @@
+vendor/
+front/node_modules/
 backend/vendor/
 node_modules/
-front/vendor/
-
+front/.idea/
+.gitignore
