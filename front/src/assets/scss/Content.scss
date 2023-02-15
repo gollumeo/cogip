@@ -1,0 +1,9 @@
+@import "mixin";
+
+.div-content {
+display: flex;
+flex-direction: column;
+        @include desktop {
+        width: 80%;
+        }
+}
