@@ -1,52 +1,23 @@
-import React from 'react';
-import '../scss/All_invoices.scss'
-import { useEffect, useState } from 'react'
+import React from "react";
+import "../scss/All_invoices.scss";
+import useFetch from "../hook/useFetch";
+import Pagination from "./Pagination_invoices";
 
 const All_invoices = () => {
-    const [data, setData] = useState([]);
-    
-    useEffect(() => {
-        fetch("https://cogip-api.pierre-mauriello.be/invoices")
-            .then ((resp) => resp.json())
-            .then ((apiData) => {
-                setData(apiData);
-            });
-    }, 
-    []);
-    console.log(data);
+  const { loading, error, data } = useFetch(
+    "https://cogip-api.pierre-mauriello.be/invoices"
+  );
 
-    return (
-        <section className='section_last_invoices'>
-            <h3>All invoices</h3>
-            <hr className='yellow_rectangle'/>
-            <input type="text" placeholder='Search company' className='input_text'/>
-            <section className='table_last_invoices'>
-                <table>
-                    <thead> 
-                        <tr>
-                            <th>Invoice number</th>
-                            <th>Dates due</th>
-                            <th>Company</th>
-                            <th>Created at</th>
-                        </tr> 
-                    </thead>
-                    <tbody>
-                        {
-                            data.map((companie) => {
-                                return( 
-                                <tr>
-                                    <th>{companie.id}</th>
-                                    <th>{companie.company_id}</th>
-                                    <th>{companie.created_at}</th>
-                                    <th>{companie.updated_at}</th>
-                                </tr>
-                                )
-                            })
-                        }
-                    </tbody>
-                </table>
-            </section>
-        </section>
-    );
-}
+  if (loading) return <p>Loading</p>;
+  if (error) return <p>Unable to load</p>;
+
+  return (
+    <section className="section_last_invoices">
+      <h1 className="allinvoices_title">All invoices</h1>
+      <hr className="yellow_rectangle" />
+      <input type="text" placeholder="Search invoice" className="input_text" />
+      <Pagination data={data} />
+    </section>
+  );
+};
 export default All_invoices;

@@ -1,18 +1,25 @@
 import React from 'react';
 import "/src/assets/scss/Last_companies.css";
 import { useEffect, useState } from 'react'
+import useFetch from '../hook/useFetch';
 
 const Last_companies = () => {
-    const [data, setData] = useState([]);
+    const {loading, error, data} = useFetch("https://cogip-api.pierre-mauriello.be/invoices")
+
+    if(loading) return <p>Loading</p>
+    if(error) return <p>Unable to load</p>
+    console.log(data);
+
+    // const [data, setData] = useState([]);
     
-    useEffect(() => {
-        fetch("https://cogip-api.pierre-mauriello.be/invoices")
-            .then ((resp) => resp.json())
-            .then ((apiData) => {
-                setData(apiData);
-            });
-    }, 
-    []);
+    // useEffect(() => {
+    //     fetch("https://cogip-api.pierre-mauriello.be/companies")
+    //         .then ((resp) => resp.json())
+    //         .then ((apiData) => {
+    //             setData(apiData);
+    //         });
+    // }, 
+    // []);
     return (
         <section className='section_last_companies'>
             <h3>Last companies</h3>
@@ -29,14 +36,14 @@ const Last_companies = () => {
                     </thead>
                     <tbody>
                         {
-                            data.slice(0, 5).map((companie) => {
+                            data.slice(Math.max(data.length - 5, 1)).reverse().map((companie) => {
                                 return( 
-                                <tr>
-                                    <th>{companie.id}</th>
-                                    <th>{companie.company_id}</th>
+                                <tr key={data}>
+                                    <th>{companie.name}</th>
+                                    <th>{companie.tva}</th>
+                                    <th>{companie.country}</th>
+                                    <th>{companie.type_id}</th>
                                     <th>{companie.created_at}</th>
-                                    <th>{companie.updated_at}</th>
-                                    <th>{companie.updated_at}</th>
                                 </tr>
                                 )
                             })
