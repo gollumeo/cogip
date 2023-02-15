@@ -5,6 +5,14 @@ import Nav2 from "../component/Nav2";
 import "../scss/Show_invoices.scss";
 import black_notebook_and_green_arm from "/public/img/black notebook and green arm.png";
 
+fetch(`https://cogip-api.pierre-mauriello.be/invoices/1`)
+  .then((response) => {
+    return response.json();
+  })
+  .then((result) => {
+    console.log(result);
+  });
+
 const Show_invoices = () => {
   return (
     <div className="page">
