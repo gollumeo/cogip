@@ -2,14 +2,7 @@
 <project version="4">
   <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
-      <paths name="API (freeinfinity)">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="lws">
+      <paths name="lws-cogip (main)">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
