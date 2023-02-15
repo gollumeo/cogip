@@ -1,0 +1,12 @@
+@import "mixin.scss";
+
+.dash_nav {
+  width: 30vw;
+  margin: 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  @include mobile {
+    display: none;
+  }
+}
