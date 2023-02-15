@@ -16,10 +16,10 @@ const Last_invoices = () => {
                 <table>
                     <thead> 
                         <tr>
-                            <th>Invoice number</th>
-                            <th>Dates due</th>
-                            <th>Company</th>
-                            <th>Created at</th>
+                            <th className='table_last_invoices_number'>Invoice number</th>
+                            <th className='table_last_invoices_dates'>Dates due</th>
+                            <th className='table_last_invoices_company'>Company</th>
+                            <th className='table_last_invoices_created'>Created at</th>
                         </tr> 
                     </thead>
                     <tbody>
@@ -27,10 +27,10 @@ const Last_invoices = () => {
                             data.slice(Math.max(data.length - 5, 1)).reverse().map((companie) => {
                                 return( 
                                 <tr>
-                                    <th className='table_last_invoices_number'>{companie.id}</th>
-                                    <th className='table_last_invoices_dates'>{companie.company_id}</th>
-                                    <th className='table_last_invoices_company'>{companie.created_at.split(" ")[0].split("-").reverse().join("-")}</th>
-                                    <th className='table_last_invoices_created'>{companie.updated_at.split(" ")[0].split("-").reverse().join("-")}</th>
+                                    <th>{companie.id}</th>
+                                    <th>{companie.company_id}</th>
+                                    <th>{companie.created_at.split(" ")[0].split("-").reverse().join("-")}</th>
+                                    <th>{companie.updated_at.split(" ")[0].split("-").reverse().join("-")}</th>
                                 </tr>
                                 )
                             })

@@ -29,7 +29,7 @@
 }
 .section_last_invoices .table_last_invoices table {
   table-layout: auto;
-  width: 200%;
+  width: 300%;
   border-collapse: collapse;
 }
 @media screen and (min-width: 1280px) {
