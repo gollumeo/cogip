@@ -14,6 +14,7 @@ const Dash_Nav = () => {
           Henry <br /> George
         </h1>
       </div>
+      <hr />
     </div>
   );
 };
