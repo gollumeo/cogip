@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+  <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
     <div>
       <label for="mail">Adresse-email:</label>
       <input type="text" name="mail" required>
