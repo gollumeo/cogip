@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+.pagination {
+  width: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Roboto", sans-serif;
+}
+.pagination .previous {
+  list-style: none;
+  border: solid 1px #919EAB;
+  border-radius: 10%;
+  padding: 1% 4% 1% 4%;
+  margin: 0 1% 0 1%;
+}
+.pagination .previous:hover {
+  background-color: #919EAB;
+  color: #F9DE4E;
+}
+@media screen and (min-width: 1280px) {
+  .pagination .previous {
+    padding: 2% 3% 2% 3%;
+  }
+}
+.pagination .li_page {
+  list-style: none;
+  border: solid 1px #919EAB;
+  border-radius: 10%;
+  padding: 1% 4% 1% 4%;
+  margin: 0 1% 0 1%;
+}
+.pagination .li_page:hover {
+  border: solid 1PX #F9DE4E;
+}
+@media screen and (min-width: 1280px) {
+  .pagination .li_page {
+    padding: 2% 3% 2% 3%;
+  }
+}
+.pagination .li_page .page-num {
+  color: black;
+}
+.pagination .li_page .page-num:hover {
+  color: #F9DE4E;
+}
+.pagination .next {
+  list-style: none;
+  border: solid 1px #919EAB;
+  border-radius: 10%;
+  padding: 1% 4% 1% 4%;
+  margin: 0 1% 0 1%;
+}
+.pagination .next:hover {
+  background-color: #919EAB;
+  color: #F9DE4E;
+}
+@media screen and (min-width: 1280px) {
+  .pagination .next {
+    padding: 2% 3% 2% 3%;
+  }
+}/*# sourceMappingURL=pagination.css.map */
