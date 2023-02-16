@@ -1,0 +1,13 @@
+.white_shape {
+  width: 90%;
+  position: static;
+  top: 60.5%;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9de4e;
+}/*# sourceMappingURL=Nav2.css.map */
