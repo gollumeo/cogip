@@ -1,18 +1,21 @@
 @import "mixin";
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  * {
+    max-width: 100vw;
+  }
 }
 .div-dash {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background-color: #E7E7E7;
-    @include desktop {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        height: 100%;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #e7e7e7;
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
 }
