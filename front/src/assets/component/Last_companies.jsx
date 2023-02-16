@@ -1,6 +1,5 @@
 import React from 'react';
 import "/src/assets/scss/Last_companies.css";
-import { useEffect, useState } from 'react'
 import useFetch from '../hook/useFetch';
 
 const Last_companies = () => {
@@ -8,18 +7,7 @@ const Last_companies = () => {
 
     if(loading) return <p>Loading</p>
     if(error) return <p>Unable to load</p>
-    console.log(data);
 
-    // const [data, setData] = useState([]);
-    
-    // useEffect(() => {
-    //     fetch("https://cogip-api.pierre-mauriello.be/companies")
-    //         .then ((resp) => resp.json())
-    //         .then ((apiData) => {
-    //             setData(apiData);
-    //         });
-    // }, 
-    // []);
     return (
         <section className='section_last_companies'>
             <h3>Last companies</h3>
@@ -27,11 +15,11 @@ const Last_companies = () => {
                 <table>
                     <thead> 
                         <tr>
-                            <th>Name</th>
-                            <th>TVA</th>
-                            <th>Country</th>
-                            <th>Type</th>
-                            <th>Created at</th>
+                            <th className='table_last_companies_name'>Name</th>
+                            <th className='table_last_companies_tva'>TVA</th>
+                            <th className='table_last_companies_country'>Country</th>
+                            <th className='table_last_companies_type'>Type</th>
+                            <th className='table_last_companies_created'>Created at</th>
                         </tr> 
                     </thead>
                     <tbody>
@@ -43,7 +31,7 @@ const Last_companies = () => {
                                     <th>{companie.tva}</th>
                                     <th>{companie.country}</th>
                                     <th>{companie.type_id}</th>
-                                    <th>{companie.created_at}</th>
+                                    <th>{companie.created_at.split(" ")[0].split("-").reverse().join("-")}</th>
                                 </tr>
                                 )
                             })

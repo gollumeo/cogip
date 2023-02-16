@@ -1,0 +1,17 @@
+.dash_pos {
+  font-size: 120%;
+}
+
+.dash_pos_span {
+  font-size: 80%;
+}
+
+.dash_invoice {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dash_invoice_main {
+  margin: 3%;
+  width: 70vw;
+}/*# sourceMappingURL=Dash_invoice.css.map */
