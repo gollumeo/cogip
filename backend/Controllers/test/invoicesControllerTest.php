@@ -71,9 +71,15 @@ class InvoicesControllerTest extends TestCase
         // Vérifiez que la facture a été créée en vérifiant la réponse JSON
         $this->expectOutputString('Invoice successfully created!');
 
-        
         // Récupérez l'ID de la facture créée
-        $invoiceId = json_decode($this->getActualOutput())->id;
+        $response = json_decode($this->getActualOutput());
+        var_dump($response); // Ajoutez cette ligne pour vérifier la valeur de $response
+        if ($response === null) {
+            var_dump($this->getActualOutput());
+            die('Failed to create invoice!');
+        }
+
+        $invoiceId = $response->id;
 
         // Supprimez la facture de la base de données en utilisant l'ID
         $_POST['id'] = $invoiceId;
@@ -83,6 +89,4 @@ class InvoicesControllerTest extends TestCase
         // Vérifiez que la facture a été supprimée en vérifiant la réponse JSON
         $this->expectOutputString('Invoice successfully deleted!');
     }
-
-
 }
