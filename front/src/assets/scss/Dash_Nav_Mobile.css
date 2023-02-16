@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+.dash_nav_mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 3%;
+  border-radius: 10px;
+}
+@media screen and (min-width: 769px) {
+  .dash_nav_mobile {
+    display: none;
+  }
+}
+.dash_nav_mobile .contact_mobile {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.dash_nav_mobile .contact_mobile .dash_contact_img_mobile {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 30%;
+}
+.dash_nav_mobile .contact_mobile .dash_contact_name_mobile {
+  font-size: 100%;
+}
+.dash_nav_mobile .burger_menu {
+  width: 7%;
+}/*# sourceMappingURL=Dash_Nav_Mobile.css.map */

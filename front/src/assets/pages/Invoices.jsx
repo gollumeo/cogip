@@ -1,12 +1,12 @@
 import React from 'react';
-import Nav from '../../assets/component/Nav';
+import Nav2 from '../../assets/component/Nav2';
 import All_invoices from '../component/All_invoices';
 import Footer from '../../assets/component/Footer';
 
 const Invoices = () => {
     return (
         <>
-            <Nav />
+            <Nav2 />
             <All_invoices />
             <Footer />
         </>

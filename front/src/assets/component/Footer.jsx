@@ -23,7 +23,7 @@ const Footer = () => {
                 <div className='info_loc_rs'>
                     <div className='info_loc'>
                         <div className='content_localisation'>
-                            <a href="https://www.google.com/maps/place/Sq.+des+Martyrs,+6000+Charleroi/@50.4053612,4.4369442,17z/data=!3m1!4b1!4m5!3m4!1s0x47c226759b15803b:0xcc51f879d97b9c78!8m2!3d50.4053578!4d4.4391329">
+                            <a href="https://www.google.com/maps/place/Sq.+des+Martyrs,+6000+Charleroi/@50.4053612,4.4369442,17z/data=!3m1!4b1!4m5!3m4!1s0x47c226759b15803b:0xcc51f879d97b9c78!8m2!3d50.4053578!4d4.4391329" target={'_blank'}>
                                 <div className='localisation'>
                                     <img src={localisation} alt="localisation"/>
                                 </div>
