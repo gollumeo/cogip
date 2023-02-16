@@ -10,7 +10,6 @@
     justify-content: space-between;
     width: 80%;
     height: 70vw;
-    //margin-left: 3vw;
     margin: 1vw;
   }
 }
@@ -39,7 +38,7 @@
       display: flex;
       flex-flow: row wrap;
       justify-content: space-around;
-      width: 33vw;
+      //width: 33vw;
       height: 18vw;
       padding: 1vw;
     }
@@ -122,9 +121,7 @@
   }
 }
 //-------------------------- Contacts ------------------------------//
-  .div-data .Tb_Contacts-section {
-    display: flex;
-    flex-direction: column;    
+  .div-data .Tb_Contacts-section {   
     background-color: #ffffff;
     width:95vw;
     height:70vw;
@@ -133,9 +130,10 @@
     padding-top: 8vw;
     @include desktop {
       padding-left: 1vw;
-      padding-bottom: 2vw;
+      padding-bottom: 0;
+      padding-top: 3vw;
       margin-bottom: 10vw;
-      width: 34vw;
+      width: 33vw;
       height: 25vw;
     }
   }
@@ -147,6 +145,7 @@
     @include desktop {
       font-size: 2vw;
       margin-left: 1vw;
+      padding-bottom: 1vw;
     }
   }
   .div-data .Tb_Contacts-section .line-h3tb {
@@ -163,6 +162,7 @@
     overflow-x: auto;
      @include desktop {
       margin-right: 1vw;
+      margin-left: 2vw;
      }
   }
   .div-data .Tb_Contacts-section .Tb_Contacts-table table {
@@ -203,9 +203,7 @@
     text-align: left;
   }
 //-------------------------- Invoices ------------------------------//
-.div-data .Tb_Invoices-section {
-  display: flex;
-    flex-direction: column;    
+.div-data .Tb_Invoices-section {   
     background-color: #ffffff;
     width:95vw;
     height:70vw;
@@ -214,9 +212,10 @@
     padding-top: 8vw;
     @include desktop {
       padding-left: 1vw;
-      padding-bottom: 2vw;
+      padding-bottom: 0;
+      padding-top: 3vw;
       margin-bottom: 10vw;
-      width: 34vw;
+      width: 33vw;
       height: 25vw;
     }
 }
@@ -226,8 +225,9 @@
     margin-left: 6vw;
     padding-bottom: 4vw;
     @include desktop {
-    font-size: 2vw;
-    margin-left: 1vw;
+      font-size: 2vw;
+      margin-left: 1vw;
+      padding-bottom: 1vw;
 }
 }
 .div-data .Tb_Invoices-section .line-h3tb {
@@ -244,6 +244,7 @@
     overflow-x: auto;
      @include desktop {
       margin-right: 1vw;
+      margin-left: 2vw;;
      }
 }
 .div-data .Tb_Invoices-section .Tb_Invoices-table table {
@@ -284,9 +285,7 @@
   text-align: left;
 }
   //-------------------------- Companies ------------------------------//
-  .div-data .Tb_Companies-section {
-    display: flex;
-    flex-direction: column;    
+  .div-data .Tb_Companies-section { 
     background-color: #ffffff;
     width:95vw;
     height:70vw;
@@ -295,9 +294,10 @@
     padding-top: 8vw;
     @include desktop {
       padding-left: 1vw;
-      padding-bottom: 2vw;
+      padding-bottom: 0;
+      padding-top: 3vw;
       margin-bottom: 10vw;
-      width: 34vw;
+      width: 33vw;
       height: 25vw;
     }
   }
@@ -309,6 +309,7 @@
     @include desktop {
       font-size: 2vw;
       margin-left: 1vw;
+      padding-bottom: 1vw;
 }
   }
   .div-data .Tb_Companies-section .line-h3tb {
@@ -325,6 +326,7 @@
     overflow-x: auto;
      @include desktop {
       margin-right: 1vw;
+      margin-left: 2vw;;
      }
   }
   .div-data .Tb_Companies-section .Tb_Companies-table table {
