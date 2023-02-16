@@ -12,9 +12,7 @@
       "ext-pdo": "*",
       "ext-json": "*",
         "fzaninotto/faker": "^1.5",
-        "carbondate/carbon": "^1.33"
-    },
-    "require-dev": {
+        "carbondate/carbon": "^1.33",
         "phpunit/phpunit": "^10.0"
     }
 }

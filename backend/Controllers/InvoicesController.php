@@ -47,7 +47,7 @@ class InvoicesController
 
     public function deleteInvoice()
     {
-        $invoiceData = new Invoices();
+        $invoiceData = new Invoices(new InvoicesService());
 
         $invoiceData->setId($_POST['id']);
 
