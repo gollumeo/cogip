@@ -46,11 +46,11 @@ function Pagination(data) {
                             return (
                                 <>
                                     <tr key={list.id}>
-                                        <th>{list.name}</th>
-                                        <th>{list.phone}</th>
-                                        <th>{list.email}</th>
-                                        <th>{list.company_id}</th>
-                                        <th>{list.created_at.split(' ').join(' ').substr(0, 11)}</th>
+                                        <th className='table_last_contacts_name'>{list.name}</th>
+                                        <th className='table_last_contacts_phone'>{list.phone}</th>
+                                        <th className='table_last_contacts_mail'>{list.email}</th>
+                                        <th className='table_last_contacts_company'>{list.company_id}</th>
+                                        <th className='table_last_contacts_created'>{list.created_at.split(" ")[0].split("-").reverse().join("-")}</th>
                                     </tr>
                                 </>
                             );

@@ -44,8 +44,8 @@ function Pagination(data) {
                                     <tr key={list.id}>
                                         <th>{list.id}</th>
                                         <th>{list.company_id}</th>
-                                        <th>{list.created_at}</th>
-                                        <th>{list.updated_at}</th>
+                                        <th>{list.created_at.split(" ")[0].split("-").reverse().join("-")}</th>
+                                        <th>{list.updated_at.split(" ")[0].split("-").reverse().join("-")}</th>
                                     </tr>
                                 </>
                             );

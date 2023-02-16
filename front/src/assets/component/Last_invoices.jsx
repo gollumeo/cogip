@@ -1,19 +1,14 @@
 import React from 'react';
 import "/src/assets/scss/Last_invoices.css";
 import black_notebook_and_green_arm from "/public/img/black notebook and green arm.png";
-import { useEffect, useState } from 'react'
+import useFetch from '../hook/useFetch';
 
 const Last_invoices = () => {
-    const [data, setData] = useState([]);
-    
-    useEffect(() => {
-        fetch("https://cogip-api.pierre-mauriello.be/invoices")
-            .then ((resp) => resp.json())
-            .then ((apiData) => {
-                setData(apiData);
-            });
-    }, 
-    []);
+    const {loading, error, data} = useFetch("https://cogip-api.pierre-mauriello.be/invoices")
+
+    if(loading) return <p>Loading</p>
+    if(error) return <p>Unable to load</p>
+
     return (
         <section className='section_last_invoices'>
             <h3>Last invoices</h3>
@@ -21,10 +16,10 @@ const Last_invoices = () => {
                 <table>
                     <thead> 
                         <tr>
-                            <th>Invoice number</th>
-                            <th>Dates due</th>
-                            <th>Company</th>
-                            <th>Created at</th>
+                            <th className='table_last_invoices_number'>Invoice number</th>
+                            <th className='table_last_invoices_dates'>Dates due</th>
+                            <th className='table_last_invoices_company'>Company</th>
+                            <th className='table_last_invoices_created'>Created at</th>
                         </tr> 
                     </thead>
                     <tbody>
@@ -34,8 +29,8 @@ const Last_invoices = () => {
                                 <tr>
                                     <th>{companie.id}</th>
                                     <th>{companie.company_id}</th>
-                                    <th>{companie.created_at}</th>
-                                    <th>{companie.updated_at}</th>
+                                    <th>{companie.created_at.split(" ")[0].split("-").reverse().join("-")}</th>
+                                    <th>{companie.updated_at.split(" ")[0].split("-").reverse().join("-")}</th>
                                 </tr>
                                 )
                             })
