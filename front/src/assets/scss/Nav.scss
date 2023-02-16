@@ -20,8 +20,8 @@ body {
       font-family: "Roboto", sans-serif;
       font-weight: 900;
       @include desktop {
-        width: 20%;
         font-size: 250%;
+        width: 25%;
       }
     }
     .all {
@@ -39,6 +39,9 @@ body {
         height: 5px;
         background-color: black;
         margin: 6px 0;
+        @include desktop{
+          display: none;
+        }
       }
       .regroup_list{
         left: 0;
@@ -50,53 +53,118 @@ body {
         background-color: black;
         font-family: "Roboto", sans-serif;
         font-weight: 700;
+        @include desktop{
+          display: flex;
+          flex-direction: row;
+          width: 75%;
+          left: 25%;
+          background-color: transparent;
+        }
         .nav_pages{
           display: flex;
           justify-content: center;
+          @include desktop{
+            display: flex;
+            flex-direction: row;
+            width: 50%;
+          }
           .list_pages{
             padding: 0;
+            @include desktop{
+              width: 100%;
+              display: flex;
+              justify-content: space-around;
+            }
             .nav_link{
               color: white;
               text-decoration: none;
               &:hover{
                 color: #f9de4e;
               }
+              @include desktop{
+                color: black;
+                padding: 1% 3% 1% 3%;
+                &:hover{
+                  background-color: #fff;
+                  border-radius: 5px;
+                }
               .page{
                 margin-bottom: 5%;
-              }
-            }
-          }
-        }
-        .nav_log{
-          display: flex;
-          justify-content: center;
-          .list_log{
-            padding: 0;
-            margin-top: 0;
-            .nav_link_2{
-              color: white;
-              text-decoration: none;
-              &:hover{
-                color: #f9de4e;
-              }
-              .sign_up{
-                margin-bottom: 10%;
-              }
-            }
-            .nav_link{
-              color: white;
-              text-decoration: none;
-              &:hover{
-                color: #f9de4e;
-              }
-              .login{
-                margin-bottom: 10%;
+                display: flex;
               }
             }
           }
         }
       }
-      
+      .nav_log{
+        display: flex;
+        justify-content: center;
+        @include desktop{
+          display: flex;
+          flex-direction: row;
+          width: 50%;
+        }
+        .list_log{
+          padding: 0;
+          margin-top: 0;
+          @include desktop{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+          }
+          .nav_link_2{
+            color: white;
+            text-decoration: none;
+            &:hover{
+              color: #f9de4e;
+            }
+            @include desktop{
+              display: flex;
+              align-items: center;
+              margin-right: 10%;
+              color: black;
+              padding: 1% 3% 1% 3%;
+              background-color: #fff;
+              border-radius: 5px;
+              &:hover{
+                color: #f9de4e;
+              }
+            }
+            .sign_up{
+              margin-bottom: 10%;
+              @include desktop{
+                margin: 0;
+              }
+            }
+          }
+          .nav_link{
+            color: white;
+            text-decoration: none;
+            &:hover{
+              color: #f9de4e;
+            }
+            @include desktop{
+              display: flex;
+              align-items: center;
+              margin-right: 10%;
+              color: black;
+              padding: 1% 3% 1% 3%;
+              &:hover{
+                background-color: #fff;
+                border-radius: 5px;
+              }
+            }
+            .login{
+              margin-bottom: 10%;
+              @include desktop{
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
     }
   }
+}
 }
