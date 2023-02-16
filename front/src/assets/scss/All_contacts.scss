@@ -51,7 +51,7 @@
         }
         table{
             table-layout: auto;
-            width: 200%;
+            width: 300%;
             border-collapse: collapse;
             @include desktop{
                 width: 100%;
@@ -71,7 +71,7 @@
                 tr{
                     background-color:#F5F5F5;
                     th{
-                        padding: 1% 1% 1% 2%;
+                        padding: 1% 1% 1% 1%;
                         text-align: left;
                     }
                     

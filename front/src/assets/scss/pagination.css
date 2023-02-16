@@ -31,6 +31,7 @@
 }
 .pagination .li_page:hover {
   border: solid 1PX #F9DE4E;
+  background-color: #919EAB;
 }
 @media screen and (min-width: 1280px) {
   .pagination .li_page {
