@@ -29,6 +29,7 @@
         margin: 0 1% 0 1%;
         &:hover{
             border: solid 1PX #F9DE4E;
+            background-color: #919EAB;
         }
         @include desktop{
             padding: 2% 3% 2% 3%;
