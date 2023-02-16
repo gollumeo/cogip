@@ -20,175 +20,145 @@ body {
       font-family: "Roboto", sans-serif;
       font-weight: 900;
       @include desktop {
-        width: 20%;
         font-size: 250%;
+        width: 25%;
       }
     }
     .all {
       width: 50%;
       display: flex;
+      z-index: 2;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      button {
-        background-color: #f9de4e;
-        color: none;
-        border: none;
-        cursor: pointer;
-        @include desktop {
+      .burger span{
+        border-radius: 50px;
+        display: block;
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 6px 0;
+        @include desktop{
           display: none;
         }
-        .burger_menu {
-          width: 5vw;
-          height: 3vh;
-        }
       }
-      .nav_pages {
+      .regroup_list{
+        left: 0;
         width: 100%;
-        justify-content: center;
         position: absolute;
         top: 8%;
-        left: 0%;
-        z-index: 1;
-        @include desktop {
-          width: 40%;
-          top: 6.5%;
-          left: 20%;
-        }
-        .list_pages {
-          width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        @include desktop{
           display: flex;
-          flex-direction: column;
-          list-style: none;
-          background-color: #000000;
-          padding-bottom: 5%;
-          padding-left: 0;
-          padding-top: 1.5%;
-          @include desktop {
-            padding: 0;
-            background-color: transparent;
+          flex-direction: row;
+          width: 75%;
+          left: 25%;
+          background-color: transparent;
+        }
+        .nav_pages{
+          display: flex;
+          justify-content: center;
+          @include desktop{
+            display: flex;
             flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
+            width: 50%;
           }
-          .nav_link {
-            font-family: "Roboto", sans-serif;
-            text-decoration: none;
-            color: #ffffff;
-            &:hover {
-              color: #f9de4e;
+          .list_pages{
+            padding: 0;
+            @include desktop{
+              width: 100%;
               display: flex;
-              align-items: center;
-              justify-content: center;
+              justify-content: space-around;
             }
-            @include desktop {
-              padding: 2% 3.5% 2% 3.5%;
-              font-size: 110%;
-              color: black;
-              &:hover {
+            .nav_link{
+              color: white;
+              text-decoration: none;
+              &:hover{
                 color: #f9de4e;
-                padding: 2% 3.5% 2% 3.5%;
-                border-radius: 10px;
-                font-size: 110%;
-                background-color: #ffffff;
               }
-            }
-            .page {
-              padding-top: 1%;
-              padding-bottom: 1%;
-              @include desktop {
-                padding-top: 0;
-                padding-bottom: 0;
+              @include desktop{
+                color: black;
+                padding: 1% 3% 1% 3%;
+                &:hover{
+                  background-color: #fff;
+                  border-radius: 5px;
+                }
+              .page{
+                margin-bottom: 5%;
+                display: flex;
               }
             }
           }
         }
       }
-      .nav_log {
-        width: 100%;
-        top: 23.5%;
-        left: 0%;
+      .nav_log{
+        display: flex;
         justify-content: center;
-        position: absolute;
-        z-index: 1;
-        @include desktop {
-          width: 40%;
-          top: 6.5%;
-          left: 60%;
-        }
-        .list_log {
-          width: 100%;
-          padding-bottom: 3%;
-          padding-left: 0;
+        @include desktop{
           display: flex;
-          flex-direction: column;
-          align-items: center;
-          list-style: none;
-          background-color: #000000;
-          @include desktop {
+          flex-direction: row;
+          width: 50%;
+        }
+        .list_log{
+          padding: 0;
+          margin-top: 0;
+          @include desktop{
             width: 100%;
-            padding: 0;
-            margin-right: 15%;
-            background-color: transparent;
-            flex-direction: row;
+            display: flex;
             justify-content: flex-end;
+            margin: 0;
           }
-          .nav_link_2 {
+          .nav_link_2{
+            color: white;
             text-decoration: none;
-            color: rgb(255, 255, 255);
-            font-family: "Roboto", sans-serif;
-            &:hover {
+            &:hover{
               color: #f9de4e;
             }
-            @include desktop {
-              margin-right: 5%;
-              padding: 1% 0% 1% 0%;
-              border-radius: 10px;
-              font-size: 110%;
-              color: black;
-              background-color: #ffffff;
-            }
-            .sign_up {
-              width: 100px;
-              padding-top: 2%;
-              padding-bottom: 1%;
-              @include desktop {
-                padding-right: 6%;
-                padding-top: 0;
-                padding-bottom: 0;
-              }
-            }
-          }
-          .nav_link {
-            text-decoration: none;
-            color: rgb(255, 255, 255);
-            font-family: "Roboto", sans-serif;
-            &:hover {
-              color: #f9de4e;
-            }
-            @include desktop {
-              font-size: 110%;
+            @include desktop{
+              display: flex;
+              align-items: center;
+              margin-right: 10%;
               color: black;
               padding: 1% 3% 1% 3%;
-              &:hover {
+              background-color: #fff;
+              border-radius: 5px;
+              &:hover{
                 color: #f9de4e;
-                padding: 1% 3% 1% 3%;
-                border-radius: 10px;
-                font-size: 110%;
-                background-color: #ffffff;
               }
             }
-            .login {
+            .sign_up{
+              margin-bottom: 10%;
+              @include desktop{
+                margin: 0;
+              }
+            }
+          }
+          .nav_link{
+            color: white;
+            text-decoration: none;
+            &:hover{
+              color: #f9de4e;
+            }
+            @include desktop{
               display: flex;
-              flex-direction: column;
-              list-style: none;
-              padding-top: 20%;
-              padding-bottom: 10%;
-              @include desktop {
-                width: 20%;
-                padding-top: 0;
-                padding-bottom: 0;
+              align-items: center;
+              margin-right: 10%;
+              color: black;
+              padding: 1% 3% 1% 3%;
+              &:hover{
+                background-color: #fff;
+                border-radius: 5px;
+              }
+            }
+            .login{
+              margin-bottom: 10%;
+              @include desktop{
+                margin: 0;
               }
             }
           }
@@ -196,4 +166,5 @@ body {
       }
     }
   }
+}
 }
