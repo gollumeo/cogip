@@ -50,7 +50,7 @@ function Pagination(data) {
                                         <th>{list.phone}</th>
                                         <th>{list.email}</th>
                                         <th>{list.company_id}</th>
-                                        <th>{list.created_at.split(' ').join(' ').substr(0, 11)}</th>
+                                        <th>{new Date(list.created_at).toLocaleDateString('fr-FR')}</th>                                       
                                     </tr>
                                 </>
                             );
@@ -78,3 +78,5 @@ function Pagination(data) {
 };
 
 export default Pagination;
+
+//<th>{list.created_at.split(' ').join(' ').substr(0, 11)}</th>
