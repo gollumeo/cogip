@@ -14,21 +14,33 @@
         z-index: 1;
         @include desktop{
             margin-top: 5%;
-            font-size: 200%;
+            font-size: 250%;
         }
     }
     .yellow_rectangle{
-        width: 30%;
-        position: fixed;
-        top: 13%;
-        left: 22.5%;
-        z-index: 0;
+        background-color:#F9DE4E;
+        border: none;
+        height: 1rem;
+        width: 35%;
+        position: absolute;
+        top: 14.5%;
+        left: 25%;
+        @include desktop{
+            top: 28%;
+            left: 17.5%;
+            height: 1.5rem;
+            width: 17%;
+        }
     }
     .input_text{
         padding: 0.5%;
-        border-radius: 10px;
-        border: solid 1px;
-        border-color: #636363;
+        border-radius: 4px;
+        border: solid 1px #636363;
+        margin-bottom: 5%;
+        @include desktop{
+            margin-bottom: 2%;
+            margin-left: 66%;
+        }
     }
     .table_last_invoices{
         width: 80%;
@@ -39,7 +51,7 @@
         }
         table{
             table-layout: auto;
-            width: 200%;
+            width: 300%;
             border-collapse: collapse;
             @include desktop{
                 width: 100%;
@@ -49,9 +61,17 @@
                 background-color:#F9DE4E;
                 tr{
                     th{
-                        padding: 1%;
+                        padding: 1% 1% 1% 1%;
                         text-align: left;
-                        padding-left: 5%;
+                    }
+                    .table_last_invoices_number{
+                        width: 17%;
+                    }
+                    .table_last_invoices_dates{
+                        width: 12%;
+                    }
+                    .table_last_invoices_company{
+                        width: 20%;
                     }
                 }
             }
@@ -60,9 +80,8 @@
                 tr{
                     background-color:#F5F5F5;
                     th{
-                        padding: 1%;
+                        padding: 1% 1% 1% 2%;
                         text-align: left;
-                        padding-left: 4%;
                     }
                     
                 }

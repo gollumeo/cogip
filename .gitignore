@@ -2,5 +2,5 @@ vendor/
 front/node_modules/
 backend/vendor/
 node_modules/
-.idea/
+front/.idea/
 .gitignore
