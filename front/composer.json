@@ -2,7 +2,9 @@
     "require": {
         "vlucas/phpdotenv": "^5.5",
       "ext-pdo": "*",
-        "fakerphp/faker": "^1.21",
-        "filp/whoops": "^2.14"
+        "carbondate/carbon": "^1.33",
+        "psr/container": "^2.0",
+        "fzaninotto/faker": "^1.5",
+      "ext-json": "*"
     }
 }

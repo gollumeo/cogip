@@ -1,0 +1,55 @@
+@import "mixin.scss";
+
+.show_contact {
+  display: flex;
+  justify-content: space-around;
+  margin: 5%;
+  font-family: "inter";
+}
+
+.contact_img {
+  border-radius: 50%;
+  width: 25%;
+  height: 25%;
+  @include desktop {
+    width: 18%;
+    height: 18%;
+  }
+}
+
+.contact_name {
+  font-size: 5vw;
+  font-family: "inter";
+  position: relative;
+  @include desktop {
+    font-size: 4vw;
+  }
+}
+
+.contact_name::after {
+  content: "";
+  display: block;
+  background-color: #f9de4e;
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  bottom: 0;
+  left: 3%;
+  z-index: -1;
+  @include desktop {
+    height: 40%;
+    width: 100%;
+  }
+}
+
+.contact_infos {
+  font-size: 3vw;
+  list-style-type: none;
+  @media screen and (min-width: 800px) {
+    font-size: 180%;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
