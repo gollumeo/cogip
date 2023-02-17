@@ -1,4 +1,8 @@
-backend/vendor/
-node_modules/
-front/vendor/
-
+node_modules
+vendor/
+.env
+package-lock.json
+```
+composer-lock.json
+composer.lock
+.idea
