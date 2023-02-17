@@ -13,7 +13,7 @@
   <img src="./public/img/black notebook and green arm.png" alt="black notebook and green arm" class="arm_php">
   <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" class="form_content">
     <h1 class="title_register">
-      SIGN UP
+      SIGN UP!
     </h1>
     <div class="form">
       <label for="first_name" class="form_label">First Name:</label>
