@@ -9,6 +9,22 @@
   position: relative;
 }
 
+.welcome::after {
+  content: "";
+  background-image: url(../../../public/img/illustr.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  background-position: center;
+  background-size: contain;
+  right: 0;
+  min-width: 50%;
+  min-height: 30vh;
+  bottom: 0;
+  @include mobile {
+    display: none;
+  }
+}
+
 .illustr {
   width: 80%;
   align-self: center;

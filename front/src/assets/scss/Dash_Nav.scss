@@ -3,11 +3,13 @@
 .dash_nav {
   width: 30vw;
   max-width: 250px;
+  min-height: 100vh;
   margin: 0;
   background-color: white;
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: space-between;
   @include mobile {
     display: none;
   }
@@ -45,4 +47,19 @@
   li {
     margin: 15% 0%;
   }
+  .li_nav {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    img {
+      margin-right: 20px;
+    }
+  }
+}
+
+.logout_nav {
+  display: flex;
+  justify-self: center;
+  width: 100%;
+  background-color: red;
 }
