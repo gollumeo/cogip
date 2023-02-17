@@ -125,6 +125,8 @@ class InvoicesRepository
         $stmt->execute();
         // Prepare the query
         $query = "SELECT * FROM invoices WHERE id = :id";
+        $id = $invoiceData->getId();
+        $stmt->bindParam(':id', $id);
 
         // Prepare the statement
         $stmt = $this->database->prepare($query);

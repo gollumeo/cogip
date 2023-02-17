@@ -82,6 +82,7 @@ class ContactsRepository
         // Prepare the query
         $query = "DELETE FROM contacts WHERE id = :id";
 
+
         // Prepare the statement
         $stmt = $this->database->prepare($query);
 
@@ -129,6 +130,8 @@ class ContactsRepository
         $stmt->execute();
         // Prepare the query
         $query = "SELECT * FROM contacts WHERE id = :id";
+        $id = $contactsData->getId();
+        $stmt->bindParam(':id',$id);
 
         // Prepare the statement
         $stmt = $this->database->prepare($query);
@@ -137,7 +140,7 @@ class ContactsRepository
         $stmt->execute();
 
         // Set the json response
-        $json_encode = json_encode($contactsData, true);
+        $json_encode = json_encode($contactsData, JSON_PRETTY_PRINT);
 
         header('Content-type: application/json');
         echo $json_encode;

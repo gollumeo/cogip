@@ -4,6 +4,7 @@ namespace App\Routes;
 use App\Controllers\CompaniesController;
 use App\Controllers\ContactsController;
 use App\Controllers\InvoicesController;
+use App\Controllers\UsersController;
 use Bramus\Router\Router;
 
 if (isset($_SERVER['HTTP_ORIGIN'])) {
@@ -102,6 +103,34 @@ $router->put('/contacts/{id}', function ($id) {
 
 $router->delete('/contacts/{id}', function ($id) {
     (new ContactsController())->deleteContacts($id);
+});
+
+///////////////////////////////////////////
+/////////////////// USERS /////////////////
+///////////////////////////////////////////
+
+$router->get('/users', function () {
+    return (new UsersController())->getAllUsers();
+});
+
+$router->get('/users/{id}', function ($id) {
+    return (new UsersController())->getUserById($id);
+});
+
+$router->post('/users', function () {
+    (new UsersController())->createUser();
+});
+
+$router->put('/users/{id}', function ($id) {
+    (new UsersController())->updateUser($id);
+});
+
+$router->delete('/users/{id}', function ($id) {
+    (new UsersController())->deleteUser($id);
+});
+
+$router->get('/isLogged', function () {
+    return (new UsersController())->isLogged();
 });
 
 $router->run();
