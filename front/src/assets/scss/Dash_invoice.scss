@@ -1,6 +1,5 @@
 @import "mixin";
 
-
 // * {
 //   margin: 0;
 //   padding: 0;
@@ -12,15 +11,18 @@
 
 .dash_pos {
   font-size: 120%;
+  margin: 0;
 }
 
 .dash_pos_span {
   font-size: 80%;
+  margin: 0;
 }
 
 .dash_invoice {
   display: flex;
-  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
   background-color: #e3e3ff;
   margin: 0;
   padding: 0;
