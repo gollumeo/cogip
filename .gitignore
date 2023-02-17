@@ -2,7 +2,6 @@ vendor/
 node_modules/
 backend/vendor/
 .idea/
-.gitignore
 .env
 composer.lock
 faker-integration.php
