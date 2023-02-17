@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+.dash_invoice {
+  font-family: "Roboto";
+}
+
 .dash_nav_mobile {
   display: flex;
   justify-content: space-between;
