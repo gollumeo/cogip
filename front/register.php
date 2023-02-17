@@ -8,7 +8,9 @@
 </head>
 
 <body class="body_form">
-  <a href="http://localhost:5173"><img src="./public/img/logo_COGIP.svg" alt="Logo Cogip" class="logo_cogip"></a>
+  <a href="http://localhost:5173" class="a_form">
+    <img src="./public/img/logo_COGIP.svg" alt="Logo Cogip" class="logo_cogip">
+  </a>
   <img src="./public/img/bulb.png" alt="bulb" class="bulb_php">
   <img src="./public/img/black notebook and green arm.png" alt="black notebook and green arm" class="arm_php">
   <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" class="form_content">
