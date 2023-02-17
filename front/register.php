@@ -8,12 +8,12 @@
 </head>
 
 <body class="body_form">
-  <img src="./public/img/logo_COGIP.svg" alt="Logo Cogip" class="logo_cogip">
+  <a href="http://localhost:5173"><img src="./public/img/logo_COGIP.svg" alt="Logo Cogip" class="logo_cogip"></a>
   <img src="./public/img/bulb.png" alt="bulb" class="bulb_php">
   <img src="./public/img/black notebook and green arm.png" alt="black notebook and green arm" class="arm_php">
   <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" class="form_content">
     <h1 class="title_register">
-      SIGN UP!
+      SIGN UP
     </h1>
     <div class="form">
       <label for="first_name" class="form_label">First Name:</label>
