@@ -1,6 +1,9 @@
 vendor/
-front/node_modules/
-backend/vendor/
 node_modules/
-front/.idea/
+backend/vendor/
+.idea/
 .gitignore
+.env
+composer.lock
+faker-integration.php
+package-lock.json
