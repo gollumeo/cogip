@@ -11,8 +11,7 @@ const All_invoices = () => {
 
     return (
         <section className='section_last_invoices'>
-            <h3>All invoices</h3>
-            <hr className='yellow_rectangle'/>
+            <h3 className='title_invoices'>All invoices</h3>
             <Pagination data={data}/>
         </section>
     );

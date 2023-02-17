@@ -46,6 +46,7 @@ function Pagination(data) {
                             return (
                                 <>
                                     <tr key={list.id}>
+
                                         <th className='table_last_contacts_name'>{list.name}</th>
                                         <th className='table_last_contacts_phone'>{list.phone}</th>
                                         <th className='table_last_contacts_mail'>{list.email}</th>
@@ -78,3 +79,5 @@ function Pagination(data) {
 };
 
 export default Pagination;
+
+//<th>{list.created_at.split(' ').join(' ').substr(0, 11)}</th>

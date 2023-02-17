@@ -11,8 +11,7 @@ const All_contacts = () => {
 
     return (
         <section className='section_last_invoices'>
-            <h3>All companies</h3>
-            <hr className='yellow_rectangle_3'/>
+            <h3 className='title_companies'>All companies</h3>
             <Pagination data={data}/>
         </section>
     );
