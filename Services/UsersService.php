@@ -44,5 +44,6 @@ class UsersService
     public function isLogged($mail, $password)
     {
         return $this->usersRepository->isLogged($mail, $password);
+
     }
 }

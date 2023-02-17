@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fbffc0f-d6ae-42fa-8018-f46dcee0b141" name="Changes" comment=".">
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/ContactsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/ContactsRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/InvoicesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/InvoicesRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routes/Routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/Routes/Routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/UsersService.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/UsersService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,6 +146,14 @@
       <workItem from="1676631007136" duration="414000" />
       <workItem from="1676631555715" duration="5335000" />
     </task>
+    <task id="LOCAL-00001" summary=".">
+      <created>1676641885457</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676641885457</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,5 +169,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>

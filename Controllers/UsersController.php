@@ -80,9 +80,9 @@ class UsersController extends Controller
 
         if ($isLogged)
         {
-            header('Content-Type: application/json');
-            echo json_encode(['isLoggedIn' => true], JSON_PRETTY_PRINT);
-            return true;
+            header('Location: https://cogip.pierre-mauriello.be/dashboard');
+
+//            return json_encode()true;
         }
     }
 }
