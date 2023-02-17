@@ -8,7 +8,8 @@ body header {
   width: 100%;
   display: flex;
   align-items: center;
-  background: #F9DE4E;
+  text-align: center;
+  background: #f9de4e;
 }
 @media screen and (min-width: 1280px) {
   body header {
@@ -24,200 +25,171 @@ body header h1 {
 }
 @media screen and (min-width: 1280px) {
   body header h1 {
-    width: 20%;
     font-size: 250%;
+    width: 25%;
   }
 }
 body header .all {
   width: 50%;
   display: flex;
+  z-index: 2;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-body header .all button {
-  background-color: #F9DE4E;
-  color: none;
-  border: none;
-  cursor: pointer;
+body header .all .burger span {
+  border-radius: 50px;
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
 }
 @media screen and (min-width: 1280px) {
-  body header .all button {
+  body header .all .burger span {
     display: none;
   }
 }
-body header .all button .burger_menu {
-  width: 5vw;
-  height: 3vh;
-}
-body header .all .nav_pages {
+body header .all .regroup_list {
+  left: 0;
   width: 100%;
-  justify-content: center;
   position: absolute;
   top: 8%;
-  left: 0%;
-  z-index: 1;
-}
-@media screen and (min-width: 1280px) {
-  body header .all .nav_pages {
-    width: 40%;
-    top: 6.5%;
-    left: 20%;
-  }
-}
-body header .all .nav_pages .list_pages {
-  width: 100%;
-  display: flex;
   flex-direction: column;
-  list-style: none;
-  background-color: #000000;
-  padding-bottom: 5%;
-  padding-left: 0;
-  padding-top: 1.5%;
-}
-@media screen and (min-width: 1280px) {
-  body header .all .nav_pages .list_pages {
-    padding: 0;
-    background-color: transparent;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-}
-body header .all .nav_pages .list_pages .nav_link {
+  align-items: center;
+  background-color: black;
   font-family: "Roboto", sans-serif;
-  text-decoration: none;
-  color: #ffffff;
+  font-weight: 700;
 }
-body header .all .nav_pages .list_pages .nav_link:hover {
-  color: #F9DE4E;
+@media screen and (min-width: 1280px) {
+  body header .all .regroup_list {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    left: 25%;
+    background-color: transparent;
+  }
+}
+body header .all .regroup_list .nav_pages {
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 @media screen and (min-width: 1280px) {
-  body header .all .nav_pages .list_pages .nav_link {
-    padding: 2% 3.5% 2% 3.5%;
-    font-size: 110%;
-    color: black;
-  }
-  body header .all .nav_pages .list_pages .nav_link:hover {
-    color: #F9DE4E;
-    padding: 2% 3.5% 2% 3.5%;
-    border-radius: 10px;
-    font-size: 110%;
-    background-color: #ffffff;
+  body header .all .regroup_list .nav_pages {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
   }
 }
-body header .all .nav_pages .list_pages .nav_link .page {
-  padding-top: 1%;
-  padding-bottom: 1%;
+body header .all .regroup_list .nav_pages .list_pages {
+  padding: 0;
 }
 @media screen and (min-width: 1280px) {
-  body header .all .nav_pages .list_pages .nav_link .page {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-body header .all .nav_log {
-  width: 100%;
-  top: 23.5%;
-  left: 0%;
-  justify-content: center;
-  position: absolute;
-  z-index: 1;
-}
-@media screen and (min-width: 1280px) {
-  body header .all .nav_log {
-    width: 40%;
-    top: 6.5%;
-    left: 60%;
-  }
-}
-body header .all .nav_log .list_log {
-  width: 100%;
-  padding-bottom: 3%;
-  padding-left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-  background-color: #000000;
-}
-@media screen and (min-width: 1280px) {
-  body header .all .nav_log .list_log {
+  body header .all .regroup_list .nav_pages .list_pages {
     width: 100%;
-    padding: 0;
-    margin-right: 15%;
-    background-color: transparent;
-    flex-direction: row;
-    justify-content: flex-end;
+    display: flex;
+    justify-content: space-around;
   }
 }
-body header .all .nav_log .list_log .nav_link_2 {
+body header .all .regroup_list .nav_pages .list_pages .nav_link {
+  color: white;
   text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-family: "Roboto", sans-serif;
 }
-body header .all .nav_log .list_log .nav_link_2:hover {
-  color: #F9DE4E;
+body header .all .regroup_list .nav_pages .list_pages .nav_link:hover {
+  color: #f9de4e;
 }
 @media screen and (min-width: 1280px) {
-  body header .all .nav_log .list_log .nav_link_2 {
-    margin-right: 5%;
-    padding: 1% 0% 1% 0%;
-    border-radius: 10px;
-    font-size: 110%;
-    color: black;
-    background-color: #ffffff;
-  }
-}
-body header .all .nav_log .list_log .nav_link_2 .sign_up {
-  width: 100px;
-  padding-top: 2%;
-  padding-bottom: 1%;
-}
-@media screen and (min-width: 1280px) {
-  body header .all .nav_log .list_log .nav_link_2 .sign_up {
-    padding-right: 6%;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-body header .all .nav_log .list_log .nav_link {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-family: "Roboto", sans-serif;
-}
-body header .all .nav_log .list_log .nav_link:hover {
-  color: #F9DE4E;
-}
-@media screen and (min-width: 1280px) {
-  body header .all .nav_log .list_log .nav_link {
-    font-size: 110%;
+  body header .all .regroup_list .nav_pages .list_pages .nav_link {
     color: black;
     padding: 1% 3% 1% 3%;
   }
-  body header .all .nav_log .list_log .nav_link:hover {
-    color: #F9DE4E;
-    padding: 1% 3% 1% 3%;
-    border-radius: 10px;
-    font-size: 110%;
-    background-color: #ffffff;
+  body header .all .regroup_list .nav_pages .list_pages .nav_link:hover {
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  body header .all .regroup_list .nav_pages .list_pages .nav_link .page {
+    margin-bottom: 5%;
+    display: flex;
   }
 }
-body header .all .nav_log .list_log .nav_link .login {
+body header .all .regroup_list .nav_log {
   display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding-top: 20%;
-  padding-bottom: 10%;
+  justify-content: center;
 }
 @media screen and (min-width: 1280px) {
-  body header .all .nav_log .list_log .nav_link .login {
-    width: 20%;
-    padding-top: 0;
-    padding-bottom: 0;
+  body header .all .regroup_list .nav_log {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+  }
+}
+body header .all .regroup_list .nav_log .list_log {
+  padding: 0;
+  margin-top: 0;
+}
+@media screen and (min-width: 1280px) {
+  body header .all .regroup_list .nav_log .list_log {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+  }
+}
+body header .all .regroup_list .nav_log .list_log .nav_link_2 {
+  color: white;
+  text-decoration: none;
+}
+body header .all .regroup_list .nav_log .list_log .nav_link_2:hover {
+  color: #f9de4e;
+}
+@media screen and (min-width: 1280px) {
+  body header .all .regroup_list .nav_log .list_log .nav_link_2 {
+    display: flex;
+    align-items: center;
+    margin-right: 10%;
+    color: black;
+    padding: 1% 3% 1% 3%;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  body header .all .regroup_list .nav_log .list_log .nav_link_2:hover {
+    color: #f9de4e;
+  }
+}
+body header .all .regroup_list .nav_log .list_log .nav_link_2 .sign_up {
+  margin-bottom: 10%;
+}
+@media screen and (min-width: 1280px) {
+  body header .all .regroup_list .nav_log .list_log .nav_link_2 .sign_up {
+    margin: 0;
+  }
+}
+body header .all .regroup_list .nav_log .list_log .nav_link {
+  color: white;
+  text-decoration: none;
+}
+body header .all .regroup_list .nav_log .list_log .nav_link:hover {
+  color: #f9de4e;
+}
+@media screen and (min-width: 1280px) {
+  body header .all .regroup_list .nav_log .list_log .nav_link {
+    display: flex;
+    align-items: center;
+    margin-right: 10%;
+    color: black;
+    padding: 1% 3% 1% 3%;
+  }
+  body header .all .regroup_list .nav_log .list_log .nav_link:hover {
+    background-color: #fff;
+    border-radius: 5px;
+  }
+}
+body header .all .regroup_list .nav_log .list_log .nav_link .login {
+  margin-bottom: 10%;
+}
+@media screen and (min-width: 1280px) {
+  body header .all .regroup_list .nav_log .list_log .nav_link .login {
+    margin: 0;
   }
 }/*# sourceMappingURL=Nav.css.map */

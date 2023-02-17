@@ -1,0 +1,22 @@
+.welcome {
+  background-color: #9698d6;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.illustr {
+  width: 80%;
+  align-self: center;
+}
+
+.welcome_title {
+  font-size: 180%;
+  padding: 2%;
+  padding-bottom: 0;
+}
+
+.welcome_text {
+  padding: 2%;
+}/*# sourceMappingURL=Dash_welcome.css.map */
