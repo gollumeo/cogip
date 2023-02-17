@@ -10,7 +10,7 @@ use App\Services\InvoicesService;
 
 class InvoicesController
 {
-//    private $invoicesRepository;
+    //    private $invoicesRepository;
     private $invoicesService;
     /**
      * @var InvoicesRepository
