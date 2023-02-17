@@ -13,9 +13,9 @@
     margin: 1vw;
   }
 }
-.div-data .div-stat, 
-.div-data .Tb_Invoices-section, 
-.div-data .Tb_Invoices-contacts, 
+.div-data .div-stat,
+.div-data .Tb_Invoices-section,
+.div-data .Tb_Invoices-contacts,
 .div-data .Tb_Invoices-companies {
   @include desktop {
     width: 49%;
@@ -23,6 +23,7 @@
 }
 //-------------------------- Statistics ------------------------------//
 .div-data .div-stat {
+
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -54,6 +55,7 @@
   }
 }
 .div-data .div-stat .div-invoices {
+
     display: flex;
     flex-wrap: wrap;
     background:url("/img/EllipseBleue.png");
@@ -77,6 +79,7 @@
   }
 }
 .div-data .div-stat .div-contacts {
+
     background:url("/img/EllipseLavande.png");
     background-repeat: no-repeat;
     color: white;
@@ -99,6 +102,7 @@
   }
 }
 .div-data .div-stat .div-companies {
+
     background:url("/img/EllipseRose.png");
     background-repeat: no-repeat;
     color: white;
@@ -121,6 +125,7 @@
   }
 }
 //-------------------------- Contacts ------------------------------//
+
   .div-data .Tb_Contacts-section {   
     background-color: #ffffff;
     width:95vw;
@@ -198,10 +203,23 @@
     padding: 1vw 0 1vw 1vw;
   }
 }
-  .div-data .Tb_Contacts-section .Tb_Contacts-table table tbody tr .email {
-    padding-left: 2vw;
-    text-align: left;
+.div-data .Tb_Contacts-section .Tb_Contacts-table {
+  margin-left: 4vw;
+  margin-right: 4vw;
+  overflow-x: auto;
+  @include desktop {
+    margin-right: 1vw;
   }
+}
+.div-data .Tb_Contacts-section .Tb_Contacts-table table {
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff;
+  width: 120vw;
+  border-collapse: collapse;
+  @include desktop {
+    width: 28vw;
+  }
+
 //-------------------------- Invoices ------------------------------//
 .div-data .Tb_Invoices-section {   
     background-color: #ffffff;
@@ -249,17 +267,18 @@
 }
 .div-data .Tb_Invoices-section .Tb_Invoices-table table {
   font-family: "Inter", sans-serif;
-    background-color: #ffffff;
-    width: 120vw;
-    border-collapse: collapse;
-    @include desktop {
-      width: 28vw;
-    }
+  background-color: #ffffff;
+  width: 120vw;
+  border-collapse: collapse;
+  @include desktop {
+    width: 28vw;
+  }
 }
 .div-data .Tb_Invoices-section .Tb_Invoices-table table thead tr th {
   font-size: 4vw;
   text-align: left;
   padding: 2vw;
+
     @include desktop {
       font-size: 1vw;
       font-weight: 900;
@@ -270,6 +289,7 @@
   font-size: 4vw;
   font-weight: 500;
   @include desktop {
+
     font-size: 1vw; 
   }
 }
@@ -284,6 +304,7 @@
   padding-left: 2vw;
   text-align: left;
 }
+
   //-------------------------- Companies ------------------------------//
   .div-data .Tb_Companies-section { 
     background-color: #ffffff;
@@ -361,8 +382,49 @@
     @include desktop {
     padding: 1vw 0 1vw 1vw;
   }
+}
+.div-data .Tb_Companies-section .Tb_Companies-table {
+  margin-left: 4vw;
+  margin-right: 4vw;
+  overflow-x: auto;
+  @include desktop {
+    margin-right: 1vw;
   }
-  .div-data .Tb_Companies-section .Tb_Companies-table table tbody tr .country {
-    padding-left: 2vw;
-    text-align: left;
+}
+.div-data .Tb_Companies-section .Tb_Companies-table table {
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff;
+  width: 120vw;
+  border-collapse: collapse;
+  @include desktop {
+    width: 28vw;
   }
+}
+.div-data .Tb_Companies-section .Tb_Companies-table table thead tr th {
+  font-size: 4vw;
+  text-align: left;
+  padding: 2vw;
+  @include desktop {
+    font-size: 1vw;
+    font-weight: 900;
+    padding: 1vw;
+  }
+}
+.div-data .Tb_Companies-section .Tb_Companies-table table tbody tr th {
+  font-size: 4vw;
+  font-weight: 500;
+  @include desktop {
+    font-size: 1vw;
+  }
+}
+.div-data .Tb_Companies-section .Tb_Companies-table table tbody tr .name {
+  padding: 2vw 2vw 2vw 2vw;
+  text-align: left;
+  @include desktop {
+    padding: 1vw 0 1vw 1vw;
+  }
+}
+.div-data .Tb_Companies-section .Tb_Companies-table table tbody tr .country {
+  padding-left: 2vw;
+  text-align: left;
+}
