@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+.body_form {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  margin-top: 40%;
+  background-color: #f9de4e;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (min-width: 1280px) {
+  .body_form {
+    margin-top: 0;
+    justify-content: center;
+  }
+}
+.body_form .logo_cogip {
+  width: 30%;
+  position: absolute;
+  top: 94%;
+  left: 70%;
+}
+@media screen and (min-width: 1280px) {
+  .body_form .logo_cogip {
+    width: 10%;
+    top: 95%;
+    left: 89%;
+  }
+}
+.body_form .bulb_php {
+  width: 30%;
+  position: absolute;
+  top: 59%;
+  left: 0%;
+}
+@media screen and (min-width: 1280px) {
+  .body_form .bulb_php {
+    width: 18%;
+    top: 64%;
+  }
+}
+.body_form .arm_php {
+  width: 30%;
+  position: absolute;
+  top: 16%;
+  left: 70%;
+}
+@media screen and (min-width: 1280px) {
+  .body_form .arm_php {
+    width: 18%;
+    top: 1%;
+    left: 82%;
+  }
+}
+.body_form .form_content {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 25px;
+}
+@media screen and (min-width: 1280px) {
+  .body_form .form_content {
+    height: 80%;
+  }
+}
+.body_form .form_content .title_register {
+  font-family: "Roboto", sans-serif;
+  font-size: 300%;
+  padding-left: 20%;
+}
+@media screen and (min-width: 1280px) {
+  .body_form .form_content .title_register {
+    font-size: 250%;
+  }
+}
+.body_form .form_content .form {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.body_form .form_content .form .form_label {
+  width: 60%;
+  margin-bottom: 1%;
+  font-size: 200%;
+  font-weight: 200;
+}
+@media screen and (min-width: 1280px) {
+  .body_form .form_content .form .form_label {
+    font-size: 150%;
+    margin-bottom: 0;
+  }
+}
+.body_form .form_content .form .form_input {
+  width: 60%;
+  margin-bottom: 3%;
+  font-size: 200%;
+  border: none;
+  border-radius: 5px;
+}
+@media screen and (min-width: 1280px) {
+  .body_form .form_content .form .form_input {
+    font-size: 150%;
+    margin-bottom: 1%;
+  }
+}
+.body_form .form_content .form .form_input:focus {
+  border: 4px solid #9698D6;
+  outline: none;
+}
+.body_form .form_content .form_submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+}
+.body_form .form_content .form_submit .form_submit_btn {
+  border-radius: 10px;
+  padding: 1% 0% 1% 0%;
+  border: none;
+  background-color: #9698D6;
+  color: #f9de4e;
+  font-family: "Roboto", sans-serif;
+  width: 60%;
+  font-size: 250%;
+}
+@media screen and (min-width: 1280px) {
+  .body_form .form_content .form_submit .form_submit_btn {
+    font-size: 200%;
+  }
+}
+.body_form .form_content .form_submit .form_submit_btn:hover {
+  background-color: transparent;
+  border: 2px solid #919EAB;
+  color: #9698D6;
+}/*# sourceMappingURL=register.css.map */

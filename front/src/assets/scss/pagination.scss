@@ -1,0 +1,58 @@
+@import 'mixin';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.pagination{
+    width: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Roboto', sans-serif;
+    .previous{
+        list-style: none;
+        border: solid 1px #919EAB;
+        border-radius: 10%;
+        padding: 1% 4% 1% 4%;
+        margin: 0 1% 0 1%;
+        &:hover{
+            background-color: #919EAB;
+            color:#F9DE4E;
+        }
+        @include desktop{
+            padding: 2% 3% 2% 3%;
+        }
+    }
+    .li_page{
+        list-style: none;
+        border: solid 1px #919EAB;
+        border-radius: 10%;
+        padding: 1% 4% 1% 4%;
+        margin: 0 1% 0 1%;
+        &:hover{
+            border: solid 1PX #F9DE4E;
+            background-color: #919EAB;
+        }
+        @include desktop{
+            padding: 2% 3% 2% 3%;
+        }
+        .page-num{
+            color: black;
+            &:hover{
+                color: #F9DE4E;
+            }
+        }
+    }
+    .next{
+        list-style: none;
+        border: solid 1px #919EAB;
+        border-radius: 10%;
+        padding: 1% 4% 1% 4%;
+        margin: 0 1% 0 1%;
+        &:hover{
+            background-color: #919EAB;
+            color:#F9DE4E;
+        }
+        @include desktop{
+            padding: 2% 3% 2% 3%;
+        }
+    }
+}

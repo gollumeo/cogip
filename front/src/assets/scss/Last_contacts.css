@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+.section_last_contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section_last_contacts h3 {
+  width: 80%;
+  font-family: "Inter", sans-serif;
+  font-size: 160%;
+  text-align: left;
+}
+@media screen and (min-width: 1280px) {
+  .section_last_contacts h3 {
+    margin-top: 5%;
+    font-size: 200%;
+  }
+}
+.section_last_contacts .table_last_contacts {
+  width: 80%;
+  overflow-x: auto;
+  position: relative;
+}
+@media screen and (min-width: 1280px) {
+  .section_last_contacts .table_last_contacts {
+    overflow-x: visible;
+  }
+}
+.section_last_contacts .table_last_contacts table {
+  table-layout: auto;
+  width: 300%;
+  border-collapse: collapse;
+}
+@media screen and (min-width: 1280px) {
+  .section_last_contacts .table_last_contacts table {
+    width: 100%;
+  }
+}
+.section_last_contacts .table_last_contacts table thead {
+  font-family: "Roboto", sans-serif;
+  background-color: #F9DE4E;
+}
+.section_last_contacts .table_last_contacts table thead tr th {
+  padding: 1% 1% 1% 1%;
+  text-align: left;
+}
+.section_last_contacts .table_last_contacts table thead tr .table_last_contacts_name {
+  width: 20%;
+}
+.section_last_contacts .table_last_contacts table thead tr .table_last_contacts_phone {
+  width: 20%;
+}
+.section_last_contacts .table_last_contacts table thead tr .table_last_contacts_mail {
+  width: 20%;
+}
+.section_last_contacts .table_last_contacts table thead tr .table_last_contacts_company {
+  width: 15%;
+}
+.section_last_contacts .table_last_contacts table thead tr .table_last_contacts_created {
+  width: 20%;
+}
+.section_last_contacts .table_last_contacts table tbody {
+  font-family: "Roboto", sans-serif;
+}
+.section_last_contacts .table_last_contacts table tbody tr {
+  background-color: #F5F5F5;
+}
+.section_last_contacts .table_last_contacts table tbody tr th {
+  padding: 1% 1% 1% 2%;
+  text-align: left;
+}
+.section_last_contacts .table_last_contacts table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+.section_last_contacts .bulb {
+  width: 12%;
+  position: relative;
+  left: -45%;
+  top: 135%;
+}
+@media screen and (min-width: 1280px) {
+  .section_last_contacts .bulb {
+    width: 9%;
+    left: -46%;
+    top: 167%;
+  }
+}/*# sourceMappingURL=Last_contacts.css.map */

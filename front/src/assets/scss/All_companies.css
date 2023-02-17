@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+.section_last_invoices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section_last_invoices .title_companies {
+  width: 80%;
+  font-family: "Inter", sans-serif;
+  font-size: 160%;
+  text-align: left;
+  z-index: 1;
+}
+.section_last_invoices .title_companies:after {
+  content: "";
+  display: block;
+  background-color: #f9de4e;
+  position: absolute;
+  height: 2%;
+  width: 38%;
+  bottom: 0;
+  left: 27.5%;
+  top: 19.2%;
+  z-index: -1;
+}
+@media screen and (min-width: 1280px) {
+  .section_last_invoices .title_companies {
+    margin-top: 5%;
+    font-size: 250%;
+  }
+  .section_last_invoices .title_companies:after {
+    height: 3%;
+    width: 20%;
+    left: 18.5%;
+    top: 41.2%;
+  }
+}
+.section_last_invoices .yellow_rectangle_3 {
+  background-color: #F9DE4E;
+  border: none;
+  height: 1rem;
+  width: 35%;
+  position: absolute;
+  top: 14.5%;
+  left: 27.5%;
+}
+@media screen and (min-width: 1280px) {
+  .section_last_invoices .yellow_rectangle_3 {
+    top: 28%;
+    left: 18.5%;
+    height: 1.5rem;
+    width: 17%;
+  }
+}
+.section_last_invoices .input_text {
+  padding: 0.5%;
+  border-radius: 4px;
+  border: solid 1px #636363;
+  margin-bottom: 5%;
+}
+@media screen and (min-width: 1280px) {
+  .section_last_invoices .input_text {
+    margin-bottom: 2%;
+    margin-left: 66%;
+  }
+}
+.section_last_invoices .table_last_invoices {
+  width: 80%;
+  overflow-x: auto;
+  position: relative;
+}
+@media screen and (min-width: 1280px) {
+  .section_last_invoices .table_last_invoices {
+    overflow-x: visible;
+  }
+}
+.section_last_invoices .table_last_invoices table {
+  table-layout: auto;
+  width: 300%;
+  border-collapse: collapse;
+}
+@media screen and (min-width: 1280px) {
+  .section_last_invoices .table_last_invoices table {
+    width: 100%;
+  }
+}
+.section_last_invoices .table_last_invoices table thead {
+  font-family: "Roboto", sans-serif;
+  background-color: #F9DE4E;
+}
+.section_last_invoices .table_last_invoices table thead tr th {
+  padding: 1% 1% 1% 1%;
+  text-align: left;
+}
+.section_last_invoices .table_last_invoices table tbody {
+  font-family: "Roboto", sans-serif;
+}
+.section_last_invoices .table_last_invoices table tbody tr {
+  background-color: #F5F5F5;
+}
+.section_last_invoices .table_last_invoices table tbody tr th {
+  padding: 1% 1% 1% 2%;
+  text-align: left;
+}
+.section_last_invoices .table_last_invoices table tbody tr .table_last_companies_name {
+  width: 35%;
+}
+.section_last_invoices .table_last_invoices table tbody tr .table_last_companies_tva {
+  width: 15%;
+}
+.section_last_invoices .table_last_invoices table tbody tr .table_last_companies_country {
+  width: 23%;
+}
+.section_last_invoices .table_last_invoices table tbody tr .table_last_companies_type {
+  width: 7%;
+}
+.section_last_invoices .table_last_invoices table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}/*# sourceMappingURL=All_companies.css.map */

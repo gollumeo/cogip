@@ -1,0 +1,48 @@
+.dash_nav {
+  width: 30vw;
+  max-width: 250px;
+  margin: 0;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .dash_nav {
+    display: none;
+  }
+}
+
+.dash_contact_img {
+  border-radius: 50%;
+  width: 30%;
+}
+
+.dash_contact_name {
+  text-align: center;
+  font-size: 150%;
+  margin: 0;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  padding: 20% 0;
+}
+
+.dash_navigation_list {
+  margin-top: 10%;
+  width: 100%;
+  text-align: center;
+}
+.dash_navigation_list * {
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+}
+.dash_navigation_list li {
+  margin: 15% 0%;
+}/*# sourceMappingURL=Dash_Nav.css.map */
