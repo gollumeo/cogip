@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
-import Dash from "../component/Dash";
-// import axios from 'axios';
+import React from 'react';
+import Dash from '../component/Dash';
 
 const Dashboard = () => {
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
