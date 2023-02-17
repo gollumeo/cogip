@@ -4,12 +4,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom:8vw;
   @include desktop {
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-between;
     width: 80%;
-    height: 70vw;
+    height: 64vw;
     margin: 1vw;
   }
 }
@@ -38,9 +38,10 @@
       display: flex;
       flex-flow: row wrap;
       justify-content: space-around;
-      //width: 33vw;
+      width: 33vw;
       height: 18vw;
       padding: 1vw;
+      margin-top: 0;
     }
 }
 .div-data .div-stat .h2-stat {
@@ -121,42 +122,55 @@
   }
 }
 //-------------------------- Contacts ------------------------------//
-  .div-data .Tb_Contacts-section {   
+  .div-data .Tb_Contacts-section {
+    @include desktop {      
+      margin-bottom: 10vw;
+  }
+}
+  .div-data .Tb_Contacts-section,
+  .div-data .Tb_Invoices-section,
+  .div-data .Tb_Companies-section   {   
     background-color: #ffffff;
     width:95vw;
     height:70vw;
     border-radius: 10px;
-    margin-bottom: 2vw;
+    margin-bottom: 4vw;
     padding-top: 8vw;
     @include desktop {
       padding-left: 1vw;
       padding-bottom: 0;
-      padding-top: 3vw;
-      margin-bottom: 10vw;
-      width: 33vw;
-      height: 25vw;
+      padding-top: 1vw;
+      margin-left: 2vw;
+      width: 34vw;
+      height: 27vw;
     }
   }
-  .div-data .Tb_Contacts-section h3 {
+  .div-data .Tb_Contacts-section h3,
+  .div-data .Tb_Invoices-section h3,
+  .div-data .Tb_Companies-section h3 {
     font-family: "Inter", sans-serif;
     text-align: left;
     margin-left: 6vw;
-    padding-bottom: 4vw;
+    margin-top: 1vw;
     @include desktop {
       font-size: 2vw;
       margin-left: 1vw;
       padding-bottom: 1vw;
     }
   }
-  .div-data .Tb_Contacts-section .line-h3tb {
+  .div-data .Tb_Contacts-section .line-h3tb,
+  .div-data .Tb_Invoices-section .line-h3tb,
+  .div-data .Tb_Companies-section .line-h3tb {
     padding: 0 5vw 2vw 5vw;
     max-width: 90%;
     @include desktop {
-      padding-bottom: 2vw;
+      padding: 0 5vw 1vw 1vw;
       max-width: 90%;
     }
   }
-  .div-data .Tb_Contacts-section .Tb_Contacts-table {
+  .div-data .Tb_Contacts-section .Tb_Contacts-table,
+  .div-data .Tb_Invoices-section .Tb_Invoices-table,
+  .div-data .Tb_Companies-section .Tb_Companies-table {
     margin-left: 4vw;
     margin-right: 4vw;
     overflow-x: auto;
@@ -165,7 +179,9 @@
       margin-left: 2vw;
      }
   }
-  .div-data .Tb_Contacts-section .Tb_Contacts-table table {
+  .div-data .Tb_Contacts-section .Tb_Contacts-table table,
+  .div-data .Tb_Invoices-section .Tb_Invoices-table table,
+  .div-data .Tb_Companies-section .Tb_Companies-table table {
     font-family: "Inter", sans-serif;
     background-color: #ffffff;
     width: 120vw;
@@ -174,7 +190,9 @@
       width: 28vw;
   }
 }
-  .div-data .Tb_Contacts-section .Tb_Contacts-table table thead tr th {
+  .div-data .Tb_Contacts-section .Tb_Contacts-table table thead tr th,
+  .div-data .Tb_Invoices-section .Tb_Invoices-table table thead tr th,
+  .div-data .Tb_Companies-section .Tb_Companies-table table thead tr th {
     font-size: 4vw;
     text-align: left;
     padding: 2vw;
@@ -184,7 +202,9 @@
       padding: 1vw;
   }
 }
-  .div-data .Tb_Contacts-section .Tb_Contacts-table table tbody tr th {
+  .div-data .Tb_Contacts-section .Tb_Contacts-table table tbody tr th,
+  .div-data .Tb_Invoices-section .Tb_Invoices-table table tbody tr th,
+  .div-data .Tb_Companies-section .Tb_Companies-table table tbody tr th {
     font-size: 4vw;
     font-weight: 500;
     @include desktop {
@@ -203,76 +223,6 @@
     text-align: left;
   }
 //-------------------------- Invoices ------------------------------//
-.div-data .Tb_Invoices-section {   
-    background-color: #ffffff;
-    width:95vw;
-    height:70vw;
-    border-radius: 10px;
-    margin-bottom: 2vw;
-    padding-top: 8vw;
-    @include desktop {
-      padding-left: 1vw;
-      padding-bottom: 0;
-      padding-top: 3vw;
-      margin-bottom: 10vw;
-      width: 33vw;
-      height: 25vw;
-    }
-}
-.div-data .Tb_Invoices-section h3 {
-    font-family: "Inter", sans-serif;
-    text-align: left;
-    margin-left: 6vw;
-    padding-bottom: 4vw;
-    @include desktop {
-      font-size: 2vw;
-      margin-left: 1vw;
-      padding-bottom: 1vw;
-}
-}
-.div-data .Tb_Invoices-section .line-h3tb {
-  padding: 0 5vw 2vw 5vw;
-  max-width: 90%;    
-  @include desktop {
-      padding-bottom: 2vw;
-      max-width: 90%;
-}
-}
-.div-data .Tb_Invoices-section .Tb_Invoices-table {
-  margin-left: 4vw;
-    margin-right: 4vw;
-    overflow-x: auto;
-     @include desktop {
-      margin-right: 1vw;
-      margin-left: 2vw;;
-     }
-}
-.div-data .Tb_Invoices-section .Tb_Invoices-table table {
-  font-family: "Inter", sans-serif;
-    background-color: #ffffff;
-    width: 120vw;
-    border-collapse: collapse;
-    @include desktop {
-      width: 28vw;
-    }
-}
-.div-data .Tb_Invoices-section .Tb_Invoices-table table thead tr th {
-  font-size: 4vw;
-  text-align: left;
-  padding: 2vw;
-    @include desktop {
-      font-size: 1vw;
-      font-weight: 900;
-      padding: 1vw;
-    }
-}
-.div-data .Tb_Invoices-section .Tb_Invoices-table table tbody tr th {
-  font-size: 4vw;
-  font-weight: 500;
-  @include desktop {
-    font-size: 1vw; 
-  }
-}
 .div-data .Tb_Invoices-section .Tb_Invoices-table table tbody tr .invoice-number {
   padding: 2vw 0 2vw 2vw;
   text-align: left;
@@ -285,76 +235,6 @@
   text-align: left;
 }
   //-------------------------- Companies ------------------------------//
-  .div-data .Tb_Companies-section { 
-    background-color: #ffffff;
-    width:95vw;
-    height:70vw;
-    border-radius: 10px;
-    margin-bottom: 4vw;
-    padding-top: 8vw;
-    @include desktop {
-      padding-left: 1vw;
-      padding-bottom: 0;
-      padding-top: 3vw;
-      margin-bottom: 10vw;
-      width: 33vw;
-      height: 25vw;
-    }
-  }
-  .div-data .Tb_Companies-section h3 {
-    font-family: "Inter", sans-serif;
-    text-align: left;
-    margin-left: 6vw;
-    padding-bottom: 4vw;    
-    @include desktop {
-      font-size: 2vw;
-      margin-left: 1vw;
-      padding-bottom: 1vw;
-}
-  }
-  .div-data .Tb_Companies-section .line-h3tb {
-    padding: 0 5vw 2vw 5vw;
-    max-width: 90%;    
-    @include desktop {
-      padding-bottom: 2vw;
-      max-width: 90%;
-  }
-}
-  .div-data .Tb_Companies-section .Tb_Companies-table {
-    margin-left: 4vw;
-    margin-right: 4vw;
-    overflow-x: auto;
-     @include desktop {
-      margin-right: 1vw;
-      margin-left: 2vw;;
-     }
-  }
-  .div-data .Tb_Companies-section .Tb_Companies-table table {
-    font-family: "Inter", sans-serif;
-    background-color: #ffffff;
-    width: 120vw;
-    border-collapse: collapse;
-    @include desktop {
-      width: 28vw;
-    }
-  }
-  .div-data .Tb_Companies-section .Tb_Companies-table table thead tr th {
-    font-size: 4vw;
-    text-align: left;
-    padding: 2vw;
-    @include desktop {
-      font-size: 1vw;
-      font-weight: 900;
-      padding: 1vw;
-    }
-  }
-  .div-data .Tb_Companies-section .Tb_Companies-table table tbody tr th {
-    font-size: 4vw;
-    font-weight: 500;
-    @include desktop {
-    font-size: 1vw; 
-  }
-  }
   .div-data .Tb_Companies-section .Tb_Companies-table table tbody tr .name {
     padding: 2vw 2vw 2vw 2vw;
     text-align: left;
