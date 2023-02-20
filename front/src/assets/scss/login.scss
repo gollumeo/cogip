@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import 'mixin';
 
-.body_form{
+.body_form_login{
     width: 100%;
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@
     @include desktop{
         margin-top: 6.5%;
     }
-    .a_form{
+    .a_form_login{
         width: 100%;
         position: absolute;
         top: 94%;
@@ -22,7 +22,7 @@
         @include desktop{
             left: 0;
         }
-        .logo_cogip{
+        .logo_cogip_login{
             width: 30%;
             position: absolute;
             top: 94%;
@@ -35,20 +35,20 @@
         }
     }
     
-    .bulb_php{
+    .bulb_php_login{
         width: 30%;
         position: absolute;
-        top: 59%;
+        top: 52%;
         left: 0%;
         @include desktop{
             width: 18%;
             top: 57%;
         }
     }
-    .arm_php{
+    .arm_php_login{
         width: 30%;
         position: absolute;
-        top: 16%;
+        top: 26%;
         left: 70%;
         @include desktop{
             width: 18%;
@@ -56,11 +56,12 @@
             left: 82%;
         }
     }
-    .form_content{
+    .form_content_login{
         width: 80%;
         height: 50%;
         display: flex;
         padding: 6% 0% 10% 0%;
+        margin-top: 23%;
         flex-direction: column;
         background: rgba( 255, 255, 255, 0.25 );
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -68,8 +69,9 @@
         border-radius: 25px;
         @include desktop{
             height: 80%;
+            margin: 5%;
         }
-        .title_register{
+        .title_register_login{
             font-family: 'Roboto', sans-serif;
             font-size: 300%;
             padding-left: 20%;
@@ -77,12 +79,12 @@
                 font-size: 200%;
             }
         }
-        .form{
+        .form_login{
             font-family: 'Roboto', sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
-            .form_label{
+            .form_label_login{
                 width: 60%;
                 margin-bottom: 1%;
                 font-size: 200%;
@@ -92,7 +94,7 @@
                     margin-bottom: 0;
                 }
             }
-            .form_input{
+            .form_input_login{
                 width: 60%;
                 margin-bottom: 3%;
                 font-size: 200%;
@@ -108,11 +110,11 @@
                 }
             }
         }
-        .form_submit{
+        .form_submit_login{
             display: flex;
             justify-content: center;
             margin-top: 4%;
-            .form_submit_btn{
+            .form_submit_btn_login{
                 border-radius: 10px;
                 padding: 1% 0% 1% 0%;
                 border: none;
