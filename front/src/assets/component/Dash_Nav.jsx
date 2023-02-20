@@ -8,8 +8,8 @@ import "../scss/Dash_Nav.scss";
 const Dash_Nav = () => {
   return (
     <div className="dash_nav">
-      <div className="contact">
-        <div className="contact_top">
+      <div className="dash_contact">
+        <div className="dash_contact_top">
           <img
             className="dash_contact_img"
             src="../../public/img/contact1.svg"
@@ -43,11 +43,11 @@ const Dash_Nav = () => {
 
       <div className="logout_nav">
         <img
-          className="dash_contact_logout"
+          className="dash_logout_img"
           src="../../public/img/contact1.svg"
           alt="contact"
         />
-        <p>Logout</p>
+        <p className="logout">Logout</p>
       </div>
     </div>
   );
