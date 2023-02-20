@@ -22,8 +22,10 @@ const Contacts = () => {
                             </tr> 
                         </thead>
                         <tbody>
-                        {
-                            data.slice(Math.max(data.length - 4, 1)).reverse().map((companie) => {
+                        {data
+                            .slice(Math.max(data.length - 4, 1))
+                            .reverse()
+                            .map((companie) => {
                                 return( 
                                     <tr>
                                     <th className='name'>{companie.name}</th>
