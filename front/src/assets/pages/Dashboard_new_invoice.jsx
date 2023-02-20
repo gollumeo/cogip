@@ -11,8 +11,6 @@ const Dashboard_new_invoice = () => {
       <Dash_Nav />
       <div className="dash_invoice_main">
         <Dash_Nav_Mobile />
-        <h2 className="dash_pos">Dashboard</h2>
-        <p className="dash_pos_span">dashboard/invoices</p>
         <Dash_welcome />
         <Invoices_form />
       </div>

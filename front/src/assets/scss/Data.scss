@@ -4,12 +4,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom:8vw;
   @include desktop {
     flex-wrap: wrap;
     align-items: flex-start;
-    width: 80%;
-    height: 64vw;
-    margin: 1vw;
+    justify-content: space-between;
+    width: 60vw;
+    height: 59vw;
+    margin-left: 3vw;
   }
 }
