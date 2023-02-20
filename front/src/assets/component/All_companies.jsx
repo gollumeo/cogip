@@ -3,7 +3,7 @@ import '../scss/All_companies.scss';
 import useFetch from '../hook/useFetch';
 import Pagination from './Pagination_companies';
 
-const All_contacts = () => {
+const All_companies = () => {
     const {loading, error, data} = useFetch('https://cogip-api.pierre-mauriello.be/companies')
 
     if(loading) return <p>Loading</p>
@@ -17,4 +17,4 @@ const All_contacts = () => {
     );
 };
 
-export default All_contacts;
+export default All_companies;

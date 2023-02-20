@@ -24,14 +24,14 @@ const App = () => {
           <Route path="*" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route
-              path="/dashboard/new-invoice"
+              path="/dashboard/new_invoice"
               element={<Dashboard_new_invoice />}
           />
           <Route
-              path="/dashboard/new-companies"
+              path="/dashboard/new_companie"
               element={<Dashboard_new_companies />}
           />
-          <Route path="/dashboard/contacts" element={<Dashboard_contact />} />
+          <Route path="/dashboard/new_contact" element={<Dashboard_contact />} />
         </Routes>
       </BrowserRouter>
   );
