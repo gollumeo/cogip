@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import "/src/assets/scss/Nav.css";
+import "../scss/Nav.css";
 import { useState } from 'react';
 
 function Nav(){

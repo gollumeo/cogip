@@ -6,27 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="7fbffc0f-d6ae-42fa-8018-f46dcee0b141" name="Changes" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/pages/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/pages/Dashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/All_companies.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/All_companies.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/All_companies.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/All_companies.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/All_contacts.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/All_contacts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/All_contacts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/All_contacts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/All_invoices.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/All_invoices.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/All_invoices.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/All_invoices.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/Dash.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/Dash.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/Dash_Nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/Dash_Nav.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/Dash_Nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/Dash_Nav.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/Dash_Nav_Mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/Dash_Nav_Mobile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/Dash_invoice.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/Dash_invoice.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/Dash_invoice.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/Dash_invoice.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/Dash_welcome.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/Dash_welcome.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/Data.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/Data.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/_mixin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/_mixin.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/login.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/register.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/register.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Dash_Nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Dash_Nav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Last_companies.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Last_companies.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Last_contacts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Last_contacts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Last_invoices.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Last_invoices.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Manage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Manage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Menu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Nav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Nav2.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Nav2.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Work.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Work.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/pages/Show_invoices.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/pages/Show_invoices.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +155,7 @@
       <updated>1676362639504</updated>
       <workItem from="1676362644214" duration="9440000" />
       <workItem from="1676386417567" duration="335000" />
-      <workItem from="1676883235075" duration="593000" />
+      <workItem from="1676883235075" duration="2095000" />
     </task>
     <servers />
   </component>

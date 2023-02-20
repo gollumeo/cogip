@@ -1,6 +1,6 @@
 import React from 'react';
-import "/src/assets/scss/Last_invoices.css";
-import black_notebook_and_green_arm from "/public/img/black notebook and green arm.png";
+import "../scss/Last_invoices.css";
+import black_notebook_and_green_arm from "../../../public/img/black notebook and green arm.png";
 import useFetch from '../hook/useFetch';
 
 const Last_invoices = () => {

@@ -7,7 +7,7 @@ const Dash_welcome = () => {
       <h2 className="dash_pos">Dashboard</h2>
       <p className="dash_pos_span">dashboard/invoices</p>
       <div className="welcome">
-        <img className="illustr" src="../../public/img/illustr.png" alt="" />
+        <img className="illustr" src="../../../public/img/illustr.png" alt="" />
         <div className="welcome_div">
           <h1 className="welcome_title">Welcome back Henry!</h1>
           <p className="welcome_text">

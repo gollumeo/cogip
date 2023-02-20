@@ -1,5 +1,5 @@
 import React from 'react';
-import "/src/assets/scss/Last_companies.css";
+import "../scss/Last_companies.css";
 import useFetch from '../hook/useFetch';
 
 const Last_companies = () => {

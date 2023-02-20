@@ -3,7 +3,7 @@ import Contact_card from "../component/Contact_card";
 import Footer from "../component/Footer";
 import Nav2 from "../component/Nav2";
 import "../scss/Show_invoices.scss";
-import black_notebook_and_green_arm from "/public/img/black notebook and green arm.png";
+import black_notebook_and_green_arm from "../../../public/img/black notebook and green arm.png";
 
 fetch(`https://cogip-api.pierre-mauriello.be/invoices/1`)
     .then((response) => {
