@@ -1,0 +1,20 @@
+.dash_pos {
+  font-size: 120%;
+}
+
+.dash_pos_span {
+  font-size: 80%;
+}
+
+.dash_invoice {
+  display: flex;
+  width: 100%;
+  background-color: #e3e3ff;
+  margin: 0;
+  padding: 0;
+}
+
+.dash_invoice_main {
+  margin: 3%;
+  width: 100%;
+}/*# sourceMappingURL=Dash_invoice.css.map */

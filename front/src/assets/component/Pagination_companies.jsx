@@ -48,7 +48,7 @@ function Pagination(data) {
                                         <th className='table_last_companies_tva'>{list.tva}</th>
                                         <th className='table_last_companies_country'>{list.country}</th>
                                         <th className='table_last_companies_type'>{list.type_id}</th>
-                                        <th className='table_last_companies_created'>{list.created_at}</th>
+                                        <th className='table_last_companies_created'>{list.created_at.split(" ")[0].split("-").reverse().join("-")}</th>
                                     </tr>
                                 </>
                             );

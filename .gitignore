@@ -1,6 +1,8 @@
 vendor/
-front/node_modules/
-backend/vendor/
 node_modules/
-front/.idea/
-.gitignore
+backend/vendor/
+.idea/
+.env
+composer.lock
+populateDb.php
+package-lock.json
