@@ -4,7 +4,7 @@ import "../scss/StatsDash.scss";
 
 const Stats = () => {
 
-    /*Créer un état local pour stocker le nombre total de contacts, invoices et companies en utilisant useState*/
+    /*Créer un état local pour stocker le nombre total de contacts en utilisant useState*/
     const [nbContacts, setNbContacts] = useState(0);
     const [nbInvoices, setNbInvoices] = useState(0);
     const [nbCompanies, setNbCompanies] = useState(0);
