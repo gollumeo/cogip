@@ -15,9 +15,6 @@ const Menu = () => {
                 <img src={henry} className="user-img"/>
                 <p className='user-name'>{user}</p>
             </div>
-            <img src={separation} className="separation1-img"/>
-            <div className='div-logout-mobile'>Logout</div>
-            <img src={separation} className="separation2-img"/>
             <div className='div-nav'>
                 <div className='div-dashboard'>
                     <img src={dashboard} className="dashboard-img"/>
@@ -39,7 +36,7 @@ const Menu = () => {
             <img src={separation} className="separation3-img"/>
             <div className='div-logout-desktop'>  
                 <img src={henry} className="user-imgSmall"/>
-                <p>Logout</p>
+                <p className='p-logout-desktop'>Logout</p>
             </div>
         </div>
     );
