@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import 'mixin';
+
+.body_form_login{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-top: 40%;
+    background-color: #f9de4e;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    @include desktop{
+        margin-top: 6.5%;
+    }
+    .a_form_login{
+        width: 100%;
+        position: absolute;
+        top: 94%;
+        left: -4%;
+        @include desktop{
+            left: 0;
+        }
+        .logo_cogip_login{
+            width: 30%;
+            position: absolute;
+            top: 94%;
+            left: 70%;
+            @include desktop{
+                width: 10%;
+                top: 95%;
+                left: 89%;
+            }
+        }
+    }
+    
+    .bulb_php_login{
+        width: 30%;
+        position: absolute;
+        top: 52%;
+        left: 0%;
+        @include desktop{
+            width: 18%;
+            top: 57%;
+        }
+    }
+    .arm_php_login{
+        width: 30%;
+        position: absolute;
+        top: 26%;
+        left: 70%;
+        @include desktop{
+            width: 18%;
+            top: 3%;
+            left: 82%;
+        }
+    }
+    .form_content_login{
+        width: 80%;
+        height: 50%;
+        display: flex;
+        padding: 6% 0% 10% 0%;
+        margin-top: 23%;
+        flex-direction: column;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 5px );
+        border-radius: 25px;
+        @include desktop{
+            height: 80%;
+            margin: 5%;
+        }
+        .title_register_login{
+            font-family: 'Roboto', sans-serif;
+            font-size: 300%;
+            padding-left: 20%;
+            @include desktop{
+                font-size: 200%;
+            }
+        }
+        .form_login{
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .form_label_login{
+                width: 60%;
+                margin-bottom: 1%;
+                font-size: 200%;
+                font-weight: 200;
+                @include desktop{
+                    font-size: 120%;
+                    margin-bottom: 0;
+                }
+            }
+            .form_input_login{
+                width: 60%;
+                margin-bottom: 3%;
+                font-size: 200%;
+                border: none;
+                border-radius: 5px;
+                @include desktop{
+                    font-size: 120%;
+                    margin-bottom: 1%;
+                }
+                &:focus{
+                    border: 4px solid #9698D6;
+                    outline: none;
+                }
+            }
+        }
+        .form_submit_login{
+            display: flex;
+            justify-content: center;
+            margin-top: 4%;
+            .form_submit_btn_login{
+                border-radius: 10px;
+                padding: 1% 0% 1% 0%;
+                border: none;
+                background-color: #9698D6;
+                color: #f9de4e;
+                font-family: 'Roboto', sans-serif;
+                width: 60%;
+                font-size: 250%;
+                @include desktop{
+                    font-size: 150%;
+                }
+                &:hover{
+                    background-color: transparent;
+                    border: 2px solid #919EAB;
+                    color: #9698D6;
+                }
+            }
+        }
+    }
+}
