@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "../scss/Dash_Nav_Mobile.scss";
 
 const Dash_Nav_Mobile = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="dash_nav_mobile">
       <div className="contact_mobile">
@@ -18,6 +20,7 @@ const Dash_Nav_Mobile = () => {
         className="burger_menu"
         src="../../public/img/burger_menu_icon.png"
         alt=""
+        onClick={() => setOpen(!open)}
       />
     </div>
   );

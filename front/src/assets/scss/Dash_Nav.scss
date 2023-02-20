@@ -10,14 +10,12 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  * {
+    font-family: "Roboto";
+  }
   @include mobile {
     display: none;
   }
-}
-
-.dash_contact_img {
-  border-radius: 50%;
-  width: 30%;
 }
 
 .dash_contact_name {
@@ -26,13 +24,23 @@
   margin: 0;
 }
 
-.contact {
+.dash_contact {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
-  border-bottom: 1px solid grey;
-  padding: 20% 0;
+  .dash_contact_top {
+    width: 100%;
+    border-bottom: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15% 0;
+  }
+  .dash_contact_img {
+    border-radius: 50%;
+    width: 40%;
+  }
 }
 
 .dash_navigation_list {
@@ -59,7 +67,15 @@
 
 .logout_nav {
   display: flex;
-  justify-self: center;
+  justify-content: space-around;
   width: 100%;
-  background-color: red;
+  border-top: solid 1px lightgray;
+  padding: 10px 0;
+  .dash_logout_img {
+    border-radius: 50%;
+    width: 20%;
+  }
+  .logout {
+    color: #9698d6;
+  }
 }
