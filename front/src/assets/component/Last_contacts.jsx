@@ -4,6 +4,7 @@ import bulb from "/public/img/bulb.png";
 import useFetch from '../hook/useFetch';
 
 const Last_contacts = () => {
+    
     const {loading, error, data} = useFetch("https://cogip-api.pierre-mauriello.be/contacts")
 
     if(loading) return <p>Loading</p>

@@ -3,6 +3,7 @@ import "/src/assets/scss/Last_companies.css";
 import useFetch from '../hook/useFetch';
 
 const Last_companies = () => {
+    
     const {loading, error, data} = useFetch("https://cogip-api.pierre-mauriello.be/companies")
 
     if(loading) return <p>Loading</p>

@@ -15,9 +15,6 @@ const Menu = () => {
                 <img src={henry} className="user-img"/>
                 <p className='user-name'>{user}</p>
             </div>
-            
-            <div className='div-logout-mobile'>Logout</div>
-            
             <div className='div-nav'>
                 <div className='div-dashboard'>
                     <img src={dashboard} className="dashboard-img"/>
@@ -39,7 +36,7 @@ const Menu = () => {
             
             <div className='div-logout-desktop'>  
                 <img src={henry} className="user-imgSmall"/>
-                <p>Logout</p>
+                <p className='p-logout-desktop'>Logout</p>
             </div>
         </div>
     );
