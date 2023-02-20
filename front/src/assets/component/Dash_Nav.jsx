@@ -1,18 +1,18 @@
 import React from "react";
-import dashboard from "/img/dashboard.png";
-import invoices from "/img/invoices.png";
-import companies from "/img/companies.png";
-import contact from "/img/contact.png";
+import dashboard from "../../../public/img/dashboard.png";
+import invoices from "../../../public/img/invoices.png";
+import companies from "../../../public/img/companies.png";
+import contact from "../../../public/img/contact.png";
 import "../scss/Dash_Nav.scss";
 
 const Dash_Nav = () => {
   return (
     <div className="dash_nav">
-      <div className="contact">
-        <div className="contact_top">
+      <div className="dash_contact">
+        <div className="dash_contact_top">
           <img
             className="dash_contact_img"
-            src="../../public/img/contact1.svg"
+            src="../../../public/img/contact1.svg"
             alt="contact"
           />
           <h1 className="dash_contact_name">
@@ -43,11 +43,11 @@ const Dash_Nav = () => {
 
       <div className="logout_nav">
         <img
-          className="dash_contact_logout"
-          src="../../public/img/contact1.svg"
+          className="dash_logout_img"
+          src="../../../public/img/contact1.svg"
           alt="contact"
         />
-        <p>Logout</p>
+        <p className="logout">Logout</p>
       </div>
     </div>
   );

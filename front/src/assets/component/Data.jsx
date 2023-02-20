@@ -1,5 +1,5 @@
 import React from 'react';
-import line from "/img/line.svg"
+import line from "../../../public/img/line.svg"
 import "../scss/Data.scss";
 
 const Data = () => {

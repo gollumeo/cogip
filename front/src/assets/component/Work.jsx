@@ -1,6 +1,6 @@
 import React from 'react';
-import "/src/assets/scss/Work.scss";
-import yellow_rectangle_comments from "/img/yellow_rectangle_comments.png"
+import "../scss/Work.scss";
+import yellow_rectangle_comments from "../../../public/img/yellow_rectangle_comments.png"
 
 const Work = () => {
     return (

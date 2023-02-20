@@ -23,7 +23,7 @@
     width: 20vw;
     height: 20vw;
     border-radius: 45px;
-    margin: 7vw 0vw 2vw 7vw;
+    margin: 4vw 0vw 3vw 5vw;
     @include desktop {
         display:flex;
         align-items: center;
@@ -40,8 +40,8 @@
     font-size: 6vw;
     text-align: left;
     width: 30vw;
-    margin-right: 13vw;
-    margin-top: 10vw;
+    margin-right: 8vw;
+    margin-top: 7vw;
     @include desktop {
         font-size: 2.5vw;
         width: 6vw;
@@ -93,7 +93,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: left;
-        margin: 2vw 2vw 0 2vw;
+        margin: 0 2vw 0 2vw;
         font-size: 1.5vw;
         height: 1vw;
     }
@@ -101,12 +101,10 @@
 .div-menu .div-nav .dashboard-img {
     width: 4vw;
     height: 4vw;
-    padding-bottom: 3vw;
     @include desktop {
-        width: 1.5vw;
-        height: 1.5vw;
+        width: 1vw;
+        height: 1vw;
         padding-right: 2vw;
-        padding-top: 3vw;
     }
 }
 .div-menu .div-nav .div-invoices {
@@ -128,12 +126,10 @@
 .div-menu .div-nav .invoices-img {
     width: 4vw;
     height: 4vw;
-    padding-bottom: 3vw;
     @include desktop {
-        width: 1.5vw;
-        height: 1.5vw;
+        width: 1vw;
+        height: 1vw;
         padding-right: 2vw;
-        padding-top: 3vw;
     }
 }
 .div-menu .div-nav .div-companies {
@@ -155,12 +151,10 @@
 .div-menu .div-nav .companies-img {
     width: 4vw;
     height: 4vw;
-    padding-bottom: 3vw;
     @include desktop {
-        width: 1.5vw;
-        height: 1.5vw;
+        width: 1vw;
+        height: 1vw;
         padding-right: 2vw;
-        padding-top: 3vw;
     }
 }
 .div-menu .div-nav .div-contact {
@@ -182,12 +176,10 @@
 .div-menu .div-nav .contact-img {
     width: 4vw;
     height: 4vw;
-    padding-bottom: 3vw;
     @include desktop {
-        width: 1.5vw;
-        height: 1.5vw;
+        width: 1vw;
+        height: 1vw;
         padding-right: 2vw;
-        padding-top: 3vw;
     }
 }
 .div-menu .separation-img3 {

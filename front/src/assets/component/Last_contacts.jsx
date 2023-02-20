@@ -1,6 +1,6 @@
 import React from 'react';
-import "/src/assets/scss/Last_contacts.scss";
-import bulb from "/public/img/bulb.png";
+import "../scss/Last_contacts.scss";
+import bulb from "../../../public/img/bulb.png";
 import useFetch from '../hook/useFetch';
 
 const Last_contacts = () => {
