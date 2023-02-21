@@ -10,6 +10,7 @@ const Last_contacts = () => {
     if(loading) return <p>Loading</p>
     if(error) return <p>Unable to load</p>
 
+    console.log(loading);
     return (
         <section className='section_last_contacts'>
             <h3>Last Contacts</h3>

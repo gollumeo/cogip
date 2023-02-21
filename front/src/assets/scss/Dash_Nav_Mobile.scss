@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import "mixin.scss";
 
+.nav_links ul {
+  display: flex;
+  flex-direction: column;
+}
+
 // body {
 //   font-family: "Roboto";
 // }
@@ -54,4 +59,22 @@
 .nav_links.menu {
   max-height: 1000px;
   transition: max-height 0.5s ease-in-out;
+}
+
+.nav_links {
+  width: 100%;
+  text-align: center;
+  * {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+  }
+  .li_nav {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    img {
+      margin-right: 20px;
+    }
+  }
 }

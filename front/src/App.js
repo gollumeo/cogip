@@ -11,6 +11,7 @@ import Dashboard_new_invoice from "./assets/pages/Dashboard_new_invoice.jsx";
 import Dashboard_new_companies from "./assets/pages/Dashboard_new_companies.jsx";
 import Dashboard_contact from "./assets/pages/Dashboard_contact.jsx";
 
+
 const App = () => {
   return (
       <BrowserRouter>
