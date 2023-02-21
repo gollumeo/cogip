@@ -41,13 +41,13 @@ const Stats = () => {
         <div className="div-stat">
             <h2 className="h2-stat">Statistics</h2>
             <div className="div-invoices">
-                <p className="invoices-stat">{nbInvoices} invoices</p>
+                <p className="invoices-stat">{nbInvoices} <br /> invoices</p>
             </div>
             <div className="div-contacts">
-                <p className="contacts-stat">{nbContacts} contacts</p>
+                <p className="contacts-stat">{nbContacts} <br /> contacts</p>
             </div>
             <div className="div-companies">
-                <p className="companies-stat">{nbCompanies} companies</p>
+                <p className="companies-stat">{nbCompanies} <br /> companies</p>
             </div>
         </div>
     );

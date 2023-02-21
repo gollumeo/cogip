@@ -2,6 +2,12 @@
 
 This project was realized during our web development training at BeCode in February 2023.
 
+![Cogip_Home_Mobile](front/public/img/ScreenshotHomeMb.png)
+![Cogip_Login_Mobile](front/public/img/ScreenshotLoginMb.png)
+![Cogip_Signup_Mobile](front/public/img/ScreenshotSigninMb.png)
+![Cogip_Dashboard_Mobile](front/public/img/ScreenshotDashMb.png)
+![Cogip_Form_Mobile](front/public/img/ScreenshotFormMb.png)
+
 ## Team
 
 - [Benjamin](https://github.com/BenPrst) : front-end
