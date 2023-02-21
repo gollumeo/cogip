@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import line from "/img/line.svg"
+import line from "../../../public/img/line.svg"
 import "../scss/InvoicesDash.scss";
 import useFetch from '../hook/useFetch';
 
