@@ -8,10 +8,13 @@
 
 .dash_invoice {
   display: flex;
-  justify-content: space-around;
+  width: 100%;
+  background-color: #e3e3ff;
+  margin: 0;
+  padding: 0;
 }
 
 .dash_invoice_main {
   margin: 3%;
-  width: 70vw;
+  width: 100%;
 }/*# sourceMappingURL=Dash_invoice.css.map */

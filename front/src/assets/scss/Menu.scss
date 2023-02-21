@@ -2,10 +2,12 @@
 
 .div-menu {
         display:flex;
-        flex-direction: column;
+        flex-direction: column;        
     @include desktop {
         width: 20%;
         max-height:max-content;
+        justify-content: space-around;
+        background-color: white;
     }
 }
 .div-menu .div-user {
@@ -23,12 +25,11 @@
     width: 20vw;
     height: 20vw;
     border-radius: 45px;
-    margin: 7vw 0vw 2vw 7vw;
+    margin: 4vw 0vw 3vw 5vw;
     @include desktop {
         display:flex;
         align-items: center;
-        margin-top: 2vw;
-        margin-left: 6vw;
+        margin: 2vw 0 2vw 6vw;
         width: 8vw;
         height: 8vw;
         border-radius: 125px;
@@ -40,13 +41,13 @@
     font-size: 6vw;
     text-align: left;
     width: 30vw;
-    margin-right: 13vw;
-    margin-top: 10vw;
+    margin-right: 8vw;
+    margin-top: 7vw;
     @include desktop {
-        font-size: 2.5vw;
+        font-size: 2vw;
         width: 6vw;
         text-align: center;
-        margin: 0 0 4vw 6vw;
+        margin: 0 0 4vw 7vw;
     }
 }
 .div-menu .separation1-img {
@@ -55,31 +56,24 @@
         width: 20%;
     }
 }
-.div-menu .div-logout-mobile {
-    font-family: "Inter", sans-serif;
-    font-size: 3vw;
-    font-weight: 900;
-    color: #9698D6;
-    background-color: white;
-    text-align: right;
-    padding: 0 6vw 4vw 0;
-    @include desktop {
-        display: none;
-    }
-}
 .div-menu .div-nav {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     background-color: white;
     height: 13vw;
+    margin: 0vw 0 1vw 0;
+    padding-top: 4vw;
     @include desktop {
         display:flex;
         flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
         max-width: 100%;
         height: max-content;
-        padding-left: 1vw;
-        padding-bottom: 27vw;
+        padding: 0 0 35vw 4vw;
+        margin: 0;
+        border-top: solid 1px #9698D6;
     }
 }
 .div-menu .div-nav .div-dashboard {
@@ -93,7 +87,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: left;
-        margin: 2vw 2vw 0 2vw;
+        margin: 2vw 2vw 0 0;
         font-size: 1.5vw;
         height: 1vw;
     }
@@ -101,12 +95,10 @@
 .div-menu .div-nav .dashboard-img {
     width: 4vw;
     height: 4vw;
-    padding-bottom: 3vw;
     @include desktop {
-        width: 1.5vw;
-        height: 1.5vw;
+        width: 1vw;
+        height: 1vw;
         padding-right: 2vw;
-        padding-top: 3vw;
     }
 }
 .div-menu .div-nav .div-invoices {
@@ -120,7 +112,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: left;
-        margin: 0 2vw 0 2vw;
+        margin: 0 2vw 0 0;
         font-size: 1.5vw;
         height: 1vw;
     }
@@ -128,12 +120,10 @@
 .div-menu .div-nav .invoices-img {
     width: 4vw;
     height: 4vw;
-    padding-bottom: 3vw;
     @include desktop {
-        width: 1.5vw;
-        height: 1.5vw;
+        width: 1vw;
+        height: 1vw;
         padding-right: 2vw;
-        padding-top: 3vw;
     }
 }
 .div-menu .div-nav .div-companies {
@@ -147,7 +137,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: left;
-        margin: 0 2vw 0 2vw;
+        margin: 0 2vw 0 0;
         font-size: 1.5vw;        
         height: 1vw;
     }
@@ -155,12 +145,10 @@
 .div-menu .div-nav .companies-img {
     width: 4vw;
     height: 4vw;
-    padding-bottom: 3vw;
     @include desktop {
-        width: 1.5vw;
-        height: 1.5vw;
+        width: 1vw;
+        height: 1vw;
         padding-right: 2vw;
-        padding-top: 3vw;
     }
 }
 .div-menu .div-nav .div-contact {
@@ -174,7 +162,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: left;
-        margin: 0 2vw 100% 2vw;
+        margin: 0 2vw 100% 0;
         font-size: 1.5vw;
         height: 1vw;
     }
@@ -182,12 +170,10 @@
 .div-menu .div-nav .contact-img {
     width: 4vw;
     height: 4vw;
-    padding-bottom: 3vw;
     @include desktop {
-        width: 1.5vw;
-        height: 1.5vw;
+        width: 1vw;
+        height: 1vw;
         padding-right: 2vw;
-        padding-top: 3vw;
     }
 }
 .div-menu .separation-img3 {
@@ -197,8 +183,20 @@
     }
 }
 .div-menu .div-logout-desktop {
-    display: none;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top:165%;
+    left: 0%;
+    width: 100%;
+    background-color: #9698D6;
+    margin: 0;
+    padding: 1vw 0 1vw 0;
     @include desktop {
+        top: 0;
+        left: 0;
+        position: relative;
+        margin: 0;
         display: flex;
         justify-content: space-around;
         align-items:center;
@@ -206,13 +204,18 @@
         font-family: "Inter", sans-serif;
         font-size: 1.5vw;
         color: #9698D6;
-        padding-top: 1vw;
-        padding-bottom: 1vw;
+        border-top: solid 1px #9698D6;
     }
 }
+.div-menu .div-logout-desktop .p-logout-desktop {
+    margin: 0;
+}
+
 .div-menu .div-logout-desktop .user-imgSmall {
     display: none;
     @include desktop {
+        display:flex;
+        flex-direction: row;
         width: 3vw;
         height: 3vw;
         border-radius: 45%;

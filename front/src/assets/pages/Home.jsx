@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from '../component/Nav'; 
+import Nav from '../component/Nav';
 import Manage from '../component/Manage';
 import Last_invoices from '../component/Last_invoices';
 import Last_contacts from '../component/Last_contacts';

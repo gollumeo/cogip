@@ -1,9 +1,9 @@
-import henry from '/img/Henry.png';
-import dashboard from '/img/dashboard.png';
-import invoices from '/img/invoices.png';
-import companies from '/img/companies.png';
-import contact from '/img/contact.png';
-import separation from '/img/Separation.png';
+import henry from '../../../public/img/Henry.png';
+import dashboard from '../../../public/img/dashboard.png';
+import invoices from '../../../public/img/invoices.png';
+import companies from '../../../public/img/companies.png';
+import contact from '../../../public/img/contact.png';
+import separation from '../../../public/img/Separation.png';
 import "../scss/Menu.scss";
 import React from 'react';
 
@@ -15,9 +15,6 @@ const Menu = () => {
                 <img src={henry} className="user-img"/>
                 <p className='user-name'>{user}</p>
             </div>
-            <img src={separation} className="separation1-img"/>
-            <div className='div-logout-mobile'>Logout</div>
-            <img src={separation} className="separation2-img"/>
             <div className='div-nav'>
                 <div className='div-dashboard'>
                     <img src={dashboard} className="dashboard-img"/>
@@ -39,7 +36,7 @@ const Menu = () => {
             <img src={separation} className="separation3-img"/>
             <div className='div-logout-desktop'>  
                 <img src={henry} className="user-imgSmall"/>
-                <p>Logout</p>
+                <p className='p-logout-desktop'>Logout</p>
             </div>
         </div>
     );
