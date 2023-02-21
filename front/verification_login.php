@@ -42,7 +42,7 @@ if (isset($_POST['button'])) {
             header('Content-Type: application/json');
             echo json_encode(['isLoggedIn' => true], JSON_PRETTY_PRINT);
 
-            header('Location: http://localhost:5173/dashboard');
+            header('Location: https://cogip.pierre-mauriello.be/dashboard');
         } else {
             echo 'Mot de passe incorrect.';
         }
