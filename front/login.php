@@ -13,7 +13,7 @@
   </a>
   <img src="./public/img/bulb.png" alt="bulb" class="bulb_php_login">
   <img src="./public/img/black notebook and green arm.png" alt="black notebook and green arm" class="arm_php_login">
-  <form action="#" method="post" class="form_content_login">
+  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="form_content_login">
     <h1 class="title_register_login">
       LOGIN
     </h1>
@@ -29,7 +29,7 @@
       <button type="submit" name="button" class="form_submit_btn_login">Se connecter</button>
     </div>
   </form>
-  <?php include '/verification_login.php'; ?>
+  <?php include './verification_login.php'; ?>
 </body>
 
 </html>

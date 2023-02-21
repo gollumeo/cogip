@@ -26,7 +26,7 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
      */
     public static function areaCode()
     {
-        return PhoneNumber . phpstatic::randomDigitNotNull() . static::randomDigitNotNull();
+        return static::randomDigitNotNull().static::randomDigitNotNull();
     }
 
     /**

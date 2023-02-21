@@ -1,5 +1,9 @@
 import React, { useRef } from "react";
 import "../scss/Dash_Nav_Mobile.scss";
+import dashboard from "../../../public/img/dashboard.png";
+import invoices from "../../../public/img/invoices.png";
+import companies from "../../../public/img/companies.png";
+import contact from "../../../public/img/contact.png";
 
 const Dash_Nav_Mobile = () => {
   const menuHamburgerRef = useRef(null);
@@ -33,10 +37,30 @@ const Dash_Nav_Mobile = () => {
         </div>
         <div className="nav_links" ref={navLinksRef}>
           <ul>
-            <li>Dashboard</li>
-            <li>Invoices</li>
-            <li>Companies</li>
-            <li>Contacts</li>
+            <div className="li_nav">
+              <img src={dashboard} className="dashboard-img" />
+              <li>
+                <a href="/dashboard/">Dashboard</a>
+              </li>
+            </div>
+            <div className="li_nav">
+              <img src={invoices} className="invoices-img" />
+              <li>
+                <a href="/dashboard/new-invoice">Invoices</a>
+              </li>
+            </div>
+            <div className="li_nav">
+              <img src={companies} className="companies-img" />
+              <li>
+                <a href="/dashboard/new-companies">Companies</a>
+              </li>
+            </div>
+            <div className="li_nav">
+              <img src={contact} className="contact-img" />
+              <li>
+                <a href="/dashboard/contacts">Contacts</a>
+              </li>
+            </div>
           </ul>
         </div>
       </div>

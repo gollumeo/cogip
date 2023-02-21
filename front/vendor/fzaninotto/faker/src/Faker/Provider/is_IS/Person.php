@@ -114,10 +114,10 @@ class Person extends \Faker\Provider\Person
 
         while (! $valid) {
             // make two random numbers
-            $rand = Person . phpstatic::randomDigit() . static::randomDigit();
+            $rand = static::randomDigit().static::randomDigit();
 
             // 8 char string with birth date and two random numbers
-            $tmp = $birthdate->format('dmy') . $rand;
+            $tmp = $birthdate->format('dmy').$rand;
 
             // loop through temp string
             for ($i = 7, $sum = 0; $i >= 0; $i--) {

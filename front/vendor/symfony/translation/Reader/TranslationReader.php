@@ -51,7 +51,7 @@ class TranslationReader implements TranslationReaderInterface
         foreach ($this->loaders as $format => $loader) {
             // load any existing translation files
             $finder = new Finder();
-            $extension = $catalogue->getLocale() . 'Reader' .$format;
+            $extension = $catalogue->getLocale().'.'.$format;
             $files = $finder->files()->name('*.'.$extension)->in($directory);
             foreach ($files as $file) {
                 $domain = substr($file->getFilename(), 0, -1 * \strlen($extension) - 1);
