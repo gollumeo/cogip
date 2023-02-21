@@ -6,17 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="7fbffc0f-d6ae-42fa-8018-f46dcee0b141" name="Changes" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/index-a0c57e4f.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/index-b4dccba9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/line-a8c2558a.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/Index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/component/CompaniesDash.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/CompaniesDash.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/component/ContactsDash.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/ContactsDash.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/component/InvoicesDash.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/InvoicesDash.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Last_invoices.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Last_invoices.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/StatsDash.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/StatsDash.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/Henry-10d14da8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/black notebook and green arm-9b0d3c9c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/bulb-f8915c39.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/burger_menu_icon-f914518c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/illustr-163d0ee3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/image_homme_1-5e3bdf7d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/index-04bc4964.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/index-0c41d95d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/line-65cb6d23.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/yellow_rectangle_comments-1fb13bd7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,8 +145,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\pitdu\Desktop\BeCode - Git\cogip" />
       <recent name="C:\Users\pitdu\Desktop\BeCode - Git\cogip\front" />
+      <recent name="C:\Users\pitdu\Desktop\BeCode - Git\cogip" />
     </key>
   </component>
   <component name="RunManager">
