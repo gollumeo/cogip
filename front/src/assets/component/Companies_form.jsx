@@ -4,7 +4,7 @@ import "../scss/Invoices_form.scss";
 const Companies_form = () => {
   return (
     <div className="new_invoice">
-      <h3 className="new_invoice_title">New invoice</h3>
+      <h3 className="new_invoice_title">New company</h3>
       <hr />
       <form action="post">
         <input type="text" placeholder="Invoice number..." />

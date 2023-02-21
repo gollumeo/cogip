@@ -30,19 +30,19 @@ const Dash_Nav = () => {
             <div className="li_nav">
               <img src={invoices} className="invoices-img" />
               <li>
-                <a href="/dashboard/new-invoice">Invoices</a>
+                <a href="/dashboard/new_invoice">Invoices</a>
               </li>
             </div>
             <div className="li_nav">
               <img src={companies} className="companies-img" />
               <li>
-                <a href="/dashboard/new-companies">Companies</a>
+                <a href="/dashboard/new_company">Companies</a>
               </li>
             </div>
             <div className="li_nav">
               <img src={contact} className="contact-img" />
               <li>
-                <a href="/dashboard/contacts">Contacts</a>
+                <a href="/dashboard/new_contact">Contacts</a>
               </li>
             </div>
           </ul>

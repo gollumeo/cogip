@@ -13,27 +13,27 @@ import Dashboard_contact from "./assets/pages/Dashboard_contact";
 
 const App = () => {
   return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/invoices" element={<Invoices />} />
-          <Route path="/companies" element={<Companies />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="/show_invoices" element={<Show_invoices />} />
-          <Route path="/show_contact" element={<Show_contact />} />
-          <Route path="*" element={<Home />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route
-              path="/dashboard/new_invoice"
-              element={<Dashboard_new_invoice />}
-          />
-          <Route
-              path="/dashboard/new_companie"
-              element={<Dashboard_new_companies />}
-          />
-          <Route path="/dashboard/new_contact" element={<Dashboard_contact />} />
-        </Routes>
-      </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/invoices" element={<Invoices />} />
+        <Route path="/companies" element={<Companies />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/show_invoices" element={<Show_invoices />} />
+        <Route path="/show_contact" element={<Show_contact />} />
+        <Route path="*" element={<Home />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route
+          path="/dashboard/new_invoice"
+          element={<Dashboard_new_invoice />}
+        />
+        <Route
+          path="/dashboard/new_company"
+          element={<Dashboard_new_companies />}
+        />
+        <Route path="/dashboard/new_contact" element={<Dashboard_contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
