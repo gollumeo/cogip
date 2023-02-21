@@ -4,9 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fbffc0f-d6ae-42fa-8018-f46dcee0b141" name="Changes" comment=".">
+    <list default="true" id="94e590de-4366-46cf-a355-dbd6a57e8106" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/CompaniesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/CompaniesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/ContactsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ContactsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/InvoicesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/InvoicesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Companies.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Companies.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Contacts.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Contacts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Invoices.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Invoices.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/CompaniesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/CompaniesRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/ContactsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/ContactsRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/InvoicesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/InvoicesRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/UsersRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/UsersRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Routes/Routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/Routes/Routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/CompaniesService.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/CompaniesService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/ContactsService.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/ContactsService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/InvoicesService.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/InvoicesService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/UsersService.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/UsersService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,25 +122,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
+    "WebServerToolWindowPanel.toolwindow.show.date": "false",
+    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
+    "WebServerToolWindowPanel.toolwindow.show.size": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\pitdu\Desktop\BeCode - Git\cogip" />

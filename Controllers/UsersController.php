@@ -2,10 +2,10 @@
 
 namespace App\Controllers;
 
+use App\Core\Controller;
 use App\Models\Users;
-use Core\Controller;
-use Repositories\UsersRepository;
-use Services\UsersService;
+use App\Repositories\UsersRepository;
+use App\Services\UsersService;
 
 
 class UsersController extends Controller
@@ -77,12 +77,10 @@ class UsersController extends Controller
         $mail = $_POST['mail'];
         $password = $_POST['password'];
         $isLogged = $this->usersService->isLogged($mail, $password);
-
-        if ($isLogged)
-        {
+        var_dump($isLogged);
+        if ($isLogged != null) {
             header('Location: https://cogip.pierre-mauriello.be/dashboard');
 
-//            return json_encode()true;
         }
     }
 }

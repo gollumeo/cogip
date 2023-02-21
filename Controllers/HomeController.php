@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use Core\Controller;
+use App\Core\Controller;
 
 class HomeController extends Controller
 {

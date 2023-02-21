@@ -2,9 +2,9 @@
 
 namespace App\Controllers;
 
-use Models\Invoices;
-use Repositories\InvoicesRepository;
-use Services\InvoicesService;
+use App\Models\Invoices;
+use App\Repositories\InvoicesRepository;
+use App\Services\InvoicesService;
 
 // TODO: Sanitization & Validation of inputs
 

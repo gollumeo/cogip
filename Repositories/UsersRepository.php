@@ -1,9 +1,9 @@
 <?php
 
-namespace Repositories;
+namespace App\Repositories;
 
+use App\Core\Database;
 use App\Models\Users;
-use Core\Database;
 use PDO;
 
 class UsersRepository
@@ -24,11 +24,16 @@ class UsersRepository
 
         // Prepare the actual query
         $stmt = $this->database->prepare("INSERT INTO users (first_name, last_name, email, password, created_at) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bindParam(1, $userData->getFirstName());
-        $stmt->bindParam(2, $userData->getLastName());
-        $stmt->bindParam(3, $userData->getEmail());
-        $stmt->bindParam(4, $userData->getPassword());
-        $stmt->bindParam(5, $userData->getCreatedAt());
+        $firstName = $userData->getFirstName();
+        $stmt->bindParam(1, $firstName);
+        $lastName = $userData->getLastName();
+        $stmt->bindParam(2, $lastName);
+        $email = $userData->getEmail();
+        $stmt->bindParam(3, $email);
+        $password = $userData->getPassword();
+        $stmt->bindParam(4, $password);
+        $createdAt = $userData->getCreatedAt();
+        $stmt->bindParam(5, $createdAt);
 
         $stmt->execute();
 
@@ -124,14 +129,15 @@ class UsersRepository
     public function isLogged($mail, $password)
     {
         if (isset($_POST['button'])) {
-            $query = 'SELECT * FROM users WHERE email = :email AND password = :password';
+            $query = 'USE cogip; SELECT * FROM users WHERE email = :email AND password = :password';
             $stmp = $this->database->prepare($query);
             $stmp->bindParam(":email", $mail);
             $stmp->bindParam(":password", $password);
             $stmp->execute();
 
             // Stockage des résultats
-            return $stmp->fetch() ?: null;
+            print_r($stmp);
+            return $stmp->fetch(PDO::FETCH_ASSOC);
         }
     }
 }

@@ -129,7 +129,7 @@ $router->delete('/users/{id}', function ($id) {
     (new UsersController())->deleteUser($id);
 });
 
-$router->get('/isLogged', function () {
+$router->post('/isLogged', function () {
     return (new UsersController())->isLogged();
 });
 

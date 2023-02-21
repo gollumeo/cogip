@@ -1,9 +1,9 @@
 <?php
 
-namespace Services;
+namespace App\Services;
 
-use Models\Invoices;
-use Repositories\InvoicesRepository;
+use App\Models\Invoices;
+use App\Repositories\InvoicesRepository;
 
 class InvoicesService
 {
