@@ -1,5 +1,5 @@
 import React from 'react';
-import line from "/img/line.svg"
+import line from "/img/line.svg";
 import "../scss/ContactsDash.scss";
 import useFetch from '../hook/useFetch';
 
@@ -25,12 +25,12 @@ const Contacts = () => {
                         {data
                             .slice(Math.max(data.length - 4, 1))
                             .reverse()
-                            .map((companie) => {
+                            .map((contact) => {
                                 return( 
                                     <tr>
-                                    <th className='name'>{companie.name}</th>
-                                    <th className='phone'>{companie.phone}</th>
-                                    <th className='email'>{companie.email}</th>
+                                    <th className='name'>{contact.name}</th>
+                                    <th className='phone'>{contact.phone}</th>
+                                    <th className='email'>{contact.email}</th>
                                 </tr>
                                 )
                             })
