@@ -1,6 +1,6 @@
 import "../scss/Top.scss";
 import React from 'react';
-import illustr from '../../../public/img/illustr.png';
+import illustr from '../img/illustr.png';
 
 const Top = () => {
         const title = "Dashboard";

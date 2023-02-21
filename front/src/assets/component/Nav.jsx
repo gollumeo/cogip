@@ -41,10 +41,10 @@ return (
         </div>
         <div className="nav_log" style={{ display: displayValue, ...(window.matchMedia("(min-width: 1280px)").matches && {display: 'flex'}) }}>
           <ul className='list_log'>
-            <NavLink to="/register.php" className="nav_link_2">
+            <NavLink to="../../register.php" className="nav_link_2">
               <li className='sign_up'>Sign up</li>
             </NavLink>
-            <NavLink to="/login.php" className="nav_link">
+            <NavLink to="../../login.php" className="nav_link">
               <li className='login'>Login</li>
             </NavLink>
           </ul>

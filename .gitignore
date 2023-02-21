@@ -6,3 +6,4 @@ backend/vendor/
 composer.lock
 populateDb.php
 package-lock.json
+front/build

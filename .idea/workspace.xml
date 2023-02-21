@@ -5,20 +5,119 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fbffc0f-d6ae-42fa-8018-f46dcee0b141" name="Changes" comment=".">
+      <change afterPath="$PROJECT_DIR$/front/src/verification_login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/Henry-10d14da8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/black notebook and green arm-9b0d3c9c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/bulb-f8915c39.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/burger_menu_icon-f914518c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/illustr-163d0ee3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/image_homme_1-5e3bdf7d.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/index-04bc4964.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/index-0c41d95d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/line-65cb6d23.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/yellow_rectangle_comments-1fb13bd7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/assets/Henry-10d14da8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/assets/black notebook and green arm-9b0d3c9c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/assets/bulb-f8915c39.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/assets/burger_menu_icon-f914518c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/assets/illustr-163d0ee3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/assets/image_homme_1-5e3bdf7d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/assets/index-1f59d74a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/assets/index-fe0c16f8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/assets/yellow_rectangle_comments-1fb13bd7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/EllipseBleue.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/EllipseBleue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/EllipseLavande.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/EllipseLavande.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/EllipseRose.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/EllipseRose.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/Facebook.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/Facebook.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/GooglePlus.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/GooglePlus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/Henry.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/Henry.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/Instagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/Instagram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/Layer 2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/Layer 2.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/LinkedIn.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/LinkedIn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/Pinterest.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/Pinterest.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/RSS.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/RSS.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/Rectangle 10.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/Rectangle 10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/Rectangle 19.svg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/Rectangle 19.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/Rectangle 22.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/Rectangle 22.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/Separation.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/Separation.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/Twitter.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/Twitter.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/Youtube.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/Youtube.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/black notebook and green arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/black notebook and green arm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/bulb.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/bulb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/burger_menu_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/burger_menu_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/companies.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/companies.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/contact.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/contact.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/contact1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/contact1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/dashboard.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/dashboard.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/favicon-32x32.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/favicon-32x32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/fax.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/fax.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/illustr.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/illustr.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/image_homme_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/image_homme_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/invoices.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/invoices.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/line.svg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/line.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/line_footer.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/line_footer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/localisation.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/localisation.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/logo_COGIP.svg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/logo_COGIP.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/phone.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/phone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/téléphone.svg" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/téléphone.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/img/yellow_rectangle_comments.png" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/img/yellow_rectangle_comments.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/EllipseBleue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/EllipseLavande.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/EllipseRose.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/Facebook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/GooglePlus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/Henry.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/Instagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/Layer 2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/LinkedIn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/Pinterest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/RSS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/Rectangle 10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/Rectangle 19.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/Rectangle 22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/Separation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/Twitter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/Youtube.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/black notebook and green arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/bulb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/burger_menu_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/companies.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/contact.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/contact1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/dashboard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/favicon-32x32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/fax.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/illustr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/image_homme_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/invoices.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/line.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/line_footer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/localisation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/logo_COGIP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/phone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/téléphone.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/img/yellow_rectangle_comments.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/CompaniesDash.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/CompaniesDash.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Contact_card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Contact_card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/ContactsDash.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/ContactsDash.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Dash_Nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Dash_Nav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Dash_Nav_Mobile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Dash_Nav_Mobile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Dash_welcome.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Dash_welcome.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/InvoicesDash.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/InvoicesDash.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Last_contacts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Last_contacts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Last_invoices.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Last_invoices.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Manage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Manage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Menu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Nav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Nav2.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Nav2.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Top.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Top.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Work.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Work.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/pages/Show_contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/pages/Show_contact.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/pages/Show_invoices.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/pages/Show_invoices.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/StatsDash.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/StatsDash.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/verification_login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/verification_register.php" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/verification_register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +244,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pitdu\Desktop\BeCode - Git\cogip\front\src" />
+      <recent name="C:\Users\pitdu\Desktop\BeCode - Git\cogip\front\public" />
+      <recent name="C:\Users\pitdu\Desktop\BeCode - Git\cogip\front\src\assets" />
       <recent name="C:\Users\pitdu\Desktop\BeCode - Git\cogip\front" />
       <recent name="C:\Users\pitdu\Desktop\BeCode - Git\cogip" />
     </key>

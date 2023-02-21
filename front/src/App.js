@@ -1,15 +1,15 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./assets/pages/Home";
-import Invoices from "./assets/pages/Invoices";
-import Companies from "./assets/pages/Companies";
-import Contacts from "./assets/pages/Contacts";
-import Dashboard from "./assets/pages/Dashboard";
-import Show_invoices from "./assets/pages/Show_invoices";
-import Show_contact from "./assets/pages/Show_contact";
-import Dashboard_new_invoice from "./assets/pages/Dashboard_new_invoice";
-import Dashboard_new_companies from "./assets/pages/Dashboard_new_companies";
-import Dashboard_contact from "./assets/pages/Dashboard_contact";
+import Home from "./assets/pages/Home.jsx";
+import Invoices from "./assets/pages/Invoices.jsx";
+import Companies from "./assets/pages/Companies.jsx";
+import Contacts from "./assets/pages/Contacts.jsx";
+import Dashboard from "./assets/pages/Dashboard.jsx";
+import Show_invoices from "./assets/pages/Show_invoices.jsx";
+import Show_contact from "./assets/pages/Show_contact.jsx";
+import Dashboard_new_invoice from "./assets/pages/Dashboard_new_invoice.jsx";
+import Dashboard_new_companies from "./assets/pages/Dashboard_new_companies.jsx";
+import Dashboard_contact from "./assets/pages/Dashboard_contact.jsx";
 
 const App = () => {
   return (

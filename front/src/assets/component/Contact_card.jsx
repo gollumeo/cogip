@@ -6,7 +6,7 @@ const Contact_card = () => {
     <div className="contact_card">
       <img
         className="contact_img"
-        src="../../../public/img/contact1.svg"
+        src="../img/contact1.svg"
         alt=""
       />
       <b>

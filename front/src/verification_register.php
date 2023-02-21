@@ -1,6 +1,9 @@
 <?php
 
 use Dotenv\Dotenv;
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 require_once './vendor/vlucas/phpdotenv/src/Dotenv.php';
 require_once './vendor/autoload.php';
@@ -8,9 +11,6 @@ require_once './vendor/autoload.php';
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 
 // Vérifier si le bouton "S'inscrire" a été cliqué
 if (isset($_POST['register'])) {

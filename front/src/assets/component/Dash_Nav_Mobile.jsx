@@ -16,7 +16,7 @@ const Dash_Nav_Mobile = () => {
           <div className="contact_mobile">
             <img
               className="dash_contact_img_mobile"
-              src="../../public/img/contact1.svg"
+              src="img/contact1.svg"
               alt="contact"
             />
             <h1 className="dash_contact_name_mobile">
@@ -25,7 +25,7 @@ const Dash_Nav_Mobile = () => {
           </div>
           <img
             className="burger_menu"
-            src="../../public/img/burger_menu_icon.png"
+            src="img/burger_menu_icon.png"
             alt=""
             ref={menuHamburgerRef}
             onClick={handleMenuClick}

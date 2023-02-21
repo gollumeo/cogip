@@ -3,7 +3,7 @@
 //useEffect est utilisé pour effectuer la requête pour obtenir les noms de société et les stocker dans l'état.
 import React, { useState, useEffect } from 'react';
 import "../../assets/scss/Last_invoices.css";
-import black_notebook_and_green_arm from "../../../public/img/black notebook and green arm.png";
+import black_notebook_and_green_arm from "../img/black notebook and green arm.png";
 import useFetch from '../hook/useFetch';
 
 const Last_invoices = () => {
