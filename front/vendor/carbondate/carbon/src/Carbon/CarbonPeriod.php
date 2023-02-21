@@ -1230,7 +1230,7 @@ class CarbonPeriod implements Iterator, Countable
 
         $result = implode(' ', $parts);
 
-        return CarbonPeriod . phpmb_strtoupper(mb_substr($result, 0, 1)) . mb_substr($result, 1);
+        return mb_strtoupper(mb_substr($result, 0, 1)).mb_substr($result, 1);
     }
 
     /**
