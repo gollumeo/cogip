@@ -42,24 +42,24 @@ const Last_invoices = () => {
         <section className='section_last_invoices'>
             <h3>Last invoices</h3>
             <section className='table_last_invoices'>
-                <table>
-                    <thead> 
-                        <tr>
+                <table className='table_last_invoices_table'>
+                    <thead className='table_last_invoices_thead'> 
+                        <tr className='table_last_invoices_tr'>
                             <th className='table_last_invoices_number'>Invoice number</th>
                             <th className='table_last_invoices_dates'>Date due</th>
                             <th className='table_last_invoices_company'>Company</th>
                             <th className='table_last_invoices_created'>Created at</th>
                         </tr> 
                     </thead>
-                    <tbody>
+                    <tbody className='table_last_invoices_tbody'>
                         {
                             data.slice(Math.max(data.length - 5, 1)).reverse().map((invoice) => {
                                 return( 
-                                    <tr key={invoice.id}>
-                                        <td>{invoice.id}</td>
-                                        <td>{invoice.updated_at.split(" ")[0].split("-").reverse().join("-")}</td>
-                                        <td>{companyNames[invoice.company_id]}</td>
-                                        <td>{invoice.created_at.split(" ")[0].split("-").reverse().join("-")}</td>
+                                    <tr key={invoice.id} >
+                                        <th className='tbody_td'>{invoice.id}</th>
+                                        <th className='tbody_td'>{invoice.updated_at.split(" ")[0].split("-").reverse().join("-")}</th>
+                                        <th className='tbody_td'>{companyNames[invoice.company_id]}</th>
+                                        <th className='tbody_td'>{invoice.created_at.split(" ")[0].split("-").reverse().join("-")}</th>
                                     </tr>
                                 )
                             })

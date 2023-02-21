@@ -6,42 +6,46 @@
 @media screen and (min-width: 1280px) {
   .div-top {
     height: 30vw;
-    flex-wrap: wrap;
+    padding-bottom: 1vw;
   }
 }
 
 .div-top .div-header {
-  height: 40vw;
+  height: 20vw;
+}
+@media screen and (min-width: 1280px) {
+  .div-top .div-header {
+    height: 15vw;
+  }
 }
 
 .div-top .div-header .title-header {
-  font-size: 6vw;
+  font-size: 5vw;
   font-weight: 900;
-  text-align: left;
-  margin-left: 5vw;
-  padding-top: 8vw;
+  text-align: center;
+  padding-top: 4vw;
   line-height: 0%;
 }
 @media screen and (min-width: 1280px) {
   .div-top .div-header .title-header {
     font-size: 2.5vw;
     text-align: left;
-    padding-top: 3vw;
+    padding-top: 6vw;
     margin-left: 3vw;
   }
 }
 
 .div-top .div-header .folder-header {
-  font-size: 4vw;
-  text-align: left;
+  font-size: 3vw;
+  text-align: center;
   padding-bottom: 2vw;
-  margin-left: 5vw;
+  margin-top: 4vw;
 }
 @media screen and (min-width: 1280px) {
   .div-top .div-header .folder-header {
-    font-size: 1vw;
+    font-size: 1.5vw;
     text-align: left;
-    line-height: 1vw;
+    line-height: 0;
     margin-left: 3vw;
   }
 }
@@ -50,16 +54,18 @@
   color: white;
   display: flex;
   flex-flow: column;
-  background-color: #9698D6;
-  height: 58vw;
+  background-color: #9698d6;
+  border-radius: 10px;
+  height: 79vw;
+  margin-left: 2vw;
+  margin-right: 2vw;
 }
 @media screen and (min-width: 1280px) {
   .div-top .div-welcome {
-    justify-content: flex-start;
-    width: 80vw;
-    height: 13vw;
+    width: 71vw;
+    height: 14vw;
     margin: 1vw 3vw 0vw 3vw;
-    line-height: 3vw;
+    line-height: 2vw;
     padding-left: 3vw;
     padding-bottom: 1vw;
   }
@@ -69,15 +75,15 @@
   text-align: center;
   font-weight: 900;
   font-size: 7vw;
-  margin-top: 12vw;
+  margin-top: 40vw;
   margin-bottom: 1vw;
 }
 @media screen and (min-width: 1280px) {
   .div-top .div-welcome .h1-welcome {
     font-size: 2.5vw;
     text-align: left;
-    width: 30vw;
-    line-height: 1vw;
+    margin-top: 4vw;
+    margin-left: 1vw;
   }
 }
 
@@ -86,26 +92,124 @@
   text-align: center;
   margin-top: 8vw;
   margin-left: 4vw;
+  margin-bottom: 20vw;
   width: 90vw;
 }
 @media screen and (min-width: 1280px) {
   .div-top .div-welcome .p-welcome {
-    font-size: 1vw;
-    width: 20vw;
-    line-height: 1.5;
+    font-size: 1.5vw;
     text-align: left;
+    margin-top: 0;
+    margin-left: 1vw;
+    width: 30vw;
   }
 }
 
 .div-top .div-welcome .illustr-welcome {
-  width: 50.5vw;
-  margin-top: -85vw;
-  margin-left: 45vw;
+  width: 40vw;
+  margin-top: -88vw;
+  margin-left: 30vw;
 }
 @media screen and (min-width: 1280px) {
   .div-top .div-welcome .illustr-welcome {
-    width: 29vw;
-    margin-left: 35vw;
-    margin-top: -24vw;
+    width: 33vw;
+    margin-top: -47vw;
+    margin-left: 36vw;
   }
-}/*# sourceMappingURL=Top.css.map */
+}
+
+/*@import "mixin";
+
+.div-top {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    @include desktop {
+        height: 30vw;
+        flex-wrap: wrap;
+    }
+}
+.div-top .div-header {
+    height: 40vw;
+}
+.div-top .div-header .title-header {
+    font-size: 6vw;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 4vw;
+    line-height: 0%;
+    @include desktop {
+        font-size: 2.5vw;
+        text-align: left;
+        padding-top: 3vw;
+        margin-left: 3vw;
+    }
+}
+.div-top .div-header .folder-header {
+    font-size: 4vw;
+    text-align: left;
+    padding-bottom: 2vw;
+    margin-left: 5vw;
+    @include desktop {
+        font-size: 1vw;
+        text-align: left;
+        line-height: 1vw;
+        margin-left: 3vw;
+    }
+}
+.div-top .div-welcome {
+    color: white;
+    display: flex;
+    flex-flow: column;
+    background-color: #9698d6;
+    border-radius: 10px;
+    height: 79vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    @include desktop {
+        justify-content: flex-start;
+        width: 80vw;
+        height: 13vw;
+        margin: 1vw 3vw 0vw 3vw;
+        line-height: 3vw;
+        padding-left: 3vw;
+        padding-bottom: 1vw;
+
+    }
+}
+.div-top .div-welcome .h1-welcome {
+    text-align: center;
+    font-weight: 900;
+    font-size: 7vw;
+    margin-top: 12vw;
+    margin-bottom: 1vw;
+    @include desktop {
+        font-size: 2.5vw;
+        text-align: left;
+        width:30vw;
+        line-height: 1vw;
+    }
+}
+.div-top .div-welcome .p-welcome {
+    font-size: 4.5vw;
+    text-align: center;
+    margin-top: 8vw;
+    margin-left:4vw;
+    width: 90vw;
+    @include desktop {
+        font-size: 1vw;
+        width: 20vw;
+        line-height: 1.5;
+        text-align: left;
+    }  
+}
+.div-top .div-welcome .illustr-welcome {
+    width: 40vw;
+    margin-top: -88vw;
+    margin-left: 30vw;
+    @include desktop {
+        width: 33vw;
+        margin-top: -47vw;
+        margin-left: 36vw;
+    }
+}*//*# sourceMappingURL=Top.css.map */
