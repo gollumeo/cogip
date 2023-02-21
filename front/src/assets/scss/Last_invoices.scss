@@ -23,17 +23,17 @@
     @include desktop {
       overflow-x: visible;
     }
-    table {
+    .table_last_invoices_table {
       table-layout: auto;
       width: 300%;
       border-collapse: collapse;
       @include desktop {
         width: 100%;
       }
-      thead {
+      .table_last_invoices_thead {
         font-family: "Roboto", sans-serif;
         background-color: #f9de4e;
-        tr {
+        .table_last_invoices_tr {
           th {
             padding: 1% 1% 1% 1%;
             text-align: left;
@@ -52,7 +52,7 @@
           }
         }
       }
-      tbody {
+      .table_last_invoices_tbody {
         font-family: "Roboto", sans-serif;
         tr {
           background-color: #f5f5f5;
