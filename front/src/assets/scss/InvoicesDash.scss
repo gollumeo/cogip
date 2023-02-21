@@ -1,0 +1,84 @@
+@import "mixin";
+
+.Tb_Invoices-section   {   
+    background-color: #ffffff;
+    width:95vw;
+    height:70vw;
+    border-radius: 10px;
+    margin-bottom: 4vw;
+    padding-top: 8vw;
+    @include desktop {
+      padding-left: 1vw;
+      padding-bottom: 0;
+      padding-top: 1vw;
+      margin-left: 2vw;
+      width: 34vw;
+      height: 27vw;
+    }
+  }
+.Tb_Invoices-section h3 {
+    font-family: "Inter", sans-serif;
+    text-align: left;
+    margin-left: 6vw;
+    margin-top: 1vw;
+    @include desktop {
+      font-size: 2vw;
+      margin-left: 1vw;
+      padding-bottom: 1vw;
+    }
+  }
+.Tb_Invoices-section .line-h3tb {
+    padding: 0 5vw 2vw 5vw;
+    max-width: 90%;
+    @include desktop {
+      padding: 0 5vw 1vw 1vw;
+      max-width: 90%;
+    }
+  }
+.Tb_Invoices-section .Tb_Invoices-table {
+    margin-left: 4vw;
+    margin-right: 4vw;
+    overflow-x: auto;
+     @include desktop {
+      margin-right: 1vw;
+      margin-left: 2vw;
+     }
+  }
+.Tb_Invoices-section .Tb_Invoices-table table {
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+    width: 120vw;
+    border-collapse: collapse;    
+    @include desktop {
+      width: 50vw;
+      text-align: left;
+  }
+}
+.Tb_Invoices-section .Tb_Invoices-table table thead tr th {
+    font-size: 4vw;
+    text-align: left;
+    padding: 2vw;
+    @include desktop {
+      font-size: 1vw;
+      font-weight: 900;
+      padding: 1vw;
+  }
+}
+.Tb_Invoices-section .Tb_Invoices-table table tbody tr th {
+    font-size: 4vw;
+    font-weight: 500;
+    @include desktop {
+    font-size: 1vw; 
+  }
+}
+.Tb_Invoices-section .Tb_Invoices-table table tbody tr .invoice-number {
+  padding: 2vw 0 2vw 2vw;
+  text-align: left;
+  @include desktop {
+    padding: 1vw 0 1vw 1vw;
+}
+}
+.Tb_Invoices-section .Tb_Invoices-table table tbody tr .company {
+  padding-left: 2vw;
+  text-align: left;
+}
