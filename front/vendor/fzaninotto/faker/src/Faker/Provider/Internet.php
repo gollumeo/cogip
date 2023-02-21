@@ -236,7 +236,7 @@ class Internet extends \Faker\Provider\Base
      */
     public function domainName()
     {
-        return $this->domainWord() . 'Provider' . $this->tld();
+        return $this->domainWord() . '.' . $this->tld();
     }
 
     /**

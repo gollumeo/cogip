@@ -52,6 +52,6 @@ class Internet extends \Faker\Provider\Internet
      */
     public function domainName()
     {
-        return static::randomElement(static::$lastNameAscii) . 'ja_JP' . $this->tld();
+        return static::randomElement(static::$lastNameAscii) . '.' . $this->tld();
     }
 }

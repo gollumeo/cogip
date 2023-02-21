@@ -459,7 +459,7 @@ EOF
     protected function computeFallbackLocales($locale)
     {
         if (null === $this->parentLocales) {
-            $this->parentLocales = json_decode(file_get_contents(__DIR__ . '/Resources/data/parents.json'), true);
+            $this->parentLocales = json_decode(file_get_contents(__DIR__.'/Resources/data/parents.json'), true);
         }
 
         $originLocale = $locale;

@@ -52,13 +52,13 @@ class MoFileDumper extends FileDumper
 
         foreach ($offsets as $offset) {
             $sourceOffsets .= $this->writeLong($offset[1])
-                . $this->writeLong($offset[0] + $sourcesStart);
+                          .$this->writeLong($offset[0] + $sourcesStart);
             $targetOffsets .= $this->writeLong($offset[3])
-                . $this->writeLong($offset[2] + $sourcesStart + $sourcesSize);
+                          .$this->writeLong($offset[2] + $sourcesStart + $sourcesSize);
         }
 
-        $output = MoFileDumper . phpimplode('', array_map([$this, 'writeLong'], $header))
-            . $sourceOffsets
+        $output = implode('', array_map([$this, 'writeLong'], $header))
+               .$sourceOffsets
                .$targetOffsets
                .$sources
                .$targets

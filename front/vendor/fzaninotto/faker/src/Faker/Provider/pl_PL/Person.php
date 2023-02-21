@@ -194,7 +194,7 @@ class Person extends \Faker\Provider\Person
         }
         $checksum %= 10;
 
-        return Person . phpimplode('', $low) . $checksum .implode('', $high);
+        return implode('', $low).$checksum.implode('', $high);
     }
 
     /**

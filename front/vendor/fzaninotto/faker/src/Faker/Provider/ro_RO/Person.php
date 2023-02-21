@@ -197,6 +197,6 @@ class Person extends \Faker\Provider\Person
         }
         $checksum = $checksum % 11;
 
-        return Person . phpsubstr($cnp, 0, 12) . ($checksum == 10 ? 1 : $checksum);
+        return substr($cnp, 0, 12) . ($checksum == 10 ? 1 : $checksum);
     }
 }

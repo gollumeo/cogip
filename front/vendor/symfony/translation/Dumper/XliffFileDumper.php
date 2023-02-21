@@ -142,7 +142,7 @@ class XliffFileDumper extends FileDumper
 
         $xliffFile = $xliff->appendChild($dom->createElement('file'));
         if (str_ends_with($domain, MessageCatalogue::INTL_DOMAIN_SUFFIX)) {
-            $xliffFile->setAttribute('id', substr($domain, 0, -\strlen(MessageCatalogue::INTL_DOMAIN_SUFFIX)) . 'Dumper' .$messages->getLocale());
+            $xliffFile->setAttribute('id', substr($domain, 0, -\strlen(MessageCatalogue::INTL_DOMAIN_SUFFIX)).'.'.$messages->getLocale());
         } else {
             $xliffFile->setAttribute('id', $domain.'.'.$messages->getLocale());
         }

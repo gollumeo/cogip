@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+  <form action="" method="post">
     <div>
       <label for="first_name">First Name:</label>
       <input type="text" name="first_name" required>

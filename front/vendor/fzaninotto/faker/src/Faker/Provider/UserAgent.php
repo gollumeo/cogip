@@ -62,7 +62,7 @@ class UserAgent extends \Faker\Provider\Base
      */
     public static function chrome()
     {
-        $saf = UserAgent . phpmt_rand(531, 536) . mt_rand(0, 2);
+        $saf = mt_rand(531, 536) . mt_rand(0, 2);
 
         $platforms = array(
             '(' . static::linuxPlatformToken() . ") AppleWebKit/$saf (KHTML, like Gecko) Chrome/" . mt_rand(36, 40) . '.0.' . mt_rand(800, 899) . ".0 Mobile Safari/$saf",
@@ -98,9 +98,9 @@ class UserAgent extends \Faker\Provider\Base
      */
     public static function safari()
     {
-        $saf = mt_rand(531, 535) . 'Provider' . mt_rand(1, 50) . '.' . mt_rand(1, 7);
+        $saf = mt_rand(531, 535) . '.' . mt_rand(1, 50) . '.' . mt_rand(1, 7);
         if (mt_rand(0, 1) == 0) {
-            $ver = mt_rand(4, 5) . 'Provider' . mt_rand(0, 1);
+            $ver = mt_rand(4, 5) . '.' . mt_rand(0, 1);
         } else {
             $ver = mt_rand(4, 5) . '.0.' . mt_rand(1, 5);
         }

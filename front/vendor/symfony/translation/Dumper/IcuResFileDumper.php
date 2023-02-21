@@ -44,16 +44,16 @@ class IcuResFileDumper extends FileDumper
         foreach ($messages->all($domain) as $source => $target) {
             $resources .= pack('V', $this->getPosition($data));
 
-            $data .= IcuResFileDumper . phppack('V', \strlen($target))
-                . mb_convert_encoding($target . "\0", 'UTF-16LE', 'UTF-8')
+            $data .= pack('V', \strlen($target))
+                .mb_convert_encoding($target."\0", 'UTF-16LE', 'UTF-8')
                 .$this->writePadding($data)
             ;
         }
 
         $resOffset = $this->getPosition($data);
 
-        $data .= IcuResFileDumper . phppack('v', \count($messages->all($domain)))
-            . $indexes
+        $data .= pack('v', \count($messages->all($domain)))
+            .$indexes
             .$this->writePadding($data)
             .$resources
         ;

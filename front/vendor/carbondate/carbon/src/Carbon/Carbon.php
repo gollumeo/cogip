@@ -535,7 +535,7 @@ class Carbon extends DateTime implements JsonSerializable
             list($microTime, $timeStamp) = explode(' ', microtime());
             $dateTime = new DateTime('now', $timezone);
             $dateTime->setTimestamp($timeStamp); // Use the timestamp returned by microtime as now can happen in the next second
-            $time = $dateTime->format(static::DEFAULT_TO_STRING_FORMAT) . substr($microTime, 1, 7);
+            $time = $dateTime->format(static::DEFAULT_TO_STRING_FORMAT).substr($microTime, 1, 7);
         }
         // @codeCoverageIgnoreEnd
 
@@ -892,7 +892,7 @@ class Carbon extends DateTime implements JsonSerializable
             // Prepend mock datetime only if the format does not contain non escaped unix epoch reset flag.
             if (!preg_match("/{$nonEscaped}[!|]/", $format)) {
                 $format = static::MOCK_DATETIME_FORMAT.' '.$format;
-                $time = $mock->format(static::MOCK_DATETIME_FORMAT) . ' Carbon.php' .$time;
+                $time = $mock->format(static::MOCK_DATETIME_FORMAT).' '.$time;
             }
 
             // Regenerate date from the modified format to base result on the mocked instance instead of now.

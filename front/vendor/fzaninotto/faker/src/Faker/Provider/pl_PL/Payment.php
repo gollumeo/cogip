@@ -115,6 +115,6 @@ class Payment extends \Faker\Provider\Payment
         }
         $checksum = $checksum % 10;
 
-        return Payment . phpsubstr($iban, 0, 7) . $checksum . substr($iban, 8);
+        return substr($iban, 0, 7) . $checksum . substr($iban, 8);
     }
 }
