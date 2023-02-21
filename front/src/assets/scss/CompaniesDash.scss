@@ -50,7 +50,7 @@
     width: 120vw;
     border-collapse: collapse;    
     @include desktop {
-      width: 50vw;
+      width: 45vw;
       text-align: left;
   }
 }
@@ -59,7 +59,7 @@
     text-align: left;
     padding: 2vw;
     @include desktop {
-      font-size: 1vw;
+      font-size: 1.2vw;
       font-weight: 900;
       padding: 1vw;
   }
@@ -68,7 +68,7 @@
     font-size: 4vw;
     font-weight: 500;
     @include desktop {
-    font-size: 1vw; 
+    font-size: 1.2vw; 
   }
 }
 .Tb_Companies-section .Tb_Companies-table table tbody tr .name {
