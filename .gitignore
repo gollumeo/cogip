@@ -1,9 +1,0 @@
-vendor/
-node_modules/
-backend/vendor/
-.idea/
-front/src/.env
-composer.lock
-populateDb.php
-package-lock.json
-front/build
