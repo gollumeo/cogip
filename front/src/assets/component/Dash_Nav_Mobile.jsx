@@ -62,6 +62,7 @@ const Dash_Nav_Mobile = () => {
               </li>
             </div>
           </ul>
+          <span className="logout">Logout</span>
         </div>
       </div>
     </div>
