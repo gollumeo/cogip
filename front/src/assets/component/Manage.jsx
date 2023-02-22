@@ -1,7 +1,7 @@
 import React from 'react';
-import Homme_1 from '../../../public/img/image_homme_1.png';
+import Homme_1 from '../img/image_homme_1.png';
 import "../scss/Manage.css";
-import white_shape from "../../../public/img/Rectangle 10.png";
+import white_shape from "../img/Rectangle 10.png";
 
 
 const Manage = () => {

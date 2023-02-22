@@ -1,8 +1,8 @@
 import React from "react";
-import dashboard from "../../../public/img/dashboard.png";
-import invoices from "../../../public/img/invoices.png";
-import companies from "../../../public/img/companies.png";
-import contact from "../../../public/img/contact.png";
+import dashboard from "../img/dashboard.png";
+import invoices from "../img/invoices.png";
+import companies from "../img/companies.png";
+import contact from "../img/contact.png";
 import "../scss/Dash_Nav.scss";
 
 const Dash_Nav = () => {
@@ -12,7 +12,7 @@ const Dash_Nav = () => {
         <div className="dash_contact_top">
           <img
             className="dash_contact_img"
-            src="../../../public/img/contact1.svg"
+            src="../img/contact1.svg"
             alt="contact"
           />
           <h1 className="dash_contact_name">
@@ -23,19 +23,27 @@ const Dash_Nav = () => {
           <ul>
             <div className="li_nav">
               <img src={dashboard} className="dashboard-img" />
-              <li>Dashboard</li>
+              <li>
+                <a href="/dashboard/">Dashboard</a>
+              </li>
             </div>
             <div className="li_nav">
               <img src={invoices} className="invoices-img" />
-              <li>Invoices</li>
+              <li>
+                <a href="/dashboard/new-invoice">Invoices</a>
+              </li>
             </div>
             <div className="li_nav">
               <img src={companies} className="companies-img" />
-              <li>Companies</li>
+              <li>
+                <a href="/dashboard/new-companies">Companies</a>
+              </li>
             </div>
             <div className="li_nav">
               <img src={contact} className="contact-img" />
-              <li>Contacts</li>
+              <li>
+                <a href="/dashboard/contacts">Contacts</a>
+              </li>
             </div>
           </ul>
         </div>
@@ -44,7 +52,7 @@ const Dash_Nav = () => {
       <div className="logout_nav">
         <img
           className="dash_logout_img"
-          src="../../../public/img/contact1.svg"
+          src="../img/contact1.svg"
           alt="contact"
         />
         <p className="logout">Logout</p>

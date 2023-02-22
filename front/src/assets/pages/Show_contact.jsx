@@ -27,7 +27,7 @@ const Show_contact = () => {
                 </div>
                 <img
                     className="contact_img"
-                    src="../../../public/img/contact1.svg"
+                    src="../img/contact1.svg"
                     alt=""
                 />
             </div>

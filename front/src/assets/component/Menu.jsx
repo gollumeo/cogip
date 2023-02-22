@@ -3,7 +3,6 @@ import dashboard from '../../../public/img/dashboard.png';
 import invoices from '../../../public/img/invoices.png';
 import companies from '../../../public/img/companies.png';
 import contact from '../../../public/img/contact.png';
-import separation from '../../../public/img/Separation.png';
 import "../scss/Menu.scss";
 import React from 'react';
 
@@ -15,9 +14,6 @@ const Menu = () => {
                 <img src={henry} className="user-img"/>
                 <p className='user-name'>{user}</p>
             </div>
-            <img src={separation} className="separation1-img"/>
-            <div className='div-logout-mobile'>Logout</div>
-            <img src={separation} className="separation2-img"/>
             <div className='div-nav'>
                 <div className='div-dashboard'>
                     <img src={dashboard} className="dashboard-img"/>
@@ -26,21 +22,23 @@ const Menu = () => {
                 <div className='div-invoices'>
                     <img src={invoices} className="invoices-img"/>
                     <p className='invoices-clic'>Invoices</p>
+                    <button className='btn_new_invoices'><a href="/dashboard/new_invoice">+</a></button>
                 </div>
                 <div className='div-companies'>
                     <img src={companies} className="companies-img"/>
                     <p className='companies-clic'>Companies</p>
+                    <button className='btn_new_companies'><a href="/dashboard/new_companie">+</a></button>
                 </div>
                 <div className='div-contact'>
                     <img src={contact} className="contact-img"/>
                     <p className='contact-clic'>Contact</p>
+                    <button className='btn_new_contact'><a href="/dashboard/new_contact">+</a></button>
                 </div>
             </div>
-            <img src={separation} className="separation3-img"/>
-            <div className='div-logout-desktop'>  
+            {/* <div className='div-logout-desktop'>  
                 <img src={henry} className="user-imgSmall"/>
-                <p>Logout</p>
-            </div>
+                <p className='p-logout-desktop'>Logout</p>
+            </div> */}
         </div>
     );
 };
