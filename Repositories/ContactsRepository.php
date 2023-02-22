@@ -38,13 +38,14 @@ class ContactsRepository
         $stmt->execute();
 
         // Set the json response
+        header('Content-type: application/json');
+
         $json_encode = json_encode(['message' => 'Contacts successfully created!'], true);
 
-        header('Content-type: application/json');
-        return $json_encode;
+        echo $json_encode;
     }
 
-    public function update(Contacts $contactsData): string
+    public function update(Contacts $contactsData)
     {
         $query = "USE cogip";
         $stmt = $this->database->prepare($query);
@@ -68,10 +69,11 @@ class ContactsRepository
         $stmt->execute();
 
         // Set the json response
+        header('Content-type: application/json');
         $json_encode = json_encode(['message' => 'Contacts successfully updated!'], true);
 
-        header('Content-type: application/json');
-        return $json_encode;
+
+        echo $json_encode;
     }
 
     public function delete(Contacts $contactsData): string
@@ -81,7 +83,6 @@ class ContactsRepository
         $stmt->execute();
         // Prepare the query
         $query = "DELETE FROM contacts WHERE id = :id";
-
 
         // Prepare the statement
         $stmt = $this->database->prepare($query);
@@ -93,11 +94,13 @@ class ContactsRepository
         $stmt->execute();
 
         // Set the json response
-        $json_encode = json_encode(['message' => 'Contacts successfully created!'], true);
-
         header('Content-type: application/json');
+
+        $json_encode = json_encode(['message' => 'Contact successfully deleted!'], true);
+
         return $json_encode;
     }
+
 
     public function getAllContacts()
     {
@@ -113,13 +116,11 @@ class ContactsRepository
         // Execute the query
         $stmt->execute();
 
-
         $contactsData = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // Set the json response
-        $json_encode = json_encode($contactsData, true);
-
         header('Content-type: application/json');
+        $json_encode = json_encode($contactsData, JSON_PRETTY_PRINT);
         echo $json_encode;
     }
 
@@ -131,7 +132,7 @@ class ContactsRepository
         // Prepare the query
         $query = "SELECT * FROM contacts WHERE id = :id";
         $id = $contactsData->getId();
-        $stmt->bindParam(':id',$id);
+        $stmt->bindParam(':id', $id);
 
         // Prepare the statement
         $stmt = $this->database->prepare($query);
@@ -139,10 +140,12 @@ class ContactsRepository
         // Execute the query
         $stmt->execute();
 
-        // Set the json response
-        $json_encode = json_encode($contactsData, JSON_PRETTY_PRINT);
+        $contactsData = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+        // Set the json response
         header('Content-type: application/json');
+        $json_encode = json_encode($contactsData, JSON_PRETTY_PRINT);
         echo $json_encode;
     }
+
 }

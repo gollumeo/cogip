@@ -1,8 +1,7 @@
-vendor/
 node_modules/
-backend/vendor/
-.idea/
-.env
-composer.lock
-populateDb.php
-package-lock.json
+front/node_modules
+backend/node_modules
+vendor
+backend/vendor
+front/vendor
+```
