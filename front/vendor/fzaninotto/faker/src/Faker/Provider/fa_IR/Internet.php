@@ -94,6 +94,6 @@ class Internet extends \Faker\Provider\Internet
      */
     public function domainName()
     {
-        return static::randomElement(static::$lastNameAscii) . 'fa_IR' . $this->tld();
+        return static::randomElement(static::$lastNameAscii) . '.' . $this->tld();
     }
 }

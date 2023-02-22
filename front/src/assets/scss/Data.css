@@ -1,0 +1,15 @@
+.div-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1280px) {
+  .div-data {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 60vw;
+    height: 59vw;
+    margin-left: 3vw;
+  }
+}/*# sourceMappingURL=Data.css.map */

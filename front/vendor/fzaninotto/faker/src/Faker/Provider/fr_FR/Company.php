@@ -117,7 +117,7 @@ class Company extends \Faker\Provider\Company
         $siret .= $this->numerify($nicFormat);
         $siret .= Luhn::computeCheckDigit($siret);
         if ($formatted) {
-            $siret = substr($siret, 0, 3) . ' Company.php' . substr($siret, 3, 3) . ' ' . substr($siret, 6, 3) . ' ' . substr($siret, 9, 5);
+            $siret = substr($siret, 0, 3) . ' ' . substr($siret, 3, 3) . ' ' . substr($siret, 6, 3) . ' ' . substr($siret, 9, 5);
         }
 
         return $siret;
@@ -134,7 +134,7 @@ class Company extends \Faker\Provider\Company
         $siren = $this->numerify('%#######');
         $siren .= Luhn::computeCheckDigit($siren);
         if ($formatted) {
-            $siren = substr($siren, 0, 3) . ' Company.php' . substr($siren, 3, 3) . ' ' . substr($siren, 6, 3);
+            $siren = substr($siren, 0, 3) . ' ' . substr($siren, 3, 3) . ' ' . substr($siren, 6, 3);
         }
 
         return $siren;

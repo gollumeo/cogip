@@ -1,0 +1,107 @@
+.Tb_Contacts-section {
+  background-color: #ffffff;
+  width: 95vw;
+  height: 70vw;
+  border-radius: 10px;
+  margin-bottom: 4vw;
+  padding-top: 8vw;
+}
+@media screen and (min-width: 1280px) {
+  .Tb_Contacts-section {
+    padding-left: 1vw;
+    padding-bottom: 0;
+    padding-top: 1vw;
+    margin-left: 2vw;
+    margin-bottom: 10vw;
+    width: 34vw;
+    height: 27vw;
+  }
+}
+
+.Tb_Contacts-section h3 {
+  font-family: "Inter", sans-serif;
+  text-align: left;
+  margin-left: 6vw;
+  margin-top: 1vw;
+}
+@media screen and (min-width: 1280px) {
+  .Tb_Contacts-section h3 {
+    font-size: 2vw;
+    margin-left: 1vw;
+    padding-bottom: 1vw;
+  }
+}
+
+.Tb_Contacts-section .line-h3tb {
+  padding: 0 5vw 2vw 5vw;
+  max-width: 90%;
+}
+@media screen and (min-width: 1280px) {
+  .Tb_Contacts-section .line-h3tb {
+    padding: 0 5vw 1vw 1vw;
+    max-width: 90%;
+  }
+}
+
+.Tb_Contacts-section .Tb_Contacts-table {
+  margin-left: 4vw;
+  margin-right: 4vw;
+  overflow-x: auto;
+}
+@media screen and (min-width: 1280px) {
+  .Tb_Contacts-section .Tb_Contacts-table {
+    margin-right: 1vw;
+    margin-left: 2vw;
+  }
+}
+
+.Tb_Contacts-section .Tb_Contacts-table table {
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff;
+  width: 120vw;
+  border-collapse: collapse;
+}
+@media screen and (min-width: 1280px) {
+  .Tb_Contacts-section .Tb_Contacts-table table {
+    width: 50vw;
+    text-align: left;
+  }
+}
+
+.Tb_Contacts-section .Tb_Contacts-table table thead tr th {
+  font-size: 4vw;
+  text-align: left;
+  padding: 2vw;
+}
+@media screen and (min-width: 1280px) {
+  .Tb_Contacts-section .Tb_Contacts-table table thead tr th {
+    font-size: 1vw;
+    font-weight: 900;
+    padding: 1vw;
+  }
+}
+
+.Tb_Contacts-section .Tb_Contacts-table table tbody tr th {
+  font-size: 4vw;
+  font-weight: 500;
+}
+@media screen and (min-width: 1280px) {
+  .Tb_Contacts-section .Tb_Contacts-table table tbody tr th {
+    font-size: 1vw;
+  }
+}
+
+.Tb_Contacts-section .Tb_Contacts-table table tbody tr .name {
+  padding: 2vw 2vw 2vw 2vw;
+  text-align: left;
+}
+@media screen and (min-width: 1280px) {
+  .Tb_Contacts-section .Tb_Contacts-table table tbody tr .name {
+    padding: 1vw 0 1vw 1vw;
+  }
+}
+
+.Tb_Contacts-section .Tb_Contacts-table table tbody tr .email {
+  padding-left: 2vw;
+  text-align: left;
+}/*# sourceMappingURL=ContactsDash.css.map */

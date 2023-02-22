@@ -6,31 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="7fbffc0f-d6ae-42fa-8018-f46dcee0b141" name="Changes" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/CompaniesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/CompaniesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/ContactsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ContactsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/InvoicesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/InvoicesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Companies.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Companies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Contacts.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Contacts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Invoices.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Invoices.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/CompaniesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/CompaniesRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/ContactsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/ContactsRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/InvoicesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/InvoicesRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/UsersRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/UsersRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/CompaniesService.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/CompaniesService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/ContactsService.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/ContactsService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/InvoicesService.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/InvoicesService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/UsersService.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/UsersService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/index-a0c57e4f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/index-b4dccba9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/line-a8c2558a.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/Index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/CompaniesDash.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/CompaniesDash.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/ContactsDash.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/ContactsDash.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/InvoicesDash.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/InvoicesDash.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/component/Last_invoices.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/component/Last_invoices.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/scss/StatsDash.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/scss/StatsDash.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="DONT_SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable path="composer" />
@@ -123,9 +116,11 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
@@ -139,14 +134,35 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\pitdu\Desktop\BeCode - Git\cogip" />
-      <recent name="C:\Users\pitdu\Desktop\BeCode - Git\cogip\Core" />
-      <recent name="C:\Users\Admin\Desktop\BeCode\GitHub\cogip\backend" />
+      <recent name="C:\Users\pitdu\Desktop\BeCode - Git\cogip\front" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -156,13 +172,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676362639504</updated>
-      <workItem from="1676362644214" duration="2205000" />
-      <workItem from="1676539298739" duration="1973000" />
-      <workItem from="1676621196217" duration="567000" />
-      <workItem from="1676629074666" duration="1846000" />
-      <workItem from="1676631007136" duration="414000" />
-      <workItem from="1676631555715" duration="5335000" />
+      <workItem from="1676362644214" duration="9440000" />
+      <workItem from="1676386417567" duration="335000" />
+      <workItem from="1676883235075" duration="3835000" />
+      <workItem from="1676969307985" duration="1459000" />
     </task>
+    <task id="LOCAL-00001" summary=".">
+      <created>1676891261428</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676891261428</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,5 +200,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>

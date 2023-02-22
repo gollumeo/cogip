@@ -203,7 +203,7 @@ function findTransUnitMismatches(array $baseTranslationKeys, array $translatedKe
 function printTitle($title)
 {
     echo $title.\PHP_EOL;
-    echo translation - status . phpstr_repeat('=', strlen($title)) . \PHP_EOL .\PHP_EOL;
+    echo str_repeat('=', strlen($title)).\PHP_EOL.\PHP_EOL;
 }
 
 function printTable($translations, $verboseOutput, bool $includeCompletedLanguages)
@@ -228,13 +228,13 @@ function printTable($translations, $verboseOutput, bool $includeCompletedLanguag
             textColorGreen();
         }
 
-        echo translation - status . phpsprintf(
-                '|  Locale: %-' . $longestLocaleNameLength . 's  |  Translated: %2d/%2d  |  Mismatches: %d  |',
-                $locale,
-                $translation['translated'],
-                $translation['total'],
-                count($translation['mismatches'])
-            ) . \PHP_EOL;
+        echo sprintf(
+            '|  Locale: %-'.$longestLocaleNameLength.'s  |  Translated: %2d/%2d  |  Mismatches: %d  |',
+            $locale,
+            $translation['translated'],
+            $translation['total'],
+            count($translation['mismatches'])
+        ).\PHP_EOL;
 
         textColorNormal();
 
@@ -243,7 +243,7 @@ function printTable($translations, $verboseOutput, bool $includeCompletedLanguag
             echo '|    Missing Translations:'.\PHP_EOL;
 
             foreach ($translation['missingKeys'] as $id => $content) {
-                echo translation - status . phpsprintf('|      (id=%s) %s', $id, $content) . \PHP_EOL;
+                echo sprintf('|      (id=%s) %s', $id, $content).\PHP_EOL;
             }
             $shouldBeClosed = true;
         }
@@ -251,13 +251,13 @@ function printTable($translations, $verboseOutput, bool $includeCompletedLanguag
             echo '|    Mismatches between trans-unit id and source:'.\PHP_EOL;
 
             foreach ($translation['mismatches'] as $id => $content) {
-                echo translation - status . phpsprintf('|      (id=%s) Expected: %s', $id, $content['expected']) . \PHP_EOL;
-                echo translation - status . phpsprintf('|              Found:    %s', $content['found']) . \PHP_EOL;
+                echo sprintf('|      (id=%s) Expected: %s', $id, $content['expected']).\PHP_EOL;
+                echo sprintf('|              Found:    %s', $content['found']).\PHP_EOL;
             }
             $shouldBeClosed = true;
         }
         if ($shouldBeClosed) {
-            echo translation - status . phpstr_repeat('-', 80) . \PHP_EOL;
+            echo str_repeat('-', 80).\PHP_EOL;
         }
     }
 }

@@ -1,0 +1,81 @@
+@import "mixin";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+.section_last_invoices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h3 {
+    width: 80%;
+    font-family: "Inter", sans-serif;
+    font-size: 160%;
+    text-align: left;
+    @include desktop {
+      margin-top: 5%;
+      font-size: 200%;
+    }
+  }
+  .table_last_invoices {
+    width: 80%;
+    overflow-x: auto;
+    position: relative;
+    @include desktop {
+      overflow-x: visible;
+    }
+    .table_last_invoices_table {
+      table-layout: auto;
+      width: 300%;
+      border-collapse: collapse;
+      @include desktop {
+        width: 100%;
+      }
+      .table_last_invoices_thead {
+        font-family: "Roboto", sans-serif;
+        background-color: #f9de4e;
+        .table_last_invoices_tr {
+          th {
+            padding: 1% 1% 1% 1%;
+            text-align: left;
+          }
+          .table_last_invoices_number{
+            width: 20%;
+          }
+          .table_last_invoices_dates{
+            width: 20%;
+          }
+          .table_last_invoices_company{
+            width: 20%;
+          }
+          .table_last_invoices_created{
+            width: 20%;
+          }
+        }
+      }
+      .table_last_invoices_tbody {
+        font-family: "Roboto", sans-serif;
+        tr {
+          background-color: #f5f5f5;
+          th {
+            padding: 1% 1% 1% 2%;
+            text-align: left;
+          }
+        }
+        tr:nth-child(odd) {
+          background-color: #ffffff;
+        }
+      }
+    }
+  }
+  .green_arm {
+    width: 15%;
+    position: relative;
+    left: 43%;
+    top: 97%;
+    @include desktop {
+      width: 10%;
+      left: 45%;
+      top: 125%;
+    }
+  }
+}

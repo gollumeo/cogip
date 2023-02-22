@@ -1,0 +1,15 @@
+@import "mixin";
+
+.div-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include desktop {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 60vw;
+    height: 59vw;
+    margin-left: 3vw;
+  }
+}

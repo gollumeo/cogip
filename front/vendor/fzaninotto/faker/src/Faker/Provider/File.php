@@ -594,7 +594,7 @@ class File extends \Faker\Provider\Base
 
         $sourceFullPath = $sourceDirectory . DIRECTORY_SEPARATOR . static::randomElement($files);
 
-        $destinationFile = Uuid::uuid() . 'Provider' . pathinfo($sourceFullPath, PATHINFO_EXTENSION);
+        $destinationFile = Uuid::uuid() . '.' . pathinfo($sourceFullPath, PATHINFO_EXTENSION);
         $destinationFullPath = $targetDirectory . DIRECTORY_SEPARATOR . $destinationFile;
 
         if (false === copy($sourceFullPath, $destinationFullPath)) {
