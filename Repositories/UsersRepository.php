@@ -1,9 +1,9 @@
 <?php
 
-namespace Repositories;
+namespace App\Repositories;
 
 use App\Models\Users;
-use Core\Database;
+use App\Core\Database;
 use PDO;
 
 class UsersRepository

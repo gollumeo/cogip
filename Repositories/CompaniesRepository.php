@@ -1,9 +1,9 @@
 <?php
 
-namespace Repositories;
+namespace App\Repositories;
 
-use Core\Database;
-use Models\Companies;
+use App\Core\Database;
+use App\Models\Companies;
 use PDO;
 
 class CompaniesRepository

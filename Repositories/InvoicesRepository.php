@@ -1,9 +1,9 @@
 <?php
 
-namespace Repositories;
+namespace App\Repositories;
 
-use Core\Database;
-use Models\Invoices;
+use App\Core\Database;
+use App\Models\Invoices;
 use PDO;
 
 class InvoicesRepository

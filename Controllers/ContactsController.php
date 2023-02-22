@@ -2,9 +2,9 @@
 
 namespace App\Controllers;
 
-use Models\Contacts;
-use Repositories\ContactsRepository;
-use Services\ContactsService;
+use App\Models\Contacts;
+use App\Repositories\ContactsRepository;
+use App\Services\ContactsService;
 
 
 class ContactsController

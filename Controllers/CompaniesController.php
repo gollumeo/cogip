@@ -2,9 +2,9 @@
 
 namespace App\Controllers;
 
-use Models\Companies;
-use Repositories\CompaniesRepository;
-use Services\CompaniesService;
+use App\Models\Companies;
+use App\Repositories\CompaniesRepository;
+use App\Services\CompaniesService;
 
 
 class CompaniesController

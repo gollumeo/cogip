@@ -3,9 +3,9 @@
 namespace App\Controllers;
 
 use App\Models\Users;
-use Core\Controller;
-use Repositories\UsersRepository;
-use Services\UsersService;
+use App\Core\Controller;
+use App\Repositories\UsersRepository;
+use App\Services\UsersService;
 
 
 class UsersController extends Controller

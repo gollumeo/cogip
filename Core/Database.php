@@ -1,6 +1,6 @@
 <?php
 
-namespace Core;
+namespace App\Core;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 

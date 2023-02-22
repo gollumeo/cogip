@@ -1,8 +1,8 @@
 <?php
 
-namespace Services;
+namespace App\Services;
 
-use Repositories\UsersRepository;
+use App\Repositories\UsersRepository;
 
 class UsersService
 {

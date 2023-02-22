@@ -1,9 +1,9 @@
 <?php
 
-namespace Services;
+namespace App\Services;
 
-use Models\Companies;
-use Repositories\CompaniesRepository;
+use App\Models\Companies;
+use App\Repositories\CompaniesRepository;
 
 class CompaniesService
 {
