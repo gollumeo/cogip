@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../scss/Nav.css";
-import BurgerMenu from "../../../public/img/burger_menu_icon.png";
+import BurgerMenu from "../img/burger_menu_icon.png";
 import { useState } from "react";
-import white_shape from "../../../public/img/Rectangle 10.png";
+import white_shape from "../img/Rectangle 10.png";
 import "../scss/Nav2.scss";
 
 function Nav2() {

@@ -13,10 +13,10 @@
     margin: 2vw;
     margin-bottom: 2vw;
     @include desktop {
-      width: 33vw;
+      width: 35vw;
       height: 15vw;
       padding: 1vw;
-      margin-top: 0;
+      margin: 0;
     }
 }
 .div-stat .h2-stat {
@@ -35,44 +35,48 @@
 .div-stat .div-invoices,
 .div-stat .div-contacts,
 .div-stat .div-companies {
-    display: flex;
-    flex-wrap: wrap;
-    background:url("../../../public/img/EllipseBleue.png");
-    background-repeat: no-repeat;
+    background-color: #4D4CAC;
     color: white;
     text-align: center;
-    width: 20vw;
-    height: 20vw;
-    padding: 1vw 3vw 1vw 1vw;
+    width: 17vw;
+    height: 17vw;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include desktop {
-      width: 5vw;
+      width: 4vw;
       height: 6vw;
-      //padding-left: 1vw;
       padding: 0vw 1vw 0vw 1vw;
     }
 }
 .div-stat .div-contacts {
-  background:url("../../../public/img/EllipseLavande.png");
-  background-repeat: no-repeat;
+  background-color: #9698D6;
 }
 .div-stat .div-companies {
-  background:url("../../../public/img/EllipseRose.png");
-  background-repeat: no-repeat;
+  background-color: #FF808B;
 }
 .div-stat .invoices-stat {
-  margin-bottom: 2vw;
-  margin-right: 2vw;
+  margin: 0;
+  font-size: 70%;
+  font-weight: 900;
   @include desktop {
     font-size: 1vw;
     width: 20vw;
   }
 }
 .div-stat .contacts-stat {
+  margin: 0;
+  font-size: 70%;
+  font-weight: 900;
   @include desktop {
     font-size: 1vw;
   }
 }
 .div-stat .companies-stat {
+  margin: 0;
+  font-size: 70%;
+  font-weight: 900;
   @include desktop {
     font-size: 1vw;
   }

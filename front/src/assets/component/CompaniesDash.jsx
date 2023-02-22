@@ -1,5 +1,5 @@
 import React from "react";
-import line from "../../../public/img/line.svg";
+import line from "../img/line.svg";
 import "../scss/CompaniesDash.scss";
 import useFetch from "../hook/useFetch";
 

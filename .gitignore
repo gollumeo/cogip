@@ -1,7 +1,9 @@
+vendor/
 node_modules/
-front/node_modules
-backend/node_modules
-vendor
-backend/vendor
-front/vendor
-```
+backend/vendor/
+.idea/
+front/src/.env
+composer.lock
+populateDb.php
+package-lock.json
+front/build
