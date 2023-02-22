@@ -22,7 +22,7 @@ The COGIP is a company which we don't know a lot about apart that they produce J
 
 ## Missions
 
-Our general mission was to code a web application to manage all the COGIP datas.
+Our general mission was to code a web application to manage all the COGIP data.
 
 ### Back-end
 
